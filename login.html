@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login - CEMO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.login-container{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#07182f,
+#0c2d52
+);
+
+}
+
+.login-box{
+
+width:400px;
+
+max-width:90%;
+
+padding:40px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.1);
+
+box-shadow:0 0 40px rgba(0,0,0,.3);
+
+}
+
+.login-box h1{
+
+text-align:center;
+
+margin-bottom:30px;
+
+color:#00e676;
+
+}
+
+.login-box input{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+}
+
+.login-box button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#00e676;
+
+color:black;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.login-box button:hover{
+
+transform:translateY(-3px);
+
+}
+
+.logo-login{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.logo-login img{
+
+width:120px;
+
+}
+
+.erro{
+
+display:none;
+
+margin-top:15px;
+
+text-align:center;
+
+color:#ff4d4d;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-box">
+
+<div class="logo-login">
+
+<img src="assets/logo-imobiliaria.png">
+
+</div>
+
+<h1>Área do Proprietário</h1>
+
+<input
+type="text"
+id="usuario"
+placeholder="Usuário">
+
+<input
+type="password"
+id="senha"
+placeholder="Senha">
+
+<button onclick="fazerLogin()">
+
+Entrar
+
+</button>
+
+<div class="erro" id="erro">
+
+Usuário ou senha inválidos
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function fazerLogin(){
+
+const usuario =
+document.getElementById(
+'usuario'
+).value;
+
+const senha =
+document.getElementById(
+'senha'
+).value;
+
+/*
+Senha temporária
+
+Usuário: admin
+Senha: cemo2026
+
+Depois o backend vai validar.
+*/
+
+if(
+usuario === 'admin'
+&&
+senha === 'cemo2026'
+){
+
+localStorage.setItem(
+'logado',
+'true'
+);
+
+window.location =
+'admin.html';
+
+}
+else{
+
+document
+.getElementById('erro')
+.style.display =
+'block';
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

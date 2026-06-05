@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - CEMO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .admin-page {
+            min-height: 100vh;
+            background: #07182f;
+            color: white;
+        }
+
+        .topbar {
+            background: #041120;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar h1 {
+            color: #00e676;
+        }
+
+        .logout {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .dashboard {
+            padding: 40px;
+        }
+
+        .cards-admin {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card-admin {
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .card-admin h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .card-admin p {
+            color: #ccc;
+        }
+
+        .section-admin {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, .05);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .section-admin h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, .08);
+            color: white;
+        }
+
+        button {
+            background: #00e676;
+            color: black;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        table th {
+            color: #00e676;
+        }
+
+        .excluir {
+            background: #dc2626;
+            color: white;
+        }
+
+        .editar {
+            background: #f59e0b;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        if (localStorage.getItem("logado") !== "true") {
+            window.location = "login.html";
+        }
+    </script>
+
+    <div class="admin-page">
+        <div class="topbar">
+            <h1>Painel Administrativo CEMO</h1>
+            <button class="logout" onclick="logout()">Sair</button>
+        </div>
+
+        <div class="dashboard">
+            <div class="cards-admin">
+                <div class="card-admin">
+                    <h2>12</h2>
+                    <p>Imóveis cadastrados</p>
+                </div>
+                <div class="card-admin">
+                    <h2>48</h2>
+                    <p>Avaliações recebidas</p>
+                </div>
+                <div class="card-admin">
+                    <h2>5.0 ⭐</h2>
+                    <p>Nota média</p>
+                </div>
+                <div class="card-admin">
+                    <h2>98%</h2>
+                    <p>Clientes satisfeitos</p>
+                </div>
+            </div>
+
+            <div class="section-admin">
+                <h2>Cadastrar Imóvel</h2>
+                
+                <form id="form-cadastro">
+                    <input id="titulo" type="text" placeholder="Título do imóvel" required>
+                    <input id="preco" type="text" placeholder="Preço" required>
+                    <input id="endereco" type="text" placeholder="Endereço" required>
+                    <textarea id="descricao" placeholder="Descrição do imóvel" required></textarea>
+                    <input id="foto" type="file">
+
+                    <button type="button" onclick="cadastrarImovel()">Cadastrar Imóvel</button>
+                </form>
+            </div>
+
+            <div class="section-admin">
+                <h2>Gerenciar Imóveis</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Imóvel</th>
+                            <th>Preço</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-imoveis"></tbody>
+                </table>
+            </div>
+
+            <div class="section-admin">
+                <h2>Avaliações dos Clientes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Nota</th>
+                            <th>Comentário</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-avaliacoes"></tbody>
+                </table>
+            </div>
+
+            <div class="section-admin">
+                <h2>Dados da Clínica</h2>
+                <textarea>Exames admissionais, demissionais, periódicos, audiometria, espirometria, ECG, EEG, raio-x, avaliação psicossocial e demais exames ocupacionais.</textarea>
+                <button type="button">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("logado");
+            window.location = "login.html";
+        }
+    </script>
+
+    <script src="assets/admin.js"></script>
+</body>
+
+</html>
