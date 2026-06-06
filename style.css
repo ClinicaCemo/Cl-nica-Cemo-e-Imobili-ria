@@ -7,9 +7,10 @@
 }
 
 body{
-    background:#0a192f; /* Fundo azul marinho profundo mais vivo */
-    color:#e6f1ff;     /* Branco azulado suave */
+    background:#0a192f;
+    color:#e6f1ff;
     overflow-x:hidden;
+    padding-top: 80px; /* Correção para o menu não tapar o conteúdo */
 }
 
 /* NAVBAR */
@@ -46,7 +47,7 @@ nav a{
 }
 
 nav a:hover{
-    color:#64ffda; /* Azul ciano vibrante */
+    color:#64ffda;
 }
 
 .btn-login{
@@ -61,7 +62,7 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    min-height:100vh;
+    min-height:90vh; /* Ajustado para compensar o padding-top */
     display:flex;
     align-items:center;
     justify-content:center;
@@ -349,11 +350,24 @@ footer{
 /* RESPONSIVO */
 
 @media(max-width:900px){
-    nav{ flex-direction:column; gap:15px; }
-    nav ul{ flex-wrap:wrap; justify-content:center; }
+    nav{ 
+        flex-direction:column; 
+        gap:15px; 
+        padding: 10px;
+    }
+    nav ul{ 
+        flex-wrap:wrap; 
+        justify-content:center; 
+    }
     .hero h1{ font-size:3rem; }
     .hero h2{ font-size:1.4rem; }
     h2{ font-size:2rem; }
+    
+    /* Garante que os itens de contato fiquem visíveis */
+    .contatos{ 
+        grid-template-columns: 1fr; 
+    }
+    
     .imovel, .servicos div, .contatos div, .endereco{
         opacity:0;
         transform:translateY(40px);
