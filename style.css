@@ -216,19 +216,26 @@ h2{
     gap:20px;
 }
 
-.servicos div{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    transition:.4s;
+/* NOVO ESTILO PARA OS BOTÕES WHATSAPP */
+.botao-servico {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: .4s;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
 
-.servicos div:hover{
-    background:#00e676;
-    color:#000;
-    transform:scale(1.05);
+.botao-servico:hover {
+    background: #00e676;
+    color: #000;
+    transform: scale(1.05);
 }
 
 /* AVALIAÇÕES */

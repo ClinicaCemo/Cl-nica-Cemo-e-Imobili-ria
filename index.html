@@ -8,26 +8,33 @@
 
 <title>CEMO Imobiliária e Clínica Ocupacional</title>
 
+<!-- Adição de Meta Tags para SEO e Performance -->
+<meta name="description" content="Soluções completas em imóveis, medicina ocupacional e engenharia de segurança do trabalho em Pirapora-MG.">
+<meta name="keywords" content="Imobiliária, Clínica Ocupacional, Medicina do Trabalho, Pirapora, Segurança do Trabalho">
+
 <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+<!-- Google Fonts para um visual mais profissional -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
+<header class="header-container">
 
 <nav>
 
 <div class="logo-area">
 
-<img src="assets/logo-imobiliaria.jpeg" alt="Logo">
+<img src="assets/logo-imobiliaria.jpeg" alt="Logo CEMO Imobiliária">
 
 </div>
 
-<ul>
+<ul class="nav-links">
 
 <li><a href="#inicio">Início</a></li>
 
@@ -51,7 +58,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <section id="inicio" class="hero">
 
-<div class="hero-content">
+<div class="hero-content fade-in">
 
 <h1>
 CEMO IMOBILIÁRIA
@@ -70,11 +77,11 @@ segurança do trabalho e medicina ocupacional.
 
 <div class="hero-buttons">
 
-<a href="#imobiliaria">
+<a href="#imobiliaria" class="btn-primary">
 Ver Imóveis
 </a>
 
-<a href="#clinica">
+<a href="#clinica" class="btn-secondary">
 Conhecer Clínica
 </a>
 
@@ -100,11 +107,11 @@ Imóveis para locação e venda em Pirapora e região.
 
 <div class="cards">
 
-<div class="imovel">
+<div class="imovel hover-effect">
 
 <div class="imagem">
 
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Casa Centro">
 
 </div>
 
@@ -112,19 +119,19 @@ Imóveis para locação e venda em Pirapora e região.
 
 <p>3 quartos • garagem • área gourmet</p>
 
-<span>R$ 1.500/mês</span>
+<span class="preco">R$ 1.500/mês</span>
 
-<button>
+<button class="btn-detalhes">
 Ver Detalhes
 </button>
 
 </div>
 
-<div class="imovel">
+<div class="imovel hover-effect">
 
 <div class="imagem">
 
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Apartamento">
 
 </div>
 
@@ -132,9 +139,9 @@ Ver Detalhes
 
 <p>2 quartos • suíte • varanda</p>
 
-<span>R$ 1.200/mês</span>
+<span class="preco">R$ 1.200/mês</span>
 
-<button>
+<button class="btn-detalhes">
 Ver Detalhes
 </button>
 
@@ -148,29 +155,30 @@ Ver Detalhes
 
 <div class="titulo-clinica">
 
-<img src="assets/logo-clinica.jpeg">
+<img src="assets/logo-clinica.jpeg" alt="Logo Clínica CEMO">
 
 <h2>
-CLÍNICA CEMO LABORAR
+CLÍNICA CEMO E ENGENHARIA DE SEGURANÇA DO TRABALHO
 </h2>
 
 </div>
 
 <div class="servicos">
-
-<div>Exame Admissional</div>
-<div>Exame Demissional</div>
-<div>Segurança do Trabalho</div>
-<div>Exame Clínico</div>
-<div>Audiometria</div>
-<div>Espirometria</div>
-<div>ECG</div>
-<div>EEG</div>
-<div>Raio-X Tórax</div>
-<div>Avaliação Psicossocial</div>
-<div>Toxicológico</div>
-<div>Hemograma Completo</div>
-
+    <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Engenharia de Segurança do Trabalho" class="botao-servico" target="_blank">Engenharia de Segurança do Trabalho</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre o PCMSO" class="botao-servico" target="_blank">PCMSO</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exame Admissional" class="botao-servico" target="_blank">Exame Admissional</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exames Periódicos" class="botao-servico" target="_blank">Exames Periódicos</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exame Demissional" class="botao-servico" target="_blank">Exame Demissional</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exames Cardiológicos" class="botao-servico" target="_blank">Exames Cardiológicos</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Eletroencefalograma" class="botao-servico" target="_blank">Eletroencefalograma</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Eletrocardiograma" class="botao-servico" target="_blank">Eletrocardiograma</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre MAPA/Holter" class="botao-servico" target="_blank">MAPA e Holter</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Espirometria" class="botao-servico" target="_blank">Espirometria</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Acuidade Visual" class="botao-servico" target="_blank">Acuidade Visual</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Audiometria" class="botao-servico" target="_blank">Audiometria</a>
+    <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Terapia da Voz e Fala" class="botao-servico" target="_blank">Terapia da Voz e Fala</a>
+    <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Engenharia Ambiental e Florestal" class="botao-servico" target="_blank">Engenharia Ambiental e Florestal</a>
+    <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Treinamentos e Palestras" class="botao-servico" target="_blank">Treinamentos e Palestras</a>
 </div>
 
 </section>
@@ -197,7 +205,6 @@ id="nome"
 placeholder="Seu nome"
 required>
 
-<!-- Trocamos o select problemático por este input numérico de 1 a 5 -->
 <input 
 type="number" 
 id="nota" 
@@ -212,7 +219,7 @@ id="comentario"
 placeholder="Digite sua avaliação"
 required></textarea>
 
-<button type="submit">
+<button type="submit" class="btn-submit">
 Enviar Avaliação
 </button>
 
@@ -228,7 +235,7 @@ Contato
 
 <div class="contatos">
 
-<div>
+<div class="contato-box">
 
 <h3>Imobiliária</h3>
 
@@ -253,7 +260,7 @@ href="https://www.instagram.com/cemoimobiliariapirapora">
 
 </div>
 
-<div>
+<div class="contato-box">
 
 <h3>Clínica</h3>
 
@@ -374,7 +381,7 @@ async function carregarDepoimentosNoSite() {
 
 // 2. ENVIA A AVALIAÇÃO SEM DEIXAR A PÁGINA ATUALIZAR SOZINHA
 async function enviarAvaliacao(event) {
-    event.preventDefault(); // <-- Isso aqui impede a página de atualizar direto!
+    event.preventDefault(); 
 
     const nome = document.getElementById("nome").value;
     const nota = document.getElementById("nota").value;
@@ -396,7 +403,6 @@ async function enviarAvaliacao(event) {
         alert("Avaliação enviada com sucesso! Obrigado.");
         document.getElementById("form-avaliacao").reset();
         
-        // Recarrega de forma controlada para atualizar os dados na tela
         window.location.reload();
 
     } catch (error) {
@@ -405,7 +411,6 @@ async function enviarAvaliacao(event) {
     }
 }
 
-// 3. ATIVA ASSIM QUE ABRE A PÁGINA
 window.onload = () => {
     carregarDepoimentosNoSite();
 };
