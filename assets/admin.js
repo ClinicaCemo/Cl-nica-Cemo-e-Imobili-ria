@@ -28,14 +28,13 @@ async function carregarImoveis() {
 
     } catch (error) {
         console.log(error);
-        // Removemos o alert daqui para não ficar travando a tela caso o banco esteja vazio
         console.error("Erro ao carregar imóveis do banco.");
     }
 }
 
 // 2. FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
 async function cadastrarImovel() {
-    // Pegando os valores da tela usando os IDs corretos do novo HTML
+    // Pegando os valores da tela usando os IDs corretos do HTML
     const titulo = document.getElementById("titulo").value;
     const preco = document.getElementById("preco").value;
     const endereco = document.getElementById("endereco").value;
@@ -54,7 +53,7 @@ async function cadastrarImovel() {
     }
 
     try {
-        alert("Enviando para o PHP...");
+        // [REMOVIDO] Tiramos o "Enviando para o PHP..." antigo daqui para não travar mais a tela!
 
         const resposta = await fetch(`${API}/cadastrar_imovel.php`, {
             method: "POST",
@@ -67,8 +66,8 @@ async function cadastrarImovel() {
         // Limpa o formulário após cadastrar com sucesso
         document.getElementById("form-cadastro").reset();
         
-        // Atualiza a tabela na tela
-        carregarImoveis();
+        // [ADICIONADO] Recarrega a página para puxar os dados atualizados do MySQL
+        window.location.reload();
 
     } catch (error) {
         console.log(error);
@@ -90,8 +89,8 @@ async function excluirImovel(id) {
         const resultado = await resposta.text();
         alert(resultado);
 
-        // Atualiza a tabela na tela após excluir
-        carregarImoveis();
+        // Recarrega a página após excluir para sumir da tabela na hora
+        window.location.reload();
 
     } catch (error) {
         console.log(error);
