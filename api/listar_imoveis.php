@@ -1,5 +1,6 @@
 <?php
-// Limpa qualquer texto ou espaço que tenha vazado de outros arquivos anteriores
+// Limpa
+// lquer texto ou espaço que tenha vazado de outros arquivos anteriores
 if (ob_get_length()) ob_clean();
 
 header("Access-Control-Allow-Origin: *");
