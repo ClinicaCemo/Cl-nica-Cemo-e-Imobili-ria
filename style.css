@@ -27,11 +27,15 @@ nav{
     background:rgba(10, 25, 47, 0.85);
     z-index:1000;
     border-bottom:1px solid rgba(100, 255, 218, 0.1);
+    transition: 0.4s; /* Efeito suave ao rolar */
 }
 
 .logo-area img{
     height:60px;
+    transition: 0.3s;
 }
+
+.logo-area img:hover { transform: scale(1.05); filter: drop-shadow(0 0 10px #64ffda); }
 
 nav ul{
     display:flex;
@@ -44,7 +48,21 @@ nav a{
     text-decoration:none;
     transition:.3s;
     font-weight:500;
+    position: relative;
 }
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #64ffda;
+    transition: 0.3s;
+}
+
+nav a:hover::after { width: 100%; }
 
 nav a:hover{
     color:#64ffda;
@@ -57,7 +75,10 @@ nav a:hover{
     color:#0a192f;
     font-weight:bold;
     box-shadow:0 0 20px rgba(100, 255, 218, 0.3);
+    transition: 0.4s;
 }
+
+.btn-login:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(100, 255, 218, 0.6); }
 
 /* HERO */
 
@@ -73,6 +94,7 @@ nav a:hover{
     url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
     background-size:cover;
     background-position:center;
+    transition: 0.5s;
 }
 
 .hero-content{
@@ -83,6 +105,7 @@ nav a:hover{
     font-size:5rem;
     color:#64ffda;
     text-shadow:0 0 30px rgba(100, 255, 218, 0.4);
+    transition: 0.3s;
 }
 
 .hero h2{
@@ -116,8 +139,8 @@ nav a:hover{
 }
 
 .hero-buttons a:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(100, 255, 218, 0.3);
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 15px 35px rgba(100, 255, 218, 0.4);
 }
 
 /* SEÇÕES */
@@ -131,7 +154,10 @@ h2{
     font-size:3rem;
     margin-bottom:20px;
     color: #e6f1ff;
+    transition: 0.3s;
 }
+
+h2:hover { text-shadow: 0 0 15px #64ffda; }
 
 .subtitulo{
     text-align:center;
@@ -157,8 +183,8 @@ h2{
 }
 
 .imovel:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(64, 196, 255, 0.2);
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(64, 196, 255, 0.2);
     border-color: rgba(100, 255, 218, 0.5);
 }
 
@@ -174,7 +200,7 @@ h2{
 }
 
 .imovel:hover img{
-    transform:scale(1.08);
+    transform:scale(1.1);
 }
 
 .imovel h3{
@@ -207,6 +233,7 @@ h2{
 
 .imovel button:hover {
     background: #40c4ff;
+    letter-spacing: 2px;
 }
 
 /* CLÍNICA */
@@ -219,7 +246,10 @@ h2{
 .titulo-clinica img{
     width:180px;
     margin-bottom:20px;
+    transition: 0.4s;
 }
+
+.titulo-clinica img:hover { transform: rotate(5deg) scale(1.1); }
 
 .servicos{
     display:grid;
@@ -246,6 +276,7 @@ h2{
     background: #64ffda;
     color: #0a192f;
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
 }
 
 /* AVALIAÇÕES */
@@ -275,7 +306,10 @@ textarea{
     border-radius:12px;
     background:rgba(255,255,255,.05);
     color:white;
+    transition: 0.3s;
 }
+
+input:focus, textarea:focus { border: 1px solid #64ffda; outline: none; background: rgba(255,255,255,0.1); }
 
 textarea{
     min-height:150px;
@@ -291,7 +325,10 @@ form button{
     color:#0a192f;
     font-weight:bold;
     cursor:pointer;
+    transition: 0.4s;
 }
+
+form button:hover { transform: scale(1.02); box-shadow: 0 0 20px #64ffda; }
 
 /* CONTATOS */
 
@@ -305,12 +342,18 @@ form button{
     background:rgba(255,255,255,.03);
     padding:25px;
     border-radius:20px;
+    transition: 0.4s;
 }
+
+.contatos div:hover { background: rgba(255,255,255,0.06); transform: translateY(-5px); }
 
 .contatos a{
     color:#64ffda;
     text-decoration:none;
+    transition: 0.3s;
 }
+
+.contatos a:hover { text-decoration: underline; }
 
 .endereco{
     margin-top:40px;
@@ -350,21 +393,24 @@ footer{
 /* RESPONSIVO */
 
 @media(max-width:900px){
+    body { padding-top: 150px; } /* Ajustado para compensar a altura real do menu mobile */
+    
     nav{ 
         flex-direction:column; 
-        gap:10px; 
-        padding: 10px;
+        gap:15px; 
+        padding: 15px;
     }
     nav ul{ 
         flex-wrap:wrap; 
         justify-content:center;
-        gap: 15px;
+        gap: 10px;
     }
-    .hero h1{ font-size:2.5rem; }
-    .hero h2{ font-size:1.2rem; }
-    h2{ font-size:2rem; }
+    nav a { font-size: 0.9rem; }
     
-    /* Correção para contatos aparecerem corretamente */
+    .hero h1{ font-size:2.2rem !important; }
+    .hero h2{ font-size:1.1rem !important; }
+    h2{ font-size:1.8rem; }
+    
     .contatos{ 
         grid-template-columns: 1fr; 
     }
