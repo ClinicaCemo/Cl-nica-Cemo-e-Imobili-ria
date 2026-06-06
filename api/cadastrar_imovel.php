@@ -1,4 +1,6 @@
 <?php
+// Limpa qualquer espaço ou caractere que tenha vazado na memória do servidor
+if (ob_get_length()) ob_clean();
 
 include("conexao.php");
 
@@ -14,8 +16,9 @@ VALUES
 
 if($conn->query($sql)){
     echo "Imóvel cadastrado com sucesso";
-}else{
+    exit; // Fecha o arquivo com segurança aqui
+} else {
     echo "Erro ao cadastrar";
+    exit; // Fecha o arquivo com segurança aqui também
 }
-
 ?>

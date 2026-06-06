@@ -61,7 +61,7 @@ async function cadastrarImovel() {
         });
 
         const resultado = await resposta.text();
-        alert("Resposta do servidor: " + resultado);
+        //alert("Resposta do servidor: " + resultado);
 
         // Limpa o formulário após cadastrar com sucesso
         document.getElementById("form-cadastro").reset();
@@ -71,7 +71,7 @@ async function cadastrarImovel() {
 
     } catch (error) {
         console.log(error);
-        alert("Erro ao conectar com o servidor PHP.");
+       // alert("Erro ao conectar com o servidor PHP.");
     }
 }
 
@@ -94,7 +94,7 @@ async function excluirImovel(id) {
 
     } catch (error) {
         console.log(error);
-        alert("Erro ao tentar excluir o imóvel.");
+        //alert("Erro ao tentar excluir o imóvel.");
     }
 }
 
