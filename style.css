@@ -349,29 +349,48 @@ footer{
 
 /* RESPONSIVO */
 
+@/* RESPONSIVO */
 @media(max-width:900px){
+    /* 1. Remove o fixed para o menu sair de cima do conteúdo */
     nav{ 
+        position: relative !important; 
         flex-direction:column; 
         gap:15px; 
-        padding: 10px;
+        background: #0a192f;
+        padding: 20px;
     }
+    
+    /* 2. Remove o padding do topo para o menu entrar no fluxo normal */
+    body {
+        padding-top: 0px !important;
+    }
+
     nav ul{ 
         flex-wrap:wrap; 
         justify-content:center; 
     }
-    .hero h1{ font-size:3rem; }
-    .hero h2{ font-size:1.4rem; }
+    
+    .hero{
+        min-height: 60vh; /* Diminui a altura para o contato subir */
+    }
+
+    .hero h1{ font-size:2.5rem; }
+    .hero h2{ font-size:1.2rem; }
     h2{ font-size:2rem; }
     
-    /* Garante que os itens de contato fiquem visíveis */
+    /* 3. Garante que os contatos apareçam um embaixo do outro */
     .contatos{ 
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr !important;
+        margin-bottom: 50px !important;
+        display: block !important; /* Força a renderização */
     }
     
-    .imovel, .servicos div, .contatos div, .endereco{
-        opacity:0;
-        transform:translateY(40px);
-        transition:1s;
+    .contatos div {
+        margin-bottom: 20px;
     }
-    .mostrar{ opacity:1; transform:translateY(0); } 
+
+    .imovel, .servicos div, .contatos div, .endereco{
+        opacity:1 !important; /* Força a visibilidade caso o JS não esteja disparando */
+        transform:translateY(0px) !important;
+    }
 }
