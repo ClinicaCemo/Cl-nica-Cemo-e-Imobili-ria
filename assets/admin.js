@@ -34,14 +34,12 @@ async function carregarImoveis() {
 
 // 2. FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
 async function cadastrarImovel() {
-    // Pegando os valores da tela usando os IDs corretos do HTML
     const titulo = document.getElementById("titulo").value;
     const preco = document.getElementById("preco").value;
     const endereco = document.getElementById("endereco").value;
     const descricao = document.getElementById("descricao").value;
     const foto = document.getElementById("foto").files[0];
 
-    // Montando a caixinha de dados limpa para o PHP ler
     const formData = new FormData();
     formData.append("titulo", titulo);
     formData.append("preco", preco);
@@ -53,25 +51,21 @@ async function cadastrarImovel() {
     }
 
     try {
-        // [REMOVIDO] Tiramos o "Enviando para o PHP..." antigo daqui para não travar mais a tela!
-
         const resposta = await fetch(`${API}/cadastrar_imovel.php`, {
             method: "POST",
             body: formData
         });
 
-        const resultado = await resposta.text();
-        //alert("Resposta do servidor: " + resultado);
+        await resposta.text();
 
-        // Limpa o formulário após cadastrar com sucesso
+        // Limpa o formulário silenciosamente, sem alertas!
         document.getElementById("form-cadastro").reset();
         
-        // [ADICIONADO] Recarrega a página para puxar os dados atualizados do MySQL
+        // Recarrega a página de forma limpa
         window.location.reload();
 
     } catch (error) {
         console.log(error);
-       // alert("Erro ao conectar com o servidor PHP.");
     }
 }
 
@@ -86,15 +80,13 @@ async function excluirImovel(id) {
             method: "GET"
         });
 
-        const resultado = await resposta.text();
-        alert(resultado);
+        await resposta.text();
 
-        // Recarrega a página após excluir para sumir da tabela na hora
+        // Recarrega a página direto após excluir, sem caixas de alertas na tela
         window.location.reload();
 
     } catch (error) {
         console.log(error);
-        //alert("Erro ao tentar excluir o imóvel.");
     }
 }
 
@@ -104,6 +96,7 @@ async function carregarAvaliacoes() {
         const resposta = await fetch(`${API}/listar_avaliacoes.php`);
         const avaliacoes = await resposta.json();
 
+        // Procura a tabela de avaliações pelo ID correto
         const tabela = document.getElementById("lista-avaliacoes");
         if (!tabela) return;
 
@@ -121,6 +114,42 @@ async function carregarAvaliacoes() {
 
     } catch (error) {
         console.log(error);
+        console.error("Erro ao carregar avaliações do banco.");
+    }
+}
+
+async function salvarClinica() {
+
+    const texto =
+        document.getElementById("descricao-clinica").value;
+
+    const formData = new FormData();
+
+    formData.append("descricao", texto);
+
+    try {
+
+        const resposta = await fetch(
+            "api/salvar_clinica.php",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
+
+        const resultado = await resposta.text();
+
+        console.log(resultado);
+
+if (resultado.includes("sucesso")) { 
+            alert("Alterações salvas com sucesso!");
+        } else {
+            alert("Erro ao salvar.");
+        }
+
+    } catch (erro) {
+        console.log(erro);
+        alert("Erro de conexão.");
     }
 }
 

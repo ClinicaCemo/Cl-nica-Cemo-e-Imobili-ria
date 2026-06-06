@@ -182,36 +182,37 @@ Avaliações dos Clientes
 </h2>
 
 <div class="media">
-
-<h1>5.0 ⭐</h1>
-
-<p>
-100% de aprovação
-</p>
-
+    <h1 id="media-nota-num">5.0 ⭐</h1>
+    <p id="media-aprovacao-txt">100% de aprovação</p>
 </div>
 
-<form>
+<div id="mural-depoimentos" style="margin: 30px auto; max-width: 600px; text-align: left;">
+    </div>
+
+<form id="form-avaliacao" onsubmit="enviarAvaliacao(event)">
 
 <input
 type="text"
-placeholder="Seu nome">
+id="nome"
+placeholder="Seu nome"
+required>
 
-<select>
-
-<option>★★★★★</option>
-<option>★★★★☆</option>
-<option>★★★☆☆</option>
-<option>★★☆☆☆</option>
-<option>★☆☆☆☆</option>
-
-</select>
+<!-- Trocamos o select problemático por este input numérico de 1 a 5 -->
+<input 
+type="number" 
+id="nota" 
+min="1" 
+max="5" 
+placeholder="Sua nota de 1 a 5 ⭐" 
+required 
+style="color: #ffffff !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; padding: 12px; border-radius: 4px; width: 100%; box-sizing: border-box; margin-bottom: 15px;">
 
 <textarea
-placeholder="Digite sua avaliação">
-</textarea>
+id="comentario"
+placeholder="Digite sua avaliação"
+required></textarea>
 
-<button>
+<button type="submit">
 Enviar Avaliação
 </button>
 
@@ -299,17 +300,116 @@ Prédio verde ao lado da Prefeitura.
 
 </section>
 
-<footer>
+<footer style="background-color: #0d1624; text-align: center; padding: 25px 10px; border-top: 1px solid rgba(255,255,255,0.05);">
 
-<p>
+<p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 14px;">
 
-© 2026 CEMO Imobiliária e Clínica CEMO
+© 2026 CEMO Imobiliária e Clínica CEMO. Todos os direitos reservados. CRECI: MGJ-0009181. 🏠📄
+
+</p>
+
+<p style="color: #00ff88; margin: 8px 0 0 0; font-size: 14px; font-weight: bold; letter-spacing: 0.5px;">
+
+Desenvolvido por <span style="color: #ffffff; font-weight: 800;">MrBrozau</span>
 
 </p>
 
 </footer>
 
-<script src="script.js"></script>
+<script>
+// 1. CARREGA AS AVALIAÇÕES E FAZ OS CÁLCULOS
+async function carregarDepoimentosNoSite() {
+    try {
+        const resposta = await fetch("api/listar_avaliacoes.php");
+        const avaliacoes = await resposta.json();
+
+        const mural = document.getElementById("mural-depoimentos");
+        if (!mural) return;
+
+        mural.innerHTML = ""; 
+
+        if (avaliacoes.length === 0) {
+            mural.innerHTML = "<p style='color: rgba(255,255,255,0.4); text-align: center;'>Nenhuma avaliação ainda. Seja o primeiro!</p>";
+            document.getElementById("media-nota-num").innerText = "0.0 ⭐";
+            document.getElementById("media-aprovacao-txt").innerText = "Nenhuma avaliação";
+            return;
+        }
+
+        let somaNotas = 0;
+        let totalNotasPositivas = 0; 
+
+        avaliacoes.forEach(item => {
+            const notaNum = parseInt(item.nota); 
+            somaNotas += notaNum; 
+            
+            if (notaNum >= 4) {
+                totalNotasPositivas++;
+            }
+
+            const estrelas = "⭐".repeat(notaNum);
+            
+            mural.innerHTML += `
+                <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #00ff88; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <strong style="color: #ffffff; font-size: 16px;">${item.nome}</strong>
+                        <span style="font-size: 14px;">${estrelas}</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8); margin: 0; font-style: italic; line-height: 1.4;">
+                        "${item.comentario}"
+                    </p>
+                </div>
+            `;
+        });
+
+        const mediaGeral = (somaNotas / avaliacoes.length).toFixed(1);
+        const porcentagemAprovacao = Math.round((totalNotasPositivas / avaliacoes.length) * 100);
+
+        document.getElementById("media-nota-num").innerText = `${mediaGeral} ⭐`;
+        document.getElementById("media-aprovacao-txt").innerText = `${porcentagemAprovacao}% de aprovação`;
+
+    } catch (error) {
+        console.error("Erro ao carregar mural:", error);
+    }
+}
+
+// 2. ENVIA A AVALIAÇÃO SEM DEIXAR A PÁGINA ATUALIZAR SOZINHA
+async function enviarAvaliacao(event) {
+    event.preventDefault(); // <-- Isso aqui impede a página de atualizar direto!
+
+    const nome = document.getElementById("nome").value;
+    const nota = document.getElementById("nota").value;
+    const comentario = document.getElementById("comentario").value;
+
+    const formData = new FormData();
+    formData.append("nome", nome);
+    formData.append("nota", nota);
+    formData.append("comentario", comentario);
+
+    try {
+        const resposta = await fetch("api/cadastrar_avaliacoes.php", {
+            method: "POST",
+            body: formData
+        });
+
+        await resposta.text();
+        
+        alert("Avaliação enviada com sucesso! Obrigado.");
+        document.getElementById("form-avaliacao").reset();
+        
+        // Recarrega de forma controlada para atualizar os dados na tela
+        window.location.reload();
+
+    } catch (error) {
+        console.error("Erro ao enviar avaliação:", error);
+        alert("Erro ao conectar com o servidor.");
+    }
+}
+
+// 3. ATIVA ASSIM QUE ABRE A PÁGINA
+window.onload = () => {
+    carregarDepoimentosNoSite();
+};
+</script>
 
 </body>
 </html>
