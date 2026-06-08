@@ -27,7 +27,7 @@ nav{
     background:rgba(10, 25, 47, 0.85);
     z-index:1000;
     border-bottom:1px solid rgba(100, 255, 218, 0.1);
-    transition: 0.4s; /* Efeito suave ao rolar */
+    transition: 0.4s;
 }
 
 .logo-area img{
@@ -390,10 +390,10 @@ footer{
     to{ opacity:1; transform:translateY(0); }
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO ORIGINAL */
 
 @media(max-width:900px){
-    body { padding-top: 150px; } /* Ajustado para compensar a altura real do menu mobile */
+    body { padding-top: 150px; }
     
     nav{ 
         flex-direction:column; 
@@ -421,4 +421,123 @@ footer{
         transition:1s;
     }
     .mostrar{ opacity:1; transform:translateY(0); } 
+}
+
+/* ================= MELHORIAS ADICIONADAS ================= */
+
+/* FIX MENU TRAVANDO + PROPORÇÃO MOBILE */
+
+@media (max-width: 900px){
+
+    nav ul{
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul::-webkit-scrollbar{
+        display: none;
+    }
+
+    nav li{
+        flex: 0 0 auto;
+    }
+
+    .logo-area img{
+        height:45px;
+    }
+
+    .btn-login{
+        padding:10px 16px;
+        font-size:0.85rem;
+    }
+
+    .hero{
+        padding:40px 15px;
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:1.8rem !important;
+        line-height:1.2;
+    }
+
+    .hero h2{
+        font-size:1rem !important;
+    }
+
+    .hero p{
+        font-size:0.9rem;
+        padding:0 10px;
+    }
+
+    .hero-buttons a{
+        padding:12px 18px;
+        font-size:0.9rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .imagem img{
+        height:180px;
+    }
+
+    .imovel p{
+        font-size:0.85rem;
+    }
+
+    .imovel span{
+        font-size:1rem;
+    }
+
+    .botao-servico{
+        font-size:0.9rem;
+        padding:15px;
+    }
+
+    input, select, textarea{
+        font-size:0.9rem;
+        padding:12px;
+    }
+
+    footer{
+        font-size:0.8rem;
+    }
+}
+
+/* TELAS MUITO PEQUENAS */
+
+@media (max-width: 480px){
+
+    body{
+        padding-top:160px;
+    }
+
+    .hero h1{
+        font-size:1.5rem !important;
+    }
+
+    .hero h2{
+        font-size:0.9rem !important;
+    }
+
+    .hero p{
+        font-size:0.8rem;
+    }
+
+    nav a{
+        font-size:0.8rem;
+    }
+
+    .btn-login{
+        font-size:0.75rem;
+        padding:8px 12px;
+    }
+
 }
