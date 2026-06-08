@@ -425,8 +425,6 @@ footer{
 
 /* ================= MELHORIAS ADICIONADAS ================= */
 
-/* FIX MENU TRAVANDO + PROPORÇÃO MOBILE */
-
 @media (max-width: 900px){
 
     nav ul{
@@ -511,8 +509,6 @@ footer{
     }
 }
 
-/* TELAS MUITO PEQUENAS */
-
 @media (max-width: 480px){
 
     body{
@@ -539,5 +535,30 @@ footer{
         font-size:0.75rem;
         padding:8px 12px;
     }
+}
 
+/* ================= ANIMAÇÃO FINAL ================= */
+
+.esconder{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imovel,
+.botao-servico,
+.contatos div{
+    will-change: transform, opacity;
+}
+
+@media (max-width: 900px){
+    .esconder{
+        opacity: 1;
+        transform: none;
+    }
 }
