@@ -562,3 +562,317 @@ footer{
         transform: none;
     }
 }
+/* FORÇA TOTAL PRA SOBRESCREVER */
+body{
+    background: linear-gradient(180deg,#f4f8ff,#eaf2ff) !important;
+    color:#0b1f3a !important;
+}
+
+/* NAVBAR PREMIUM */
+nav{
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom:none !important;
+}
+
+nav a{
+    color:#0b1f3a !important;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#0077ff !important;
+}
+
+/* BOTÃO TOP */
+.btn-login{
+    background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
+    color:#fff !important;
+    border-radius:30px;
+}
+
+/* HERO ULTRA PROFISSIONAL */
+.hero{
+    position:relative;
+    background:
+    linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.9)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80') !important;
+    background-size:cover !important;
+    background-position:center !important;
+}
+
+/* TEXTO HERO */
+.hero h1{
+    color:#0b1f3a !important;
+    font-size:3.2rem !important;
+    text-shadow:none !important;
+}
+
+.hero h2{
+    color:#3a6ea5 !important;
+}
+
+.hero p{
+    color:#5f7fa3 !important;
+}
+
+/* BOTÕES HERO PREMIUM */
+.hero-buttons a{
+    background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
+    color:#fff !important;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,119,255,0.25);
+}
+
+.hero-buttons a:last-child{
+    background:white !important;
+    color:#0077ff !important;
+    border:2px solid #0077ff;
+}
+
+/* SEÇÕES */
+section{
+    background: transparent !important;
+}
+
+/* TÍTULOS */
+h2{
+    color:#0b1f3a !important;
+}
+
+/* CARDS ESTILO LUXO */
+.imovel{
+    background:#ffffff !important;
+    border:none !important;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.imovel:hover{
+    transform:translateY(-10px) scale(1.02);
+}
+
+/* TEXTO CARD */
+.imovel p{
+    color:#5f7fa3 !important;
+}
+
+.imovel span{
+    color:#0077ff !important;
+}
+
+/* BOTÃO CARD */
+.imovel button{
+    background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
+    color:#fff !important;
+    border-radius:0 0 20px 20px;
+}
+
+/* SERVIÇOS */
+.botao-servico{
+    background:#fff !important;
+    color:#0b1f3a !important;
+    border:none !important;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.botao-servico:hover{
+    background:#0077ff !important;
+    color:#fff !important;
+}
+
+/* FORM */
+input, select, textarea{
+    background:#fff !important;
+    color:#0b1f3a !important;
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+/* CONTATO */
+.contatos div,
+.endereco{
+    background:#fff !important;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+footer{
+    background:#eaf2ff !important;
+    color:#5f7fa3 !important;
+}
+
+/* ================= ANIMAÇÃO DE SCROLL PROFISSIONAL ================= */
+
+.reveal{
+    opacity:0;
+    transform: translateY(60px) scale(0.98);
+    transition: all 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active{
+    opacity:1;
+    transform: translateY(0) scale(1);
+}
+
+/* delay elegante */
+.reveal:nth-child(2){ transition-delay:0.1s; }
+.reveal:nth-child(3){ transition-delay:0.2s; }
+.reveal:nth-child(4){ transition-delay:0.3s; }
+
+/* ================= UX MELHORADO ================= */
+
+/* botões mais clicáveis mobile */
+.hero-buttons a,
+.btn-login,
+.imovel button{
+    min-height:48px;
+}
+
+/* espaçamento premium */
+section{
+    padding:120px 8%;
+}
+
+/* ================= MOBILE PREMIUM ================= */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:1.8rem !important;
+    }
+
+    .hero h2{
+        font-size:1rem !important;
+    }
+
+    .hero p{
+        font-size:0.85rem !important;
+    }
+
+    .hero-buttons a{
+        display:block;
+        width:90%;
+        margin:10px auto;
+    }
+
+    nav{
+        backdrop-filter: blur(10px);
+    }
+
+}
+/* ===== CORREÇÃO FINAL DE VISIBILIDADE (SEM MEXER NO RESTO) ===== */
+
+/* avaliação (nota tipo 3.0) */
+.media h1{
+    color:#0077ff !important;
+}
+
+/* textos da avaliação */
+.media p,
+.media span{
+    color:#0b1f3a !important;
+}
+
+/* estrelas */
+.estrelas{
+    color:#ffc107 !important;
+    font-size:1.5rem;
+}
+
+/* inputs (corrige texto invisível) */
+input,
+select,
+textarea{
+    background:#ffffff !important;
+    color:#0b1f3a !important;
+}
+
+/* placeholder */
+input::placeholder,
+textarea::placeholder{
+    color:#7a9cc6 !important;
+}
+
+/* links contato (tava claro demais) */
+.contatos a{
+    color:#0077ff !important;
+    font-weight:600;
+}
+
+/* rodapé mais visível */
+footer{
+    background:#dbe7ff !important;
+    color:#0b1f3a !important;
+}
+
+/* garante contraste em tudo */
+p, span, small{
+    color:#0b1f3a !important;
+}
+/* ===== AVALIAÇÃO COMPLETA BONITA ===== */
+
+.media{
+    background:#ffffff !important;
+    padding:30px !important;
+    border-radius:20px !important;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08) !important;
+}
+
+/* nota (3.0) */
+.media h1{
+    color:#0077ff !important;
+    font-size:3rem !important;
+}
+
+/* nome do usuário */
+.media strong,
+.media b{
+    color:#0b1f3a !important;
+    font-weight:700 !important;
+    display:block;
+    margin-top:10px;
+}
+
+/* texto da avaliação */
+.media p{
+    color:#5f7fa3 !important;
+    margin-top:10px;
+}
+
+/* estrelas */
+.estrelas{
+    color:#ffc107 !important;
+    font-size:1.5rem;
+    margin-top:5px;
+}
+/* ===== FORÇAR NOME DO USUÁRIO ESCURO ===== */
+
+.media *{
+    color:#0b1f3a !important;
+}
+
+/* deixa o nome mais destacado */
+.media strong,
+.media b,
+.media h3,
+.media h4,
+.media .nome,
+.media .usuario{
+    color:#000000 !important;
+    font-weight:700 !important;
+}
+.titulo-clinica img {
+    width: 250px;
+    max-width: 90%;
+    height: auto;
+}
+
+.logo-area img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+#nota {
+    color: #000 !important;
+    background: #fff !important;
+    border: 1px solid #ccc;
+}

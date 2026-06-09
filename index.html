@@ -30,7 +30,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <div class="logo-area">
 
-<img src="assets/logo-imobiliaria.jpeg" alt="Logo CEMO Imobiliária">
+<img src="assets/logo-imobiliaria.png" alt="Logo CEMO Imobiliária">
 
 </div>
 
@@ -155,7 +155,7 @@ Ver Detalhes
 
 <div class="titulo-clinica">
 
-<img src="assets/logo-clinica.jpeg" alt="Logo Clínica CEMO">
+<img src="assets/logo-clinica.png" alt="Logo Clínica CEMO">
 
 <h2>
 CLÍNICA CEMO E ENGENHARIA DE SEGURANÇA DO TRABALHO
@@ -206,13 +206,16 @@ placeholder="Seu nome"
 required>
 
 <input 
-type="number" 
-id="nota" 
-min="1" 
-max="5" 
-placeholder="Sua nota de 1 a 5 ⭐" 
-required 
-style="color: #ffffff !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; padding: 12px; border-radius: 4px; width: 100%; box-sizing: border-box; margin-bottom: 15px;">
+  type="number" 
+  id="nota" 
+  min="1" 
+  max="5" 
+  step="1"
+  placeholder="Sua nota de 1 a 5 ⭐" 
+  required 
+  oninput="limitarNota(this)"
+  style="color: #000; background: #fff; border: 1px solid #ccc; padding: 12px; border-radius: 4px; width: 100%; box-sizing: border-box; margin-bottom: 15px;"
+>
 
 <textarea
 id="comentario"
@@ -315,11 +318,13 @@ Prédio verde ao lado da Prefeitura.
 
 </p>
 
+<!--
 <p style="color: #00ff88; margin: 8px 0 0 0; font-size: 14px; font-weight: bold; letter-spacing: 0.5px;">
 
 Desenvolvido por <span style="color: #ffffff; font-weight: 800;">MrBrozau</span>
 
 </p>
+-->
 
 </footer>
 
@@ -358,7 +363,7 @@ async function carregarDepoimentosNoSite() {
             mural.innerHTML += `
                 <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #00ff88; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <strong style="color: #ffffff; font-size: 16px;">${item.nome}</strong>
+                        <strong style="color: #0d1b2a; font-size: 16px;">${item.nome}</strong>
                         <span style="font-size: 14px;">${estrelas}</span>
                     </div>
                     <p style="color: rgba(255,255,255,0.8); margin: 0; font-style: italic; line-height: 1.4;">
@@ -414,6 +419,36 @@ async function enviarAvaliacao(event) {
 window.onload = () => {
     carregarDepoimentosNoSite();
 };
+</script>
+
+<script>
+const reveals = document.querySelectorAll('.imovel, .botao-servico, .contatos div');
+
+function revealOnScroll(){
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+
+<script>
+function limitarNota(input) {
+    let valor = parseInt(input.value);
+
+    if (isNaN(valor)) return;
+
+    if (valor > 5) input.value = 5;
+    if (valor < 1) input.value = 1;
+}
 </script>
 
 </body>
