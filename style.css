@@ -88,7 +88,7 @@ nav a:hover{
     background:
     linear-gradient(rgba(10, 25, 47, 0.7),
     rgba(10, 25, 47, 0.7)),
-    url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+    url('https://images.unsplash.com/photo-1497366216548-37526070297cauto=&fit=crop&q=80&w=2000');
     background-size:cover;
     background-position:center;
     transition: 0.5s;
@@ -124,15 +124,16 @@ nav a:hover{
 }
 
 .hero-buttons a{
-    display:inline-block;
-    margin:10px;
-    padding:15px 30px;
-    border-radius:10px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:220px;
+    padding:18px 35px;
+    border-radius:50px;
+    font-weight:700;
+    letter-spacing:.5px;
     text-decoration:none;
-    color:#0a192f;
-    font-weight: bold;
     transition:.4s;
-    background:linear-gradient(135deg,#64ffda,#40c4ff);
 }
 
 .hero-buttons a:hover{
@@ -241,8 +242,8 @@ h2:hover { text-shadow: 0 0 15px #64ffda; }
 }
 
 .titulo-clinica img{
-    width:180px;
-    margin-bottom:20px;
+    width:400px;
+    margin-bottom:60px;
     transition: 0.4s;
 }
 
@@ -628,10 +629,15 @@ nav a:hover{
 .hero{
     position:relative;
     background:
-    linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.9)),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80') !important;
+    linear-gradient(
+        rgba(255,255,255,0.75),
+        rgba(255,255,255,0.85)
+    ),
+    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=80') !important;
+
     background-size:cover !important;
-    background-position:center !important;
+    background-position:center center !important;
+    background-attachment:fixed;
 }
 
 /* TEXTO HERO */
@@ -675,13 +681,18 @@ h2{
 
 /* CARDS ESTILO LUXO */
 .imovel{
-    background:#ffffff !important;
-    border:none !important;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:all .4s ease;
+    position:relative;
 }
 
+
 .imovel:hover{
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,0.15);
 }
 
 /* TEXTO CARD */
@@ -915,8 +926,8 @@ p, span, small{
 }
 
 .logo-imobiliaria-central img{
-    width:280px;
-    max-width:90%;
+    width:325px;
+    max-width:95%;
     height:auto;
 }
 
@@ -946,4 +957,222 @@ p, span, small{
         height:160px;
     }
 
+}
+/* ===== MELHORIAS PREMIUM 2026 ===== */
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:30px;
+    background:rgba(0,119,255,0.1);
+    color:#0077ff;
+    font-weight:600;
+    margin-bottom:20px;
+    backdrop-filter:blur(10px);
+}
+
+.hero-content{
+    max-width:900px;
+    padding:50px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,0.15);
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    animation:fadeUp 1.2s ease;
+}
+
+
+nav{
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:9999;
+}
+
+.nav-links{
+    align-items:center;
+}
+
+.imovel{
+    position:relative;
+}
+
+.imovel::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(
+        90deg,
+        #0077ff,
+        #00c6ff
+    );
+}
+
+.imovel h3{
+    color:#0b1f3a;
+    font-size:1.3rem;
+}
+
+.preco{
+    font-size:1.4rem !important;
+}
+
+.btn-detalhes{
+    font-size:1rem;
+}
+
+.contato-box{
+    transition:0.4s;
+}
+
+.contato-box:hover{
+    transform:translateY(-10px);
+}
+
+.endereco{
+    transition:0.4s;
+}
+
+.endereco:hover{
+    transform:translateY(-8px);
+}
+
+#mural-depoimentos div{
+    background:#fff !important;
+    border-radius:20px !important;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08) !important;
+    border-left:5px solid #0077ff !important;
+}
+
+#mural-depoimentos strong{
+    color:#0b1f3a !important;
+}
+
+#mural-depoimentos p{
+    color:#5f7fa3 !important;
+}
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:70vh;
+    }
+
+    .hero-badge{
+        font-size:0.75rem;
+    }
+
+    .hero h1{
+        font-size:2rem !important;
+    }
+
+    .hero p{
+        font-size:0.9rem !important;
+    }
+
+    .btn-login{
+        width:100%;
+        text-align:center;
+    }
+}
+#mural-depoimentos{
+    max-width:900px !important;
+}
+
+#mural-depoimentos > div{
+    background:#fff !important;
+    border-radius:20px !important;
+    padding:25px !important;
+    margin-bottom:20px !important;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08) !important;
+    border-left:5px solid #0077ff !important;
+}
+section{
+    animation:fadeSection .8s ease;
+}
+
+@keyframes fadeSection{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@media(max-width:768px){
+
+    nav{
+        padding:12px;
+    }
+
+    .hero{
+        min-height:75vh;
+    }
+
+    .hero-content{
+        padding:25px;
+        margin:20px;
+    }
+
+    .hero h1{
+        font-size:2.2rem !important;
+    }
+
+    .hero p{
+        font-size:1rem !important;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-buttons a{
+        width:100%;
+    }
+}
+/* ===== NAVBAR PREMIUM FINAL ===== */
+
+nav{
+    position:sticky !important;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,0.96) !important;
+    backdrop-filter:blur(20px);
+    box-shadow:0 5px 25px rgba(0,0,0,0.06);
+    z-index:9999;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-weight:600;
+    color:#0b1f3a !important;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#0077ff !important;
+}
+
+.btn-login{
+    background:linear-gradient(135deg,#0077ff,#00c6ff) !important;
+    color:white !important;
+    border-radius:40px;
+    padding:12px 25px;
+    font-weight:700;
 }
