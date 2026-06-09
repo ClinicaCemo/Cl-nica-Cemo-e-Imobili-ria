@@ -10,24 +10,21 @@ body{
     background:#0a192f;
     color:#e6f1ff;
     overflow-x:hidden;
-    padding-top: 80px;
+    padding-top:0;
 }
 
 /* NAVBAR */
 
 nav{
-    position:fixed;
-    top:0;
+    position:relative;
     width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 8%;
     backdrop-filter:blur(20px);
-    background:rgba(10, 25, 47, 0.85);
+    background:rgba(255,255,255,0.95);
     z-index:1000;
-    border-bottom:1px solid rgba(100, 255, 218, 0.1);
-    transition: 0.4s;
 }
 
 .logo-area img{
@@ -393,7 +390,10 @@ footer{
 /* RESPONSIVO ORIGINAL */
 
 @media(max-width:900px){
-    body { padding-top: 150px; }
+    body{
+        padding-top:0;
+    }
+
     
     nav{ 
         flex-direction:column; 
@@ -509,34 +509,67 @@ footer{
     }
 }
 
-@media (max-width: 480px){
+@media(max-width:480px){
 
-    body{
-        padding-top:160px;
+    nav{
+        padding:10px;
+        gap:10px;
     }
 
-    .hero h1{
-        font-size:1.5rem !important;
-    }
-
-    .hero h2{
-        font-size:0.9rem !important;
-    }
-
-    .hero p{
-        font-size:0.8rem;
+    nav ul{
+        gap:8px;
     }
 
     nav a{
-        font-size:0.8rem;
+        font-size:0.75rem;
     }
 
     .btn-login{
-        font-size:0.75rem;
-        padding:8px 12px;
+        font-size:0.70rem;
+        padding:8px 10px;
+    }
+
+    .hero h1{
+        font-size:1.3rem !important;
+    }
+
+    .hero h2{
+        font-size:0.85rem !important;
+    }
+
+    .hero p{
+        font-size:0.78rem !important;
+    }
+
+    h2{
+        font-size:1.4rem !important;
+    }
+
+    .subtitulo{
+        font-size:0.85rem;
+    }
+
+    .imovel h3{
+        font-size:1rem;
+    }
+
+    .imovel p{
+        font-size:0.80rem;
+    }
+
+    .botao-servico{
+        font-size:0.80rem;
+    }
+
+    .media h1{
+        font-size:2rem !important;
+    }
+
+    input,
+    textarea{
+        font-size:0.85rem;
     }
 }
-
 /* ================= ANIMAÇÃO FINAL ================= */
 
 .esconder{
@@ -875,4 +908,42 @@ p, span, small{
     color: #000 !important;
     background: #fff !important;
     border: 1px solid #ccc;
+}
+.logo-imobiliaria-central{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo-imobiliaria-central img{
+    width:280px;
+    max-width:90%;
+    height:auto;
+}
+
+@media(max-width:480px){
+
+    .logo-imobiliaria-central img{
+        width:200px;
+    }
+
+}
+@media(max-width:480px){
+
+    section{
+        padding:60px 20px !important;
+    }
+
+    .hero{
+        min-height:60vh;
+    }
+
+    .hero-buttons a{
+        width:100%;
+        max-width:300px;
+    }
+
+    .imagem img{
+        height:160px;
+    }
+
 }
