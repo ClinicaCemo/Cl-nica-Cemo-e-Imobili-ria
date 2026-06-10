@@ -661,17 +661,17 @@ nav a:hover{
 
 /* TEXTO HERO */
 .hero h1{
-    color:#0b1f3a !important;
+    color:#7db5ff !important;
     font-size:3.2rem !important;
     text-shadow:none !important;
 }
 
 .hero h2{
-    color:#3a6ea5 !important;
+    color:#53a6ff !important;
 }
 
 .hero p{
-    color:#5f7fa3 !important;
+    color:hsl(218, 12%, 43%)!important;
 }
 
 /* BOTÕES HERO PREMIUM */
@@ -991,15 +991,14 @@ p, span, small{
 }
 
 .hero-content{
-    max-width:900px;
-    padding:50px;
-    border-radius:30px;
-    backdrop-filter:blur(10px);
-    background:rgba(255,255,255,0.15);
-    box-shadow:0 20px 50px rgba(0,0,0,0.08);
-    animation:fadeUp 1.2s ease;
+    max-width: 850px;
+    padding: 45px 60px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.30);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+    text-align: center;
 }
-
 
 nav{
     position:sticky;
@@ -1220,4 +1219,13 @@ nav{
 /* ESCONDE QUALQUER LOGO QUE ESTEJA DENTRO DO MENU */
 .logo-area{
     display:none !important;
+}
+.hero p{
+    max-width: 680px;
+    margin: 25px auto 0;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: #334155 !important;
 }

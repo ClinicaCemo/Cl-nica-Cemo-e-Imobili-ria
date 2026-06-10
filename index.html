@@ -55,7 +55,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="hero-content fade-in">
 
 <div class="hero-badge">
-🏢 Imobiliária • Medicina Ocupacional • Engenharia
+ Imobiliária • Medicina Ocupacional • Engenharia
 </div>
 
 <h1>
@@ -67,7 +67,11 @@ E CLÍNICA OCUPACIONAL
 </h2>
 
 <p>
-Soluções completas em imóveis, medicina ocupacional e engenharia de segurança do trabalho para empresas e clientes de Pirapora e região.
+Excelência, confiança e soluções completas para você e sua empresa.<br><br>
+
+Atuamos com imóveis, medicina ocupacional e engenharia de segurança do trabalho, oferecendo atendimento especializado e soluções eficientes para Pirapora e região.<br><br>
+
+Segurança, profissionalismo e dedicação em cada atendimento.
 </p>
 
 <div class="hero-buttons">
@@ -96,59 +100,16 @@ Conhecer Clínica
 
 </div>
 
-<h2>
-CEMO IMOBILIÁRIA
-</h2>
 
 <p class="subtitulo">
 
-Imóveis para locação e venda em Pirapora e região.
+Imóveis para locação e venda em Pirapora e região.<br><br>
+Especialistas em conectar pessoas aos imóveis ideais, oferecendo soluções completas em compra, venda, locação e administração imobiliária.<br><br>
+Atuamos com transparência, segurança e atendimento personalizado, acompanhando cada etapa do processo para garantir tranquilidade tanto para proprietários quanto para inquilinos.
 
 </p>
 
-<div class="cards">
-
-<div class="imovel hover-effect reveal"></div>
-
-<div class="imagem">
-
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="Casa Centro">
-
-</div>
-
-<h3>Casa Centro</h3>
-
-<p>3 quartos • garagem • área gourmet</p>
-
-<span class="preco">R$ 1.500/mês</span>
-
-<button class="btn-detalhes">
-Ver Detalhes
-</button>
-
-</div>
-
-<div class="imovel hover-effect reveal">
-
-</div>
-<div class="imagem">
-
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156" alt="Apartamento">
-
-</div>
-
-<h3>Apartamento</h3>
-
-<p>2 quartos • suíte • varanda</p>
-
-<span class="preco">R$ 1.200/mês</span>
-
-<button class="btn-detalhes">
-Ver Detalhes
-</button>
-
-</div>
-
+<div class="cards" id="lista-imoveis-site">
 </div>
 
 </section>
@@ -192,7 +153,8 @@ Avaliações dos Clientes
 </h2>
 
 <p class="subtitulo">
-Veja a opinião de quem já utilizou nossos serviços.
+A confiança de nossos clientes é a nossa maior conquista.<br><br>
+Conheça a experiência de quem já escolheu nossos serviços e veja por que somos referência em qualidade, compromisso e atendimento.
 </p>
 
 <div class="media">
@@ -455,6 +417,54 @@ function limitarNota(input) {
     if (valor > 5) input.value = 5;
     if (valor < 1) input.value = 1;
 }
+</script>
+
+<script>
+async function carregarImoveisSite() {
+console.log("FUNÇÃO DOS IMÓVEIS EXECUTOU");
+
+    try {
+
+        const resposta = await fetch("api/listar_imoveis.php");
+        const imoveis = await resposta.json();
+        console.log(imoveis);
+
+        const container =
+            document.getElementById("lista-imoveis-site");
+
+        container.innerHTML = "";
+
+        imoveis.forEach(imovel => {
+
+            container.innerHTML += `
+                <div class="imovel hover-effect reveal">
+
+                    <div class="imagem">
+                        <img src="${
+                            imovel.foto
+                            ? imovel.foto
+                            : 'https://via.placeholder.com/400x250'
+                        }" alt="${imovel.titulo}">
+                    </div>
+
+                    <h3>${imovel.titulo}</h3>
+
+                    <p>${imovel.descricao}</p>
+
+                    <span class="preco">
+                        ${imovel.preco}
+                    </span>
+
+                </div>
+            `;
+        });
+
+    } catch (erro) {
+        console.log(erro);
+    }
+}
+
+window.addEventListener("load", carregarImoveisSite);
 </script>
 
 </body>
