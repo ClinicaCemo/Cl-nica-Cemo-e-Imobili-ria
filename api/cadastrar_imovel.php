@@ -1,5 +1,4 @@
 <?php
-// Limpa qualquer espaço ou caractere que tenha vazado na memória do servidor
 if (ob_get_length()) ob_clean();
 
 include("conexao.php");
@@ -9,16 +8,33 @@ $preco = $_POST['preco'];
 $endereco = $_POST['endereco'];
 $descricao = $_POST['descricao'];
 
-$sql = "INSERT INTO imoveis
-(titulo, preco, endereco, descricao)
-VALUES
-('$titulo', '$preco', '$endereco', '$descricao')";
+$fotoNome = "";
 
-if($conn->query($sql)){
-    echo "Imóvel cadastrado com sucesso";
-    exit; // Fecha o arquivo com segurança aqui
-} else {
-    echo "Erro ao cadastrar";
-    exit; // Fecha o arquivo com segurança aqui também
+if (isset($_FILES['midia']) && $_FILES['midia']['error'] == 0) {
+
+    // Pega a extensão do arquivo
+    $extensao = pathinfo($_FILES['midia']['name'], PATHINFO_EXTENSION);
+
+    // Cria um nome único
+    $fotoNome = uniqid() . "." . $extensao;
+
+    // Caminho onde vai salvar
+    $destino = "../uploads/" . $fotoNome;
+
+    // Salva o arquivo
+    move_uploaded_file($_FILES['midia']['tmp_name'], $destino);
 }
+
+$sql = "INSERT INTO imoveis 
+(titulo, preco, endereco, descricao, foto)
+VALUES 
+('$titulo', '$preco', '$endereco', '$descricao', '$fotoNome')";
+
+if ($conn->query($sql)) {
+    echo "Imóvel cadastrado com sucesso";
+} else {
+    echo "Erro ao cadastrar: " . $conn->error;
+}
+
+exit;
 ?>

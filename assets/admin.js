@@ -19,8 +19,8 @@ async function carregarImoveis() {
                     <td>${imovel.preco}</td>
                     <td>
                         <button onclick="excluirImovel(${imovel.id})" class="excluir">
-                            Excluir
-                        </button>
+                         Excluir
+                        /button>
                     </td>
                 </tr>
             `;
