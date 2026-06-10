@@ -66,16 +66,35 @@ nav a:hover{
 }
 
 .btn-login{
-    background:linear-gradient(135deg,#64ffda,#40c4ff);
-    padding:12px 22px;
-    border-radius:10px;
-    color:#0a192f;
-    font-weight:bold;
-    box-shadow:0 0 20px rgba(100, 255, 218, 0.3);
-    transition: 0.4s;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    background:rgba(255,255,255,0.85) !important;
+
+    color:#72adfc !important;
+
+    border:2px solid #b8dcff !important;
+
+    padding:8px 16px !important;
+
+    border-radius:999px !important;
+
+    font-size:13px !important;
+    font-weight:700 !important;
+
+    text-decoration:none !important;
+
+    box-shadow:0 8px 25px rgba(106, 245, 255, 0.842) !important;
+
+    transition:all .3s ease !important;
 }
 
-.btn-login:hover { transform: scale(1.1); box-shadow: 0 0 30px rgba(100, 255, 218, 0.6); }
+.btn-login:hover{
+    background:#5ea0f5 !important;
+    color:#fff !important;
+    transform:translateY(-2px) !important;
+}
 
 /* HERO */
 
@@ -1175,4 +1194,30 @@ nav{
     border-radius:40px;
     padding:12px 25px;
     font-weight:700;
+}
+/* CORREÇÃO DO MENU */
+
+nav{
+    position:relative !important;
+    top:auto !important;
+    padding:12px 5% !important;
+    box-shadow:none !important;
+}
+
+.nav-links{
+    gap:15px !important;
+}
+
+.nav-links a{
+    font-size:0.9rem !important;
+}
+
+.btn-login{
+    padding:8px 15px !important;
+    font-size:0.85rem !important;
+}
+
+/* ESCONDE QUALQUER LOGO QUE ESTEJA DENTRO DO MENU */
+.logo-area{
+    display:none !important;
 }
