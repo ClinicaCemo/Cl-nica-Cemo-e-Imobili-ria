@@ -1102,72 +1102,49 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-/* --- BLOCO ÚNICO DE RESPONSIVIDADE (COLOCAR NO FINAL DO ARQUIVO) --- */
+/* --- BLOCO ÚNICO DE RESPONSIVIDADE (OTIMIZADO) --- */
 
 /* Ajustes para telas até 900px */
 @media(max-width: 900px) {
-    nav { flex-direction: column; gap: 15px; padding: 15px; backdrop-filter: blur(10px); }
-    nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
-    nav ul::-webkit-scrollbar { display: none; }
-    nav li { flex: 0 0 auto; }
+    nav { flex-direction: row !important; justify-content: space-between !important; padding: 10px 5px !important; backdrop-filter: blur(10px); }
+    nav ul { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 10px !important; }
+    nav ul li a { font-size: 0.8rem !important; white-space: nowrap; }
     
-    .hero { padding: 40px 15px; min-height: 80vh; }
-    .hero h1 { font-size: 1.8rem !important; line-height: 1.2; }
-    .hero h2 { font-size: 1rem !important; }
-    .hero p { font-size: 0.85rem !important; padding: 0 10px; }
-    .hero-buttons a { display: block; width: 90%; margin: 10px auto; padding: 12px 18px; font-size: 0.9rem; }
+    .hero { padding: 40px 15px; min-height: 50vh; }
+    .hero h1 { font-size: 1.6rem !important; }
     
-    h2 { font-size: 1.5rem; }
-    .cards { grid-template-columns: 1fr; }
-    .imagem img { height: 180px; }
-    .imovel p { font-size: 0.85rem; }
-    .imovel span { font-size: 1rem; }
-    .botao-servico { font-size: 0.9rem; padding: 15px; }
-    .contatos { grid-template-columns: 1fr; }
-    input, select, textarea { font-size: 0.9rem; padding: 12px; }
-    footer { font-size: 0.8rem; }
-    
-    .esconder { opacity: 1; transform: none; }
-    .imovel, .servicos div, .contatos div, .endereco { opacity: 1; transform: translateY(0); transition: 1s; }
+    .cards { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+    h2 { font-size: 1.3rem !important; }
 }
 
 /* Ajustes para telas até 768px */
 @media(max-width: 768px) {
-    body { font-size: 14px; }
+    body { font-size: 13px !important; }
     section { padding: 20px 10px !important; }
-    nav { padding: 10px; flex-direction: column; gap: 10px; }
-    nav ul { flex-direction: column; gap: 8px; }
-    nav ul li a { font-size: 14px; }
     
-    .hero { min-height: 75vh; padding: 30px 15px; }
-    .hero-content { padding: 25px; margin: 20px; }
-    .hero h1 { font-size: 2rem !important; }
-    .hero p { font-size: 1rem !important; }
-    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
-    .hero-buttons a { width: 100%; max-width: 300px; }
-    .btn-login { width: 100%; text-align: center; }
+    /* Menu compacto */
+    nav ul { gap: 5px !important; }
+    nav ul li a { font-size: 0.7rem !important; }
+    
+    .hero h1 { font-size: 1.4rem !important; }
+    .hero p { font-size: 0.9rem !important; }
+    .hero-buttons { display: flex; flex-direction: column; gap: 10px; }
+    
+    .imovel { padding: 10px !important; }
 }
 
 /* Ajustes para telas até 480px */
 @media(max-width: 480px) {
-    nav { padding: 10px; gap: 10px; }
-    nav a { font-size: 0.75rem; }
-    .btn-login { font-size: 0.70rem; padding: 8px 10px; }
+    /* Força menu em uma linha única */
+    nav { padding: 5px !important; }
+    nav ul { gap: 2px !important; }
+    nav ul li a { font-size: 0.6rem !important; }
     
-    .hero { min-height: 60vh; }
-    .hero h1 { font-size: 1.3rem !important; }
-    .hero h2 { font-size: 0.85rem !important; }
-    .hero p { font-size: 0.78rem !important; }
+    /* Cards em coluna única para telas muito pequenas */
+    .cards { grid-template-columns: 1fr !important; }
     
-    h2 { font-size: 1.4rem !important; }
-    .subtitulo { font-size: 0.85rem; }
-    .imovel h3 { font-size: 1rem; }
-    .imovel p { font-size: 0.80rem; }
-    .botao-servico { font-size: 0.80rem; }
-    .media h1 { font-size: 2rem !important; }
+    .hero { min-height: 40vh; }
+    .hero h1 { font-size: 1.2rem !important; }
     
-    section { padding: 60px 20px !important; }
-    .imagem img { height: 160px; }
-    .logo-imobiliaria-central img { width: 200px; }
-    input, textarea { font-size: 0.85rem; }
+    input, textarea { font-size: 0.8rem !important; padding: 8px !important; }
 }
