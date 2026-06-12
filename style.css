@@ -1125,3 +1125,19 @@ nav{
    
     h1, h2 { font-size: 1rem !important; }
 }
+/* --- AJUSTE RADICAL PARA MOBILE --- */
+@media (max-width: 768px) {
+    /* Força todos os textos a diminuírem de tamanho */
+    h1 { font-size: 1.2rem !important; margin: 5px 0 !important; }
+    h2 { font-size: 1rem !important; }
+    p { font-size: 0.7rem !important; line-height: 1.1 !important; margin-bottom: 5px !important; }
+    
+    /* Compacta o bloco principal */
+    .hero { min-height: auto !important; padding: 10px 5px !important; text-align: center; }
+    
+    /* Botões: Fazem o tamanho ser justo ao texto */
+    .hero-buttons a { padding: 6px 10px !important; font-size: 0.7rem !important; display: inline-block !important; margin: 2px !important; }
+    
+    /* Remove padding excessivo da seção que está ocupando a tela toda */
+    section { padding: 5px !important; }
+}
