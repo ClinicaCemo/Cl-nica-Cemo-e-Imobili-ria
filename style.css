@@ -1102,30 +1102,34 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-/* --- BLOCO ÚNICO E OTIMIZADO PARA MOBILE (SUBSTITUA TUDO PELO QUE ESTÁ ABAIXO) --- */
+/* --- CSS OTIMIZADO PARA MOBILE COMPACTO --- */
 
 @media (max-width: 768px) {
-    /* 1. Reset e Base */
-    html { font-size: 12px !important; }
-    section { padding: 10px 5px !important; }
+    /* 1. Redução Global */
+    html { font-size: 10px !important; } /* Diminui tudo proporcionalmente */
 
-    /* 2. Menu em linha (estilo desktop) */
-    nav { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; padding: 5px !important; }
-    nav ul { display: flex !important; flex-direction: row !important; gap: 5px !important; margin: 0 !important; }
-    nav ul li a { font-size: 0.7rem !important; padding: 2px 4px !important; }
-    
-    /* 3. Área do Proprietário (botão estilo menu) */
-    .btn-proprietario { background: transparent !important; color: #000 !important; border: none !important; font-size: 0.7rem !important; padding: 2px !important; box-shadow: none !important; }
+    /* 2. Menu Compacto e Botão Área do Proprietário */
+    nav { display: flex !important; flex-wrap: nowrap !important; justify-content: center !important; gap: 8px !important; padding: 5px !important; }
+    nav ul { display: flex !important; flex-direction: row !important; gap: 8px !important; }
+    nav ul li a, .btn-proprietario { 
+        font-size: 0.9rem !important; 
+        padding: 4px 6px !important; 
+        background: transparent !important; 
+        border: none !important; 
+        box-shadow: none !important; 
+        color: #333 !important; 
+    }
 
-    /* 4. Hero e Botões (lado a lado) */
-    .hero { min-height: auto !important; padding: 15px !important; text-align: center !important; }
-    .hero h1 { font-size: 1.2rem !important; margin-bottom: 5px !important; }
-    .hero p { font-size: 0.75rem !important; }
-    .hero-buttons { display: flex !important; flex-direction: row !important; justify-content: center !important; gap: 5px !important; }
-    .hero-buttons a { padding: 6px 10px !important; font-size: 0.7rem !important; }
+    /* 3. Ajuste do Bloco Principal (Hero) */
+    .hero { min-height: auto !important; padding: 20px 10px !important; }
+    .hero h1 { font-size: 1.4rem !important; }
+    .hero p { font-size: 0.8rem !important; }
     
-    /* 5. Cards e Contatos compactos */
-    .cards, .contatos { grid-template-columns: 1fr !important; gap: 5px !important; }
-    .imovel, .contatos div, .endereco { padding: 8px !important; margin: 5px !important; font-size: 0.75rem !important; border-radius: 10px !important; }
-    h2 { font-size: 1rem !important; }
+    /* 4. Botões menores e alinhados */
+    .hero-buttons { flex-direction: column !important; gap: 5px !important; }
+    .hero-buttons a { padding: 6px 12px !important; font-size: 0.8rem !important; }
+
+    /* 5. Seções de Contato/Cards */
+    section, .contatos, .imovel { padding: 10px !important; margin: 5px !important; }
+    h2 { font-size: 1.1rem !important; }
 }
