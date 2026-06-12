@@ -1102,68 +1102,30 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-/* --- AJUSTE COMPACTO PARA MOBILE --- */
+/* --- BLOCO ÚNICO E OTIMIZADO PARA MOBILE (SUBSTITUA TUDO PELO QUE ESTÁ ABAIXO) --- */
 
 @media (max-width: 768px) {
-    
-    nav { padding: 5px !important; flex-wrap: wrap !important; }
-    nav ul { gap: 5px !important; margin: 0 !important; }
-    nav ul li a { font-size: 0.65rem !important; padding: 2px 4px !important; }
-    
-    
-    .hero { min-height: 40vh !important; padding: 15px !important; }
-    .hero h1 { font-size: 1.1rem !important; line-height: 1.1 !important; margin-bottom: 5px !important; }
-    .hero p { font-size: 0.7rem !important; margin-bottom: 10px !important; }
-    
-    
-    .hero-buttons a { padding: 8px 12px !important; font-size: 0.75rem !important; }
-    
-   
-    .contatos { grid-template-columns: 1fr !important; gap: 5px !important; }
-    .imovel, .endereco, .contatos div { padding: 8px !important; margin: 5px !important; font-size: 0.7rem !important; }
-    
-   
-    h1, h2 { font-size: 1rem !important; }
-}
-/* --- AJUSTE RADICAL PARA MOBILE --- */
-@media (max-width: 768px) {
-    /* Força todos os textos a diminuírem de tamanho */
-    h1 { font-size: 1.2rem !important; margin: 5px 0 !important; }
-    h2 { font-size: 1rem !important; }
-    p { font-size: 0.7rem !important; line-height: 1.1 !important; margin-bottom: 5px !important; }
-    
-    /* Compacta o bloco principal */
-    .hero { min-height: auto !important; padding: 10px 5px !important; text-align: center; }
-    
-    /* Botões: Fazem o tamanho ser justo ao texto */
-    .hero-buttons a { padding: 6px 10px !important; font-size: 0.7rem !important; display: inline-block !important; margin: 2px !important; }
-    
-    /* Remove padding excessivo da seção que está ocupando a tela toda */
-    section { padding: 5px !important; }
-}
-/* --- BLOCO FINAL DE RESPONSIVIDADE (ESCALA PROPORCIONAL) --- */
-
-@media (max-width: 768px) {
-    /* Reseta o tamanho base para tudo ficar menor */
+    /* 1. Reset e Base */
     html { font-size: 12px !important; }
+    section { padding: 10px 5px !important; }
+
+    /* 2. Menu em linha (estilo desktop) */
+    nav { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; padding: 5px !important; }
+    nav ul { display: flex !important; flex-direction: row !important; gap: 5px !important; margin: 0 !important; }
+    nav ul li a { font-size: 0.7rem !important; padding: 2px 4px !important; }
     
-    /* Menu: Força ser pequeno e em uma linha */
-    nav { padding: 5px !important; flex-wrap: nowrap !important; }
-    nav ul { gap: 5px !important; }
-    nav ul li a { font-size: 0.7rem !important; padding: 2px !important; }
+    /* 3. Área do Proprietário (botão estilo menu) */
+    .btn-proprietario { background: transparent !important; color: #000 !important; border: none !important; font-size: 0.7rem !important; padding: 2px !important; box-shadow: none !important; }
+
+    /* 4. Hero e Botões (lado a lado) */
+    .hero { min-height: auto !important; padding: 15px !important; text-align: center !important; }
+    .hero h1 { font-size: 1.2rem !important; margin-bottom: 5px !important; }
+    .hero p { font-size: 0.75rem !important; }
+    .hero-buttons { display: flex !important; flex-direction: row !important; justify-content: center !important; gap: 5px !important; }
+    .hero-buttons a { padding: 6px 10px !important; font-size: 0.7rem !important; }
     
-    /* Seções: Remove o excesso de espaço que faz tudo parecer gigante */
-    section { padding: 15px 10px !important; }
-    
-    /* Títulos e Parágrafos: Escala menor */
-    h1 { font-size: 1.5rem !important; }
-    h2 { font-size: 1.2rem !important; }
-    p { font-size: 0.8rem !important; margin-bottom: 8px !important; }
-    
-    /* cards e contatos: Ajusta para ficar igual à 1000090335_2.jpg */
-    .imovel, .contatos, .cards { 
-        padding: 10px !important; 
-        margin: 5px !important; 
-        border-radius: 15px !important; 
-    }
+    /* 5. Cards e Contatos compactos */
+    .cards, .contatos { grid-template-columns: 1fr !important; gap: 5px !important; }
+    .imovel, .contatos div, .endereco { padding: 8px !important; margin: 5px !important; font-size: 0.75rem !important; border-radius: 10px !important; }
+    h2 { font-size: 1rem !important; }
 }
