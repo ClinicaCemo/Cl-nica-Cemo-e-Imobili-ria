@@ -1141,3 +1141,29 @@ nav{
     /* Remove padding excessivo da seção que está ocupando a tela toda */
     section { padding: 5px !important; }
 }
+/* --- BLOCO FINAL DE RESPONSIVIDADE (ESCALA PROPORCIONAL) --- */
+
+@media (max-width: 768px) {
+    /* Reseta o tamanho base para tudo ficar menor */
+    html { font-size: 12px !important; }
+    
+    /* Menu: Força ser pequeno e em uma linha */
+    nav { padding: 5px !important; flex-wrap: nowrap !important; }
+    nav ul { gap: 5px !important; }
+    nav ul li a { font-size: 0.7rem !important; padding: 2px !important; }
+    
+    /* Seções: Remove o excesso de espaço que faz tudo parecer gigante */
+    section { padding: 15px 10px !important; }
+    
+    /* Títulos e Parágrafos: Escala menor */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    p { font-size: 0.8rem !important; margin-bottom: 8px !important; }
+    
+    /* cards e contatos: Ajusta para ficar igual à 1000090335_2.jpg */
+    .imovel, .contatos, .cards { 
+        padding: 10px !important; 
+        margin: 5px !important; 
+        border-radius: 15px !important; 
+    }
+}
