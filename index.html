@@ -8,7 +8,7 @@
 
 <title>CEMO Imobiliária e Clínica Ocupacional</title>
 
-<!-- Adição de Meta Tags para SEO e Performance -->
+
 <meta name="description" content="Soluções completas em imóveis, medicina ocupacional e engenharia de segurança do trabalho em Pirapora-MG.">
 <meta name="keywords" content="Imobiliária, Clínica Ocupacional, Medicina do Trabalho, Pirapora, Segurança do Trabalho">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Google Fonts para um visual mais profissional -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 </head>
@@ -297,7 +297,7 @@ Desenvolvido por <span style="color: #ffffff; font-weight: 800;">MrBrozau</span>
 </footer>
 
 <script>
-// 1. CARREGA AS AVALIAÇÕES E FAZ OS CÁLCULOS
+// CARREGAR AS AVALIAÇÕES E FAZER OS CÁLCULOS
 async function carregarDepoimentosNoSite() {
     try {
         const resposta = await fetch("api/listar_avaliacoes.php");
@@ -352,7 +352,7 @@ async function carregarDepoimentosNoSite() {
     }
 }
 
-// 2. ENVIA A AVALIAÇÃO SEM DEIXAR A PÁGINA ATUALIZAR SOZINHA
+//  ENVIA A AVALIAÇÃO SEM DEIXAR A PÁGINA ATUALIZAR SOZINHA
 async function enviarAvaliacao(event) {
     event.preventDefault(); 
 
@@ -372,15 +372,14 @@ async function enviarAvaliacao(event) {
         });
 
         await resposta.text();
-        
-        alert("Avaliação enviada com sucesso! Obrigado.");
-        document.getElementById("form-avaliacao").reset();
+      
         
         window.location.reload();
 
     } catch (error) {
         console.error("Erro ao enviar avaliação:", error);
-        alert("Erro ao conectar com o servidor.");
+    
+    
     }
 }
 

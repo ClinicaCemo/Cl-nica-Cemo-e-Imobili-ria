@@ -5,7 +5,7 @@ if (ob_get_length()) ob_clean();
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "cemo"; // Garanta que o nome do seu banco está correto aqui!
+$dbname = "cemo"; 
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

@@ -1,6 +1,6 @@
 const API = "api";
 
-// 1. FUNÇÃO QUE CARREGA OS IMÓVEIS NA TABELA
+// FUNÇÃO QUE CARREGA OS IMÓVEIS NA TABELA
 async function carregarImoveis() {
     try {
         const resposta = await fetch(`${API}/listar_imoveis.php`);
@@ -32,7 +32,7 @@ async function carregarImoveis() {
     }
 }
 
-// 2. FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
+// FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
 async function cadastrarImovel() {
     const titulo = document.getElementById("titulo").value;
     const preco = document.getElementById("preco").value;
@@ -60,20 +60,20 @@ async function cadastrarImovel() {
         const resultado = await resposta.text();
 
         console.log(resultado);
-        alert(resultado);
+        
 
     } catch (error) {
         console.log(error);
     }
 }
 
-// 4. FUNÇÃO QUE CARREGA AS AVALIAÇÕES DOS CLIENTES
+// FUNÇÃO QUE CARREGA AS AVALIAÇÕES DOS CLIENTES
 async function carregarAvaliacoes() {
     try {
         const resposta = await fetch(`${API}/listar_avaliacoes.php`);
         const avaliacoes = await resposta.json();
 
-        // Procura a tabela de avaliações pelo ID correto
+
         const tabela = document.getElementById("lista-avaliacoes");
         if (!tabela) return;
 
@@ -119,18 +119,18 @@ async function salvarClinica() {
         console.log(resultado);
 
 if (resultado.includes("sucesso")) { 
-            alert("Alterações salvas com sucesso!");
+           
         } else {
-            alert("Erro ao salvar.");
+          
         }
 
     } catch (erro) {
         console.log(erro);
-        alert("Erro de conexão.");
+        
     }
 }
 
-// 5. SE DETERMINA QUE TUDO COMEÇA ASSIM QUE A PÁGINA ABRE
+
 window.onload = () => {
     carregarImoveis();
     carregarAvaliacoes();

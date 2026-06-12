@@ -1,6 +1,6 @@
 const API = "api";
 
-// 1. FUNÇÃO QUE CARREGA OS IMÓVEIS NA TABELA
+// CARREGA OS IMÓVEIS NA TABELA
 async function carregarImoveis() {
     try {
         const resposta = await fetch(`${API}/listar_imoveis.php`);
@@ -32,7 +32,7 @@ async function carregarImoveis() {
     }
 }
 
-// 2. FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
+// FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
 async function cadastrarImovel() {
     const titulo = document.getElementById("titulo").value;
     const preco = document.getElementById("preco").value;
@@ -58,10 +58,9 @@ async function cadastrarImovel() {
 
         await resposta.text();
 
-        // Limpa o formulário silenciosamente, sem alertas!
+
         document.getElementById("form-cadastro").reset();
-        
-        // Recarrega a página de forma limpa
+
         window.location.reload();
 
     } catch (error) {
@@ -69,7 +68,7 @@ async function cadastrarImovel() {
     }
 }
 
-// 3. FUNÇÃO QUE EXCLUI UM IMÓVEL
+// FUNÇÃO QUE EXCLUI UM IMÓVEL
 async function excluirImovel(id) {
     if (!confirm("Deseja excluir este imóvel?")) {
         return;
@@ -82,7 +81,7 @@ async function excluirImovel(id) {
 
         await resposta.text();
 
-        // Recarrega a página direto após excluir, sem caixas de alertas na tela
+
         window.location.reload();
 
     } catch (error) {
@@ -90,13 +89,13 @@ async function excluirImovel(id) {
     }
 }
 
-// 4. FUNÇÃO QUE CARREGA AS AVALIAÇÕES DOS CLIENTES
+// CARREGAR AS AVALIAÇÕES DOS CLIENTES
 async function carregarAvaliacoes() {
     try {
         const resposta = await fetch(`${API}/listar_avaliacoes.php`);
         const avaliacoes = await resposta.json();
 
-        // Procura a tabela de avaliações pelo ID correto
+
         const tabela = document.getElementById("lista-avaliacoes");
         if (!tabela) return;
 
@@ -153,7 +152,7 @@ if (resultado.includes("sucesso")) {
     }
 }
 
-// 5. SE DETERMINA QUE TUDO COMEÇA ASSIM QUE A PÁGINA ABRE
+
 window.onload = () => {
     carregarImoveis();
     carregarAvaliacoes();

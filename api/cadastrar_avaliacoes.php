@@ -17,7 +17,7 @@ $nome = $_POST['nome'] ?? '';
 $nota = $_POST['nota'] ?? '';
 $comentario = $_POST['comentario'] ?? '';
 
-// Insere os dados na tabela 'avaliacoes' do seu MySQL
+// Inserir os dados na tabela 'avaliacoes' no MySQL
 $sql = "INSERT INTO avaliacoes (nome, nota, comentario) VALUES ('$nome', '$nota', '$comentario')";
 
 if ($conn->query($sql)) {

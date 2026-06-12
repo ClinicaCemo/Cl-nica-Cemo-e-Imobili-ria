@@ -21,7 +21,7 @@ if (isset($_FILES['midia']) && $_FILES['midia']['error'] == 0) {
     // Caminho onde vai salvar
     $destino = "../uploads/" . $fotoNome;
 
-    // Salva o arquivo
+    // Salva os arquivo
     move_uploaded_file($_FILES['midia']['tmp_name'], $destino);
 }
 

@@ -1,3 +1,6 @@
+html {
+    font-size: 16px;
+}
 *{
     margin:0;
     padding:0;
@@ -512,189 +515,7 @@ footer{
     to{ opacity:1; transform:translateY(0); }
 }
 
-/* RESPONSIVO ORIGINAL */
 
-@media(max-width:900px){
-    body{
-        padding-top:0;
-    }
-
-    
-    nav{ 
-        flex-direction:column; 
-        gap:15px; 
-        padding: 15px;
-    }
-    nav ul{ 
-        flex-wrap:wrap; 
-        justify-content:center;
-        gap: 10px;
-    }
-    nav a { font-size: 0.9rem; }
-    
-    .hero h1{ font-size:2.2rem !important; }
-    .hero h2{ font-size:1.1rem !important; }
-    h2{ font-size:1.8rem; }
-    
-    .contatos{ 
-        grid-template-columns: 1fr; 
-    }
-    
-    .imovel, .servicos div, .contatos div, .endereco{
-        opacity:1;
-        transform:translateY(0);
-        transition:1s;
-    }
-    .mostrar{ opacity:1; transform:translateY(0); } 
-}
-
-/* ================= MELHORIAS ADICIONADAS ================= */
-
-@media (max-width: 900px){
-
-    nav ul{
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    nav ul::-webkit-scrollbar{
-        display: none;
-    }
-
-    nav li{
-        flex: 0 0 auto;
-    }
-
-    .logo-area img{
-        height:45px;
-    }
-
-    .btn-login{
-        padding:10px 16px;
-        font-size:0.85rem;
-    }
-
-    .hero{
-        padding:40px 15px;
-        min-height:80vh;
-    }
-
-    .hero h1{
-        font-size:1.8rem !important;
-        line-height:1.2;
-    }
-
-    .hero h2{
-        font-size:1rem !important;
-    }
-
-    .hero p{
-        font-size:0.9rem;
-        padding:0 10px;
-    }
-
-    .hero-buttons a{
-        padding:12px 18px;
-        font-size:0.9rem;
-    }
-
-    h2{
-        font-size:1.5rem;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .imagem img{
-        height:180px;
-    }
-
-    .imovel p{
-        font-size:0.85rem;
-    }
-
-    .imovel span{
-        font-size:1rem;
-    }
-
-    .botao-servico{
-        font-size:0.9rem;
-        padding:15px;
-    }
-
-    input, select, textarea{
-        font-size:0.9rem;
-        padding:12px;
-    }
-
-    footer{
-        font-size:0.8rem;
-    }
-}
-
-@media(max-width:480px){
-
-    nav{
-        padding:10px;
-        gap:10px;
-    }
-
-    nav ul{
-        gap:8px;
-    }
-
-    nav a{
-        font-size:0.75rem;
-    }
-
-    .btn-login{
-        font-size:0.70rem;
-        padding:8px 10px;
-    }
-
-    .hero h1{
-        font-size:1.3rem !important;
-    }
-
-    .hero h2{
-        font-size:0.85rem !important;
-    }
-
-    .hero p{
-        font-size:0.78rem !important;
-    }
-
-    h2{
-        font-size:1.4rem !important;
-    }
-
-    .subtitulo{
-        font-size:0.85rem;
-    }
-
-    .imovel h3{
-        font-size:1rem;
-    }
-
-    .imovel p{
-        font-size:0.80rem;
-    }
-
-    .botao-servico{
-        font-size:0.80rem;
-    }
-
-    .media h1{
-        font-size:2rem !important;
-    }
-
-    input,
-    textarea{
-        font-size:0.85rem;
-    }
-}
 /* ================= ANIMAÇÃO FINAL ================= */
 
 .esconder{
@@ -714,19 +535,13 @@ footer{
     will-change: transform, opacity;
 }
 
-@media (max-width: 900px){
-    .esconder{
-        opacity: 1;
-        transform: none;
-    }
-}
-/* FORÇA TOTAL PRA SOBRESCREVER */
+
 body{
     background: linear-gradient(180deg,#f4f8ff,#eaf2ff) !important;
     color:#0b1f3a !important;
 }
 
-/* NAVBAR PREMIUM */
+/* NAVBAR TOP */
 nav{
     background: rgba(255,255,255,0.95) !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -749,7 +564,7 @@ nav a:hover{
     border-radius:30px;
 }
 
-/* HERO ULTRA PROFISSIONAL */
+/* HERO TOP */
 .hero{
     position:relative;
     background:
@@ -779,7 +594,7 @@ nav a:hover{
     color:hsl(218, 12%, 43%)!important;
 }
 
-/* BOTÕES HERO PREMIUM */
+/* BOTÕES HERO TOP */
 .hero-buttons a{
     background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
     color:#fff !important;
@@ -803,7 +618,7 @@ h2{
     color:#0b1f3a !important;
 }
 
-/* CARDS ESTILO LUXO */
+/* CARDS DAORA */
 .imovel{
     background:#fff;
     border-radius:25px;
@@ -868,7 +683,7 @@ footer{
     color:#5f7fa3 !important;
 }
 
-/* ================= ANIMAÇÃO DE SCROLL PROFISSIONAL ================= */
+/* ================= ANIMAÇÃO DE SCROLL TOP ================= */
 
 .reveal{
     opacity:0;
@@ -881,7 +696,7 @@ footer{
     transform: translateY(0) scale(1);
 }
 
-/* delay elegante */
+/* delay top */
 .reveal:nth-child(2){ transition-delay:0.1s; }
 .reveal:nth-child(3){ transition-delay:0.2s; }
 .reveal:nth-child(4){ transition-delay:0.3s; }
@@ -895,39 +710,14 @@ footer{
     min-height:48px;
 }
 
-/* espaçamento premium */
+/* espaçamento top */
 section{
     padding:120px 8%;
 }
 
-/* ================= MOBILE PREMIUM ================= */
+/* ================= MOBILE DAORA ================= */
 
-@media(max-width:900px){
 
-    .hero h1{
-        font-size:1.8rem !important;
-    }
-
-    .hero h2{
-        font-size:1rem !important;
-    }
-
-    .hero p{
-        font-size:0.85rem !important;
-    }
-
-    .hero-buttons a{
-        display:block;
-        width:90%;
-        margin:10px auto;
-    }
-
-    nav{
-        backdrop-filter: blur(10px);
-    }
-
-}
-/* ===== CORREÇÃO FINAL DE VISIBILIDADE (SEM MEXER NO RESTO) ===== */
 
 /* avaliação (nota tipo 3.0) */
 .media h1{
@@ -946,7 +736,7 @@ section{
     font-size:1.5rem;
 }
 
-/* inputs (corrige texto invisível) */
+/* inputs  */
 input,
 select,
 textarea{
@@ -960,7 +750,7 @@ textarea::placeholder{
     color:#7a9cc6 !important;
 }
 
-/* links contato (tava claro demais) */
+/* links contato  */
 .contatos a{
     color:#0077ff !important;
     font-weight:600;
@@ -976,7 +766,7 @@ footer{
 p, span, small{
     color:#0b1f3a !important;
 }
-/* ===== AVALIAÇÃO COMPLETA BONITA ===== */
+/* ===== AVALIAÇÃO COMPLETA MAIS TOP===== */
 
 .media{
     background:#ffffff !important;
@@ -1012,7 +802,7 @@ p, span, small{
     font-size:1.5rem;
     margin-top:5px;
 }
-/* ===== FORÇAR NOME DO USUÁRIO ESCURO ===== */
+
 
 .media *{
     color:#0b1f3a !important;
@@ -1055,34 +845,9 @@ p, span, small{
     height:auto;
 }
 
-@media(max-width:480px){
 
-    .logo-imobiliaria-central img{
-        width:200px;
-    }
 
-}
-@media(max-width:480px){
-
-    section{
-        padding:60px 20px !important;
-    }
-
-    .hero{
-        min-height:60vh;
-    }
-
-    .hero-buttons a{
-        width:100%;
-        max-width:300px;
-    }
-
-    .imagem img{
-        height:160px;
-    }
-
-}
-/* ===== MELHORIAS PREMIUM 2026 ===== */
+/* ===== MELHORIAS  ===== */
 
 .hero-badge{
     display:inline-block;
@@ -1178,29 +943,7 @@ nav{
     color:#5f7fa3 !important;
 }
 
-@media(max-width:768px){
 
-    .hero{
-        min-height:70vh;
-    }
-
-    .hero-badge{
-        font-size:0.75rem;
-    }
-
-    .hero h1{
-        font-size:2rem !important;
-    }
-
-    .hero p{
-        font-size:0.9rem !important;
-    }
-
-    .btn-login{
-        width:100%;
-        text-align:center;
-    }
-}
 #mural-depoimentos{
     max-width:900px !important;
 }
@@ -1227,40 +970,8 @@ section{
         transform:translateY(0);
     }
 }
-@media(max-width:768px){
 
-    nav{
-        padding:12px;
-    }
-
-    .hero{
-        min-height:75vh;
-    }
-
-    .hero-content{
-        padding:25px;
-        margin:20px;
-    }
-
-    .hero h1{
-        font-size:2.2rem !important;
-    }
-
-    .hero p{
-        font-size:1rem !important;
-    }
-
-    .hero-buttons{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .hero-buttons a{
-        width:100%;
-    }
-}
-/* ===== NAVBAR PREMIUM FINAL ===== */
+/* ===== NAVBAR MELHORADA ===== */
 
 nav{
     position:sticky !important;
@@ -1321,7 +1032,7 @@ nav{
     font-size:0.85rem !important;
 }
 
-/* ESCONDE QUALQUER LOGO QUE ESTEJA DENTRO DO MENU */
+
 .logo-area{
     display:none !important;
 }
@@ -1391,52 +1102,72 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-}
-@media (max-width: 768px) {
-    section {
-        padding: 20px 10px !important;
-    }
-}
-h1 {
-    font-size: clamp(28px, 5vw, 48px);
+/* --- BLOCO ÚNICO DE RESPONSIVIDADE (COLOCAR NO FINAL DO ARQUIVO) --- */
+
+/* Ajustes para telas até 900px */
+@media(max-width: 900px) {
+    nav { flex-direction: column; gap: 15px; padding: 15px; backdrop-filter: blur(10px); }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+    nav ul::-webkit-scrollbar { display: none; }
+    nav li { flex: 0 0 auto; }
+    
+    .hero { padding: 40px 15px; min-height: 80vh; }
+    .hero h1 { font-size: 1.8rem !important; line-height: 1.2; }
+    .hero h2 { font-size: 1rem !important; }
+    .hero p { font-size: 0.85rem !important; padding: 0 10px; }
+    .hero-buttons a { display: block; width: 90%; margin: 10px auto; padding: 12px 18px; font-size: 0.9rem; }
+    
+    h2 { font-size: 1.5rem; }
+    .cards { grid-template-columns: 1fr; }
+    .imagem img { height: 180px; }
+    .imovel p { font-size: 0.85rem; }
+    .imovel span { font-size: 1rem; }
+    .botao-servico { font-size: 0.9rem; padding: 15px; }
+    .contatos { grid-template-columns: 1fr; }
+    input, select, textarea { font-size: 0.9rem; padding: 12px; }
+    footer { font-size: 0.8rem; }
+    
+    .esconder { opacity: 1; transform: none; }
+    .imovel, .servicos div, .contatos div, .endereco { opacity: 1; transform: translateY(0); transition: 1s; }
 }
 
-h2 {
-    font-size: clamp(22px, 4vw, 36px);
+/* Ajustes para telas até 768px */
+@media(max-width: 768px) {
+    body { font-size: 14px; }
+    section { padding: 20px 10px !important; }
+    nav { padding: 10px; flex-direction: column; gap: 10px; }
+    nav ul { flex-direction: column; gap: 8px; }
+    nav ul li a { font-size: 14px; }
+    
+    .hero { min-height: 75vh; padding: 30px 15px; }
+    .hero-content { padding: 25px; margin: 20px; }
+    .hero h1 { font-size: 2rem !important; }
+    .hero p { font-size: 1rem !important; }
+    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+    .hero-buttons a { width: 100%; max-width: 300px; }
+    .btn-login { width: 100%; text-align: center; }
 }
 
-p {
-    font-size: clamp(14px, 2.5vw, 18px);
-}
-@media (max-width: 768px){
-
-    nav{
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .hero{
-        padding: 30px 15px;
-    }
-
-    button, .btn-login{
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-        display: block;
-    }
-}
-img {
-    max-width: 100%;
-    height: auto;
+/* Ajustes para telas até 480px */
+@media(max-width: 480px) {
+    nav { padding: 10px; gap: 10px; }
+    nav a { font-size: 0.75rem; }
+    .btn-login { font-size: 0.70rem; padding: 8px 10px; }
+    
+    .hero { min-height: 60vh; }
+    .hero h1 { font-size: 1.3rem !important; }
+    .hero h2 { font-size: 0.85rem !important; }
+    .hero p { font-size: 0.78rem !important; }
+    
+    h2 { font-size: 1.4rem !important; }
+    .subtitulo { font-size: 0.85rem; }
+    .imovel h3 { font-size: 1rem; }
+    .imovel p { font-size: 0.80rem; }
+    .botao-servico { font-size: 0.80rem; }
+    .media h1 { font-size: 2rem !important; }
+    
+    section { padding: 60px 20px !important; }
+    .imagem img { height: 160px; }
+    .logo-imobiliaria-central img { width: 200px; }
+    input, textarea { font-size: 0.85rem; }
 }
