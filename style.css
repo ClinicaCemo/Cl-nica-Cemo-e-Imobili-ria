@@ -1105,26 +1105,23 @@ nav{
 /* --- AJUSTE COMPACTO PARA MOBILE --- */
 
 @media (max-width: 768px) {
-    /* 1. Menu igual à referência: Fonte pequena, sem padding exagerado */
-    nav { padding: 5px !important; }
-    nav ul { gap: 10px !important; flex-wrap: wrap !important; justify-content: center !important; }
-    nav ul li a { font-size: 0.7rem !important; padding: 2px !important; }
-
-    /* 2. Remover o espaçamento gigante das seções */
-    section { padding: 10px !important; margin: 0 !important; }
-
-    /* 3. Cards e blocos de conteúdo */
-    .hero, .imovel, .servicos div, .contatos div { 
-        padding: 10px !important; 
-        margin: 5px auto !important; 
-        border-radius: 10px !important; 
-    }
-
-    /* 4. Ajuste de textos para caberem na tela */
-    h1 { font-size: 1.2rem !important; }
-    h2 { font-size: 1rem !important; }
-    p { font-size: 0.75rem !important; line-height: 1.2 !important; }
     
-    /* 5. Contato: Coloca um do lado do outro ou bem compacto */
+    nav { padding: 5px !important; flex-wrap: wrap !important; }
+    nav ul { gap: 5px !important; margin: 0 !important; }
+    nav ul li a { font-size: 0.65rem !important; padding: 2px 4px !important; }
+    
+    
+    .hero { min-height: 40vh !important; padding: 15px !important; }
+    .hero h1 { font-size: 1.1rem !important; line-height: 1.1 !important; margin-bottom: 5px !important; }
+    .hero p { font-size: 0.7rem !important; margin-bottom: 10px !important; }
+    
+    
+    .hero-buttons a { padding: 8px 12px !important; font-size: 0.75rem !important; }
+    
+   
     .contatos { grid-template-columns: 1fr !important; gap: 5px !important; }
+    .imovel, .endereco, .contatos div { padding: 8px !important; margin: 5px !important; font-size: 0.7rem !important; }
+    
+   
+    h1, h2 { font-size: 1rem !important; }
 }
