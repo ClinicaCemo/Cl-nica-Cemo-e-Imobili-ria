@@ -1102,49 +1102,29 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-/* --- BLOCO ÚNICO DE RESPONSIVIDADE (OTIMIZADO) --- */
+/* --- AJUSTE COMPACTO PARA MOBILE --- */
 
-/* Ajustes para telas até 900px */
-@media(max-width: 900px) {
-    nav { flex-direction: row !important; justify-content: space-between !important; padding: 10px 5px !important; backdrop-filter: blur(10px); }
-    nav ul { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; gap: 10px !important; }
-    nav ul li a { font-size: 0.8rem !important; white-space: nowrap; }
-    
-    .hero { padding: 40px 15px; min-height: 50vh; }
-    .hero h1 { font-size: 1.6rem !important; }
-    
-    .cards { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
-    h2 { font-size: 1.3rem !important; }
-}
-
-/* Ajustes para telas até 768px */
-@media(max-width: 768px) {
-    body { font-size: 13px !important; }
-    section { padding: 20px 10px !important; }
-    
-    /* Menu compacto */
-    nav ul { gap: 5px !important; }
-    nav ul li a { font-size: 0.7rem !important; }
-    
-    .hero h1 { font-size: 1.4rem !important; }
-    .hero p { font-size: 0.9rem !important; }
-    .hero-buttons { display: flex; flex-direction: column; gap: 10px; }
-    
-    .imovel { padding: 10px !important; }
-}
-
-/* Ajustes para telas até 480px */
-@media(max-width: 480px) {
-    /* Força menu em uma linha única */
+@media (max-width: 768px) {
+    /* 1. Menu igual à referência: Fonte pequena, sem padding exagerado */
     nav { padding: 5px !important; }
-    nav ul { gap: 2px !important; }
-    nav ul li a { font-size: 0.6rem !important; }
+    nav ul { gap: 10px !important; flex-wrap: wrap !important; justify-content: center !important; }
+    nav ul li a { font-size: 0.7rem !important; padding: 2px !important; }
+
+    /* 2. Remover o espaçamento gigante das seções */
+    section { padding: 10px !important; margin: 0 !important; }
+
+    /* 3. Cards e blocos de conteúdo */
+    .hero, .imovel, .servicos div, .contatos div { 
+        padding: 10px !important; 
+        margin: 5px auto !important; 
+        border-radius: 10px !important; 
+    }
+
+    /* 4. Ajuste de textos para caberem na tela */
+    h1 { font-size: 1.2rem !important; }
+    h2 { font-size: 1rem !important; }
+    p { font-size: 0.75rem !important; line-height: 1.2 !important; }
     
-    /* Cards em coluna única para telas muito pequenas */
-    .cards { grid-template-columns: 1fr !important; }
-    
-    .hero { min-height: 40vh; }
-    .hero h1 { font-size: 1.2rem !important; }
-    
-    input, textarea { font-size: 0.8rem !important; padding: 8px !important; }
+    /* 5. Contato: Coloca um do lado do outro ou bem compacto */
+    .contatos { grid-template-columns: 1fr !important; gap: 5px !important; }
 }
