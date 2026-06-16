@@ -1866,3 +1866,51 @@ nav a{
 }
 
 }
+@media (max-width:768px){
+
+/* Menu mínimo */
+nav{
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+nav ul,
+.nav-links{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 30px !important;
+}
+
+nav li{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+nav a{
+    font-size: 9px !important;
+    padding: 0 3px !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    height: auto !important;
+}
+
+/* Área do proprietário */
+.area-proprietario,
+.proprietario{
+    font-size: 9px !important;
+    margin: 2px 0 !important;
+    padding: 0 !important;
+}
+
+}
