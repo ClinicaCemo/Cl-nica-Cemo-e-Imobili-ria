@@ -1213,3 +1213,155 @@ nav{
     flex-wrap: wrap !important;
     justify-content: center;
 }
+@media (max-width: 768px){
+
+    /* 🔷 HERO (tela inicial) */
+    .hero h1{
+        font-size: 1.6rem !important;
+        line-height: 1.3;
+    }
+
+    .hero h2{
+        font-size: 1rem !important;
+    }
+
+    .hero p{
+        font-size: 0.85rem !important;
+        line-height: 1.5;
+    }
+
+    .hero-content{
+        padding: 15px !important;
+        border-radius: 20px !important;
+    }
+
+    /* 🔘 BOTÕES */
+    .hero-buttons a{
+        min-width: 140px !important;
+        padding: 10px 14px !important;
+        font-size: 0.8rem !important;
+        border-radius: 25px !important;
+    }
+
+    /* ⭐ AVALIAÇÃO (5.0 estrela) */
+    .media{
+        padding: 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .media h1{
+        font-size: 2rem !important;
+    }
+
+    .media p{
+        font-size: 0.85rem !important;
+    }
+
+    /* 🧾 FORMULÁRIO */
+    input, textarea{
+        padding: 10px !important;
+        font-size: 0.85rem !important;
+        border-radius: 12px !important;
+    }
+
+    textarea{
+        min-height: 100px !important;
+    }
+
+    /* 🚀 BOTÃO ENVIAR */
+    button{
+        padding: 12px !important;
+        font-size: 0.9rem !important;
+        border-radius: 25px !important;
+    }
+
+    /* 📞 CONTATO */
+    .contato-box{
+        padding: 15px !important;
+        border-radius: 20px !important;
+    }
+
+    .contato-box h3{
+        font-size: 1rem !important;
+    }
+
+    .contato-box p{
+        font-size: 0.85rem !important;
+    }
+
+}
+.bg-section{
+    width:100%;
+    height:450px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-radius:25px;
+    margin:30px 0;
+}
+#imobiliaria{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.85),
+            rgba(255,255,255,0.96)
+        ),
+        url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2200&q=80") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+#clinica{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.85),
+            rgba(255,255,255,0.96)
+        ),
+        url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2200&q=80") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+#imobiliaria,
+#clinica{
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin: 30px 15px;
+}
+#avaliacoes{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.92),
+            rgba(255,255,255,0.96)
+        ),
+        url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2200&q=80") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+
+    border-radius: 35px;
+    margin: 40px 20px;
+    padding: 60px 8%;
+    overflow: hidden;
+}
+#contato{
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.92),
+            rgba(255,255,255,0.97)
+        ),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=80") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+
+    border-radius: 35px;
+    margin: 40px 20px;
+    padding: 60px 8%;
+    overflow: hidden;
+}

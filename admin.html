@@ -8,121 +8,240 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .admin-page {
-            min-height: 100vh;
-            background: #5f6ffc;
-            color: white;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-        .topbar {
-            background: #041120;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.admin-page{
+    min-height:100vh;
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #0ea5e9
+    );
+    color:white;
+}
 
-        .topbar h1 {
-            color: #0509ff;
-        }
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .logout {
-            background: #dc2626;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
+.topbar h1{
+    color:#ffffff;
+    font-size:1.8rem;
+    font-weight:700;
+}
 
-        .dashboard {
-            padding: 40px;
-        }
+.logout{
+    background:linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+    );
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-        .cards-admin {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.logout:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(220,38,38,.4);
+}
 
-        .card-admin {
-            background: rgba(255, 255, 255, .05);
-            backdrop-filter: blur(15px);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, .1);
-        }
+.dashboard{
+    max-width:1400px;
+    margin:auto;
+    padding:40px;
+}
 
-        .card-admin h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            text-align: left;
-        }
+.cards-admin{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
 
-        .card-admin p {
-            color: #041120;
-        }
+.card-admin{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:30px;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 
-        .section-admin {
-            margin-top: 40px;
-            background: rgba(255, 255, 255, .05);
-            padding: 30px;
-            border-radius: 20px;
-        }
+.card-admin:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
 
-        .section-admin h2 {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+.card-admin h2{
+    font-size:2.3rem;
+    margin-bottom:10px;
+    color:#ffffff;
+}
 
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, .08);
-            color: rgb(12, 49, 255);
-        }
+.card-admin p{
+    color:rgba(255,255,255,.75);
+    font-size:.95rem;
+}
 
-        button {
-            background: #0206f7;
-            color: black;
-            border: none;
-            padding: 15px 25px;
-            border-radius: 12px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+.section-admin{
+    margin-top:35px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+.section-admin h2{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:white;
+}
 
-        table th,
-        table td {
-            padding: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, .1);
-        }
+input,
+textarea,
+select{
+    width:100%;
+    padding:16px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:14px;
+    background:rgba(255,255,255,.08);
+    color:white;
+    outline:none;
+    transition:.3s;
+}
 
-        table th {
-            color: #2008fc;
-        }
+input::placeholder,
+textarea::placeholder{
+    color:rgba(255,255,255,.55);
+}
 
-        .excluir {
-            background: #dc2626;
-            color: white;
-        }
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,.25);
+}
 
-        .editar {
-            background: #f59e0b;
-            color: black;
-        }
-    </style>
+textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+button{
+    background:linear-gradient(
+    135deg,
+    #0ea5e9,
+    #38bdf8
+    );
+    color:white;
+    border:none;
+    padding:16px 28px;
+    border-radius:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+table th{
+    background:rgba(255,255,255,.08);
+    color:#ffffff;
+    padding:18px;
+    text-align:left;
+}
+
+table td{
+    padding:18px;
+    color:rgba(255,255,255,.85);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+table tr:hover{
+    background:rgba(255,255,255,.04);
+}
+
+.editar{
+    background:linear-gradient(
+    135deg,
+    #f59e0b,
+    #fbbf24
+    );
+    color:black;
+    margin-right:10px;
+}
+
+.excluir{
+    background:linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+    );
+    color:white;
+}
+
+.editar:hover,
+.excluir:hover{
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+    .dashboard{
+        padding:20px;
+    }
+
+    .topbar{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .topbar h1{
+        text-align:center;
+        font-size:1.4rem;
+    }
+
+    .section-admin{
+        padding:20px;
+    }
+
+}
+</style>
 </head>
 
 <body>
