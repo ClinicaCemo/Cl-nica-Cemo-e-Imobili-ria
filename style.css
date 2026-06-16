@@ -2100,3 +2100,143 @@ nav{
     border-radius:18px !important;
 }
 }
+/* ===== AJUSTES PARA CELULAR ===== */
+@media (max-width: 768px) {
+
+    /* Imóveis */
+    .lista-imoveis-site {
+        gap: 12px !important;
+    }
+
+    .lista-imoveis-site img {
+        width: 100% !important;
+        aspect-ratio: 1/1 !important;
+        object-fit: cover !important;
+        border-radius: 10px;
+    }
+
+    /* Avaliações */
+    #avaliacoes {
+        padding: 20px 15px !important;
+    }
+
+    #avaliacoes h2 {
+        font-size: 26px !important;
+    }
+
+    #avaliacoes .subtitulo {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    #avaliacoes .media h1 {
+        font-size: 32px !important;
+    }
+
+    #avaliacoes .media p {
+        font-size: 14px !important;
+    }
+
+    #mural-depoimentos > * {
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+        font-size: 14px !important;
+    }
+
+    #form-avaliacao input,
+    #form-avaliacao textarea,
+    #form-avaliacao button {
+        font-size: 14px !important;
+    }
+}
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    /* Imóveis */
+    .imovel {
+        width: 100% !important;
+        max-width: 350px !important;
+        margin: 0 auto 20px auto !important;
+    }
+
+    .imovel .imagem {
+        aspect-ratio: 1 / 1 !important;
+        overflow: hidden !important;
+        border-radius: 12px !important;
+    }
+
+    .imovel .imagem img,
+    .imovel .imagem video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    /* Avaliações */
+    #mural-depoimentos {
+        max-width: 100% !important;
+    }
+
+    #mural-depoimentos > div {
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+        font-size: 14px !important;
+    }
+
+    #avaliacoes h2 {
+        font-size: 28px !important;
+    }
+
+    #avaliacoes .subtitulo {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    #media-nota-num {
+        font-size: 30px !important;
+    }
+
+    #media-aprovacao-txt {
+        font-size: 14px !important;
+    }
+}
+@media (max-width: 768px) {
+
+    .imovel .imagem {
+        width: 100% !important;
+        aspect-ratio: 1 / 1 !important;
+        overflow: hidden !important;
+    }
+
+    .imovel .imagem img,
+    .imovel .imagem video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+}
+@media (max-width: 768px) {
+
+    .imovel {
+        width: 100% !important;
+    }
+
+    .imovel .imagem {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+        overflow: hidden !important;
+    }
+
+    .imovel .imagem img,
+    .imovel .imagem video {
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
+    }
+
+}
