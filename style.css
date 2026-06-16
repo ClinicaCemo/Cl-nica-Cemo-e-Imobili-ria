@@ -2034,3 +2034,69 @@ nav{
 }
 
 }
+/* ===== HERO MOBILE PROFISSIONAL ===== */
+@media (max-width:768px){
+
+.hero{
+    padding: 20px 12px !important;
+    min-height: auto !important;
+}
+
+.hero-content{
+    background: rgba(255,255,255,0.92) !important;
+    backdrop-filter: blur(20px);
+    padding: 28px 20px !important;
+    border-radius: 28px !important;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08),
+        0 2px 10px rgba(0,0,0,.05);
+
+    max-width: 100% !important;
+}
+
+/* faixa azul */
+.hero-badge{
+    font-size: 13px !important;
+    padding: 10px 15px !important;
+    margin-bottom: 18px !important;
+    border-radius: 30px !important;
+}
+
+/* título */
+.hero h1{
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+}
+
+/* subtítulo */
+.hero h2{
+    font-size: 1.2rem !important;
+    margin-bottom: 18px !important;
+}
+
+/* texto */
+.hero p{
+    font-size: .95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 25px !important;
+    color:#4b5563 !important;
+}
+
+/* botões */
+.hero-buttons{
+    display:flex !important;
+    gap:12px !important;
+    justify-content:center !important;
+}
+
+.hero-buttons a{
+    flex:1;
+    max-width:170px;
+    height:50px !important;
+    font-size:.95rem !important;
+    font-weight:600;
+    border-radius:18px !important;
+}
+}
