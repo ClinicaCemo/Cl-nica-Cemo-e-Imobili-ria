@@ -1557,3 +1557,135 @@ footer{
 }
 
 }
+/* ===== MOBILE ULTRA COMPACTO ===== */
+@media (max-width:768px){
+
+/* Espaço geral */
+section {
+    padding: 15px 10px !important;
+    margin: 6px !important;
+}
+
+/* Títulos */
+h1 {
+    font-size: 1.8rem !important;
+}
+
+h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 6px !important;
+}
+
+h3 {
+    font-size: 1rem !important;
+}
+
+p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+}
+
+
+/* Menu */
+nav {
+    padding: 8px 5px !important;
+}
+
+nav a {
+    font-size: 13px !important;
+}
+
+
+/* CEMO principal */
+.hero-content {
+    padding: 15px !important;
+    border-radius: 15px !important;
+}
+
+.hero h1 {
+    font-size: 1.8rem !important;
+}
+
+.hero h2 {
+    font-size: 1rem !important;
+}
+
+.hero p {
+    font-size: 0.9rem !important;
+}
+
+
+/* Botões iniciais */
+.hero-buttons a {
+    max-width: 170px !important;
+    height: 38px !important;
+    font-size: 13px !important;
+}
+
+
+/* Imóveis */
+.imovel {
+    padding: 10px !important;
+    border-radius: 15px !important;
+}
+
+.imagem {
+    height: 150px !important;
+}
+
+
+/* Avaliação 5 estrelas */
+.media {
+    padding: 10px !important;
+    border-radius: 15px !important;
+}
+
+.media h1 {
+    font-size: 1.8rem !important;
+}
+
+
+/* Formulário */
+input,
+textarea,
+select {
+    padding: 10px !important;
+    font-size: 13px !important;
+    border-radius: 10px !important;
+}
+
+textarea {
+    min-height: 80px !important;
+}
+
+button,
+form button {
+    height: 38px !important;
+    font-size: 13px !important;
+    border-radius: 20px !important;
+}
+
+
+/* Contatos */
+.contatos {
+    gap: 8px !important;
+}
+
+.contatos div,
+.endereco {
+    padding: 12px !important;
+    border-radius: 15px !important;
+}
+
+.contatos p,
+.contatos a {
+    font-size: 0.8rem !important;
+}
+
+/* Rodapé */
+footer {
+    padding: 8px !important;
+    font-size: 0.7rem !important;
+}
+
+}
