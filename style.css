@@ -1975,3 +1975,27 @@ nav{
 }
 
 }
+@media (max-width:768px){
+
+nav{
+    display: flex !important;
+    align-items: center !important;
+}
+
+.nav-links{
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.btn-login{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    top: 1px !important; /* desce ele um pouco */
+    margin: 0 !important;
+    padding: 2px 4px !important;
+}
+
+}
