@@ -6,12 +6,6 @@ async function carregarImoveis() {
         const resposta = await fetch(`${API}/listar_imoveis.php`);
         const imoveis = await resposta.json();
 
-        // CARD TOTAL DE IMÓVEIS
-        const totalImoveis = document.getElementById("total-imoveis");
-        if (totalImoveis) {
-            totalImoveis.textContent = imoveis.length;
-        }
-
         const tabela = document.getElementById("lista-imoveis");
         if (!tabela) return;
 
@@ -25,9 +19,8 @@ async function carregarImoveis() {
                     <td>${imovel.preco}</td>
                     <td>
                         <button onclick="excluirImovel(${imovel.id})" class="excluir">
-                            Excluir
-                        </button>
-                    </td>
+ Excluir
+</button>
                 </tr>
             `;
         });
@@ -44,7 +37,7 @@ async function cadastrarImovel() {
     const preco = document.getElementById("preco").value;
     const endereco = document.getElementById("endereco").value;
     const descricao = document.getElementById("descricao").value;
-    const foto = document.getElementById("foto")?.files?.[0];
+    const foto = document.getElementById("midia").files[0];
 
     const formData = new FormData();
     formData.append("titulo", titulo);
@@ -63,6 +56,7 @@ async function cadastrarImovel() {
         });
 
         await resposta.text();
+
 
         document.getElementById("form-cadastro").reset();
 
@@ -86,6 +80,7 @@ async function excluirImovel(id) {
 
         await resposta.text();
 
+
         window.location.reload();
 
     } catch (error) {
@@ -99,38 +94,6 @@ async function carregarAvaliacoes() {
         const resposta = await fetch(`${API}/listar_avaliacoes.php`);
         const avaliacoes = await resposta.json();
 
-        // CARD TOTAL DE AVALIAÇÕES
-        const totalAvaliacoes = document.getElementById("total-avaliacoes");
-        if (totalAvaliacoes) {
-            totalAvaliacoes.textContent = avaliacoes.length;
-        }
-
-        // NOTA MÉDIA
-        const notaMedia = document.getElementById("nota-media");
-        if (notaMedia && avaliacoes.length > 0) {
-            const soma = avaliacoes.reduce((acc, item) => {
-                return acc + Number(item.nota || 0);
-            }, 0);
-
-            const media = (soma / avaliacoes.length).toFixed(1);
-            notaMedia.textContent = `${media} ⭐`;
-        }
-
-        // CLIENTES SATISFEITOS
-        const clientesSatisfeitos =
-            document.getElementById("clientes-satisfeitos");
-
-        if (clientesSatisfeitos && avaliacoes.length > 0) {
-            const satisfeitos = avaliacoes.filter(item =>
-                Number(item.nota) >= 4
-            ).length;
-
-            const porcentagem =
-                Math.round((satisfeitos / avaliacoes.length) * 100);
-
-            clientesSatisfeitos.textContent =
-                `${porcentagem}%`;
-        }
 
         const tabela = document.getElementById("lista-avaliacoes");
         if (!tabela) return;
@@ -156,9 +119,10 @@ async function carregarAvaliacoes() {
 async function salvarClinica() {
 
     const texto =
-        document.getElementById("descricao-clinica")?.value;
+        document.getElementById("descricao-clinica").value;
 
     const formData = new FormData();
+
     formData.append("descricao", texto);
 
     try {
@@ -175,7 +139,7 @@ async function salvarClinica() {
 
         console.log(resultado);
 
-        if (resultado.includes("sucesso")) {
+if (resultado.includes("sucesso")) { 
             alert("Alterações salvas com sucesso!");
         } else {
             alert("Erro ao salvar.");
@@ -187,7 +151,65 @@ async function salvarClinica() {
     }
 }
 
+async function carregarDashboard() {
+
+    try {
+
+        const respImoveis =
+            await fetch(`${API}/listar_imoveis.php`);
+
+        const imoveis =
+            await respImoveis.json();
+
+        const respAvaliacoes =
+            await fetch(`${API}/listar_avaliacoes.php`);
+
+        const avaliacoes =
+            await respAvaliacoes.json();
+
+        document.getElementById("total-imoveis").innerText =
+            imoveis.length;
+
+        document.getElementById("total-avaliacoes").innerText =
+            avaliacoes.length;
+
+        let media = 0;
+
+        if (avaliacoes.length > 0) {
+
+            const soma = avaliacoes.reduce(
+                (total, item) =>
+                    total + Number(item.nota),
+                0
+            );
+
+            media = soma / avaliacoes.length;
+        }
+
+        document.getElementById("nota-media").innerText =
+            media.toFixed(1) + " ⭐";
+
+        const satisfeitos =
+            avaliacoes.length > 0
+            ? (avaliacoes.filter(
+                a => Number(a.nota) >= 4
+              ).length /
+              avaliacoes.length) * 100
+            : 0;
+
+        document.getElementById("clientes-satisfeitos").innerText =
+            satisfeitos.toFixed(0) + "%";
+
+    } catch (erro) {
+
+        console.log("Erro dashboard:", erro);
+
+    }
+
+}
+
 window.onload = () => {
     carregarImoveis();
     carregarAvaliacoes();
+    carregarDashboard();
 };

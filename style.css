@@ -537,7 +537,7 @@ footer{
 
 
 body{
-    background: linear-gradient(180deg,#f4f8ff,#eaf2ff) !important;
+    background: linear-gradient(180deg,#3e83fa,#1067f3) !important;
     color:#0b1f3a !important;
 }
 
@@ -557,14 +557,14 @@ nav a:hover{
     color:#0077ff !important;
 }
 
-/* BOTÃO TOP */
+/* BOTÃO */
 .btn-login{
     background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
     color:#fff !important;
     border-radius:30px;
 }
 
-/* HERO TOP */
+/* HERO */
 .hero{
     position:relative;
     background:
@@ -581,7 +581,7 @@ nav a:hover{
 
 /* TEXTO HERO */
 .hero h1{
-    color:#4894f8 !important;
+    color:#4894FFF8 !important;
     font-size:3.2rem !important;
     text-shadow:none !important;
 }
@@ -594,7 +594,7 @@ nav a:hover{
     color:hsl(218, 12%, 43%)!important;
 }
 
-/* BOTÕES HERO TOP */
+/* BOTÕES HERO ATUALIZADO */
 .hero-buttons a{
     background: linear-gradient(135deg,#0077ff,#00c6ff) !important;
     color:#fff !important;
@@ -703,19 +703,17 @@ footer{
 
 /* ================= UX MELHORADO ================= */
 
-/* botões mais clicáveis mobile */
 .hero-buttons a,
 .btn-login,
 .imovel button{
     min-height:48px;
 }
 
-/* espaçamento top */
 section{
     padding:120px 8%;
 }
 
-/* ================= MOBILE DAORA ================= */
+/* ================= MOBILE ARRUMADO ================= */
 
 
 
@@ -1103,13 +1101,11 @@ nav{
     background: rgba(255,255,255,0.3);
     transform: rotate(90deg);
 }
-/* --- CSS OTIMIZADO PARA MOBILE COMPACTO --- */
 
 @media (max-width: 768px) {
-    /* 1. Redução Global */
-   html { font-size: 16px; } /* Diminui tudo proporcionalmente */
-
-    /* 2. Menu Compacto e Botão Área do Proprietário */@media (max-width: 768px){
+    
+   html { font-size: 16px; } 
+    @media (max-width: 768px){
 
     /* HERO */
     .hero h1{
@@ -1368,7 +1364,7 @@ nav{
     overflow: hidden;
 }
 /* ================================= */
-/* MOBILE COMPACTO PROFISSIONAL */
+/* MOBILE COMPACTO  */
 /* ================================= */
 
 @media (max-width:768px){
@@ -1557,7 +1553,6 @@ footer{
 }
 
 }
-/* ===== MOBILE ULTRA COMPACTO ===== */
 @media (max-width:768px){
 
 /* Espaço geral */
@@ -1719,7 +1714,6 @@ footer {
     font-size: 11px !important;
 }
 
-/* Botões lado a lado e menores */
 .hero-buttons{
     display: flex !important;
     flex-direction: row !important;
@@ -1836,7 +1830,7 @@ footer p{
 }
 @media (max-width:768px){
 
-/* Menu extremamente compacto */
+
 nav{
     padding: 2px 0 !important;
 }
@@ -1868,7 +1862,7 @@ nav a{
 }
 @media (max-width:768px){
 
-/* Menu mínimo */
+
 nav{
     height: 30px !important;
     min-height: 30px !important;
@@ -1914,7 +1908,7 @@ nav a{
 }
 
 }
-/* ===== MENU MOBILE PEQUENO DE VERDADE ===== */
+/* ===== MENU MOBILE ===== */
 @media (max-width:768px){
 
 nav{
@@ -2034,7 +2028,7 @@ nav{
 }
 
 }
-/* ===== HERO MOBILE PROFISSIONAL ===== */
+/* ===== HERO MOBILE ===== */
 @media (max-width:768px){
 
 .hero{
@@ -2239,4 +2233,164 @@ nav{
         object-fit: cover !important;
     }
 
+}
+/* --- ADIÇÃO DE BORDAS PARA O MENU E HERO --- */
+
+/* 1. Borda no Menu de Navegação */
+nav {
+    border-bottom: 2px solid #0077ff !important;
+    padding-bottom: 5px !important;
+}
+
+/* 2. Borda na seção principal (Hero) */
+.hero-content {
+    border: 2px solid #0077ff !important;
+    /* Mantém o efeito de blur que você já tem */
+    backdrop-filter: blur(15px) !important; 
+}
+/* --- MELHORIA DE ESTILO: CLÍNICA E IMOBILIÁRIA --- */
+
+/* Estilo para os Cards de Serviços da Clínica */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.botao-servico {
+    background: #ffffff !important; /* Fundo branco */
+    border: 2px solid #0077ff !important; /* Borda colorida */
+    color: #0b1f3a !important; /* Texto escuro para contraste */
+    padding: 25px !important;
+    border-radius: 25px !important; /* Bordas arredondadas */
+    text-align: center;
+    font-weight: 600 !important;
+    transition: 0.4s ease !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+}
+
+.botao-servico:hover {
+    background: #0077ff !important; /* Cor ao passar o mouse */
+    color: #ffffff !important;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,119,255,0.3) !important;
+}
+
+/* Título da Clínica */
+.titulo-clinica h2 {
+    color: #0077ff !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 20px;
+}
+
+/* Melhoria no texto da Imobiliária */
+.subtitulo {
+    color: #5f7fa3 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    max-width: 800px;
+    margin: 0 auto 50px auto !important;
+}
+/* --- AJUSTES DE ESTILO: IMAGEM E RODAPÉ --- */
+
+/* 1. Arredondar a imagem que está quadrada */
+/* Substitua .imagem-hero pela classe correta da sua imagem, se necessário */
+.hero-content img, .container-imagem {
+    border-radius: 20px !important;
+    border: 3px solid #0077ff !important;
+}
+
+/* 2. Melhorar o Rodapé (Footer) para ficar mais vivo */
+footer {
+    background: linear-gradient(135deg, #0077ff, #00c6ff) !important;
+    color: #ffffff !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+    border-top: 5px solid #005bb5 !important;
+    margin-top: 30px !important;
+}
+
+footer p {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Adicionando um leve destaque aos links/textos do rodapé */
+footer a {
+    color: #e0f7ff !important;
+    text-decoration: underline !important;
+}
+/* --- AJUSTES DE DESIGN E ROLAGEM --- */
+
+/* 1. Arredondar bordas da área principal (Hero) */
+.hero-content {
+    border-radius: 30px !important; /* Arredonda o box */
+    border: 3px solid #0077ff !important;
+    overflow: hidden; /* Garante que o conteúdo respeite o arredondamento */
+}
+
+/* 2. Criar a caixa de rolagem para os comentários */
+.container-avaliacoes {
+    max-height: 400px !important; /* Altura máxima antes de rolar */
+    overflow-y: auto !important;  /* Habilita a barra de rolagem */
+    padding: 15px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 20px !important;
+    background: #f9f9f9 !important;
+}
+
+/* 3. Ajuste do tamanho dos comentários no mobile */
+@media (max-width: 600px) {
+    .comentario-item {
+        font-size: 0.9rem !important; /* Diminui a fonte no mobile */
+        padding: 10px !important;
+    }
+    
+    /* Reduz o tamanho da área de formulário de avaliação no mobile */
+    .formulario-avaliacao {
+        padding: 15px !important;
+        margin-top: 20px !important;
+    }
+}
+/* --- CORREÇÃO: BORDAS NO HERO --- */
+.hero-content, #hero, section#hero {
+    border: 3px solid #0077ff !important;
+    border-radius: 30px !important;
+    padding: 20px !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+/* --- CORREÇÃO: ROLAGEM AVALIAÇÕES --- */
+.container-avaliacoes {
+    max-height: 400px !important; 
+    overflow-y: auto !important;  
+    border: 3px solid #0077ff !important; /* Borda visível */
+    border-radius: 20px !important;
+    padding: 15px !important;
+    background: #ffffff !important;
+    margin: 30px auto !important;
+    max-width: 600px !important;
+    /* Adiciona estilo à barra de rolagem (Chrome/Edge/Safari) */
+}
+
+.container-avaliacoes::-webkit-scrollbar {
+    width: 8px;
+}
+.container-avaliacoes::-webkit-scrollbar-thumb {
+    background-color: #0077ff;
+    border-radius: 10px;
+}
+.hero-content {
+    border: 4px solid #0077ff !important;
+    border-radius: 30px !important;
+    padding: 20px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin-bottom: 20px !important;
+}
+.hero-content, .header-container + section {
+    border: 4px solid #0077ff !important;
+    border-radius: 30px !important;
+    padding: 30px !important;
+    box-sizing: border-box !important;
+    display: block !important;
 }
