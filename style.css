@@ -1777,3 +1777,60 @@ footer{
 }
 
 }
+/* MENU SUPER COMPACTO MOBILE */
+@media (max-width:768px){
+
+nav{
+    padding: 4px 2px !important;
+    min-height: auto !important;
+}
+
+nav ul,
+.nav-links{
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+nav li{
+    margin: 0 !important;
+}
+
+nav a{
+    font-size: 11px !important;
+    padding: 4px 3px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+/* Área do proprietário */
+.area-proprietario,
+.proprietario,
+nav + *{
+    margin-top: 5px !important;
+}
+
+.area-proprietario a,
+.area-proprietario{
+    font-size: 12px !important;
+    padding: 4px !important;
+}
+
+
+/* RODAPÉ MENOR */
+footer{
+    padding: 4px 8px !important;
+    font-size: 0.55rem !important;
+    line-height: 1.2 !important;
+}
+
+footer p{
+    margin: 0 !important;
+    font-size: 0.55rem !important;
+}
+
+}
