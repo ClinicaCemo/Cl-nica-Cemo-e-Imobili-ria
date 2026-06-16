@@ -1914,3 +1914,49 @@ nav a{
 }
 
 }
+/* ===== MENU MOBILE PEQUENO DE VERDADE ===== */
+@media (max-width:768px){
+
+nav{
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:5px !important;
+    padding:4px 3px !important;
+    height:auto !important;
+}
+
+/* Início, Imobiliária, Clínica... */
+.nav-links{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    gap:4px !important;
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.nav-links li{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.nav-links a{
+    font-size:9px !important;
+    padding:2px 3px !important;
+    font-weight:600 !important;
+    line-height:1 !important;
+}
+
+/* Área do Proprietário */
+.btn-login{
+    font-size:9px !important;
+    padding:2px 4px !important;
+    min-height:auto !important;
+    height:auto !important;
+    margin:0 !important;
+    border-radius:10px !important;
+}
+
+}
