@@ -1689,3 +1689,91 @@ footer {
 }
 
 }
+@media (max-width:768px){
+
+/* Capa principal menor */
+.hero-content{
+    padding: 12px !important;
+    border-radius: 12px !important;
+}
+
+.hero h1{
+    font-size: 1.35rem !important;
+    margin-bottom: 8px !important;
+}
+
+.hero h2{
+    font-size: 0.9rem !important;
+    margin-bottom: 10px !important;
+}
+
+.hero p{
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Faixa azul em cima */
+.hero-badge{
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+}
+
+/* Botões lado a lado e menores */
+.hero-buttons{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 8px !important;
+}
+
+.hero-buttons a{
+    width: 140px !important;
+    height: 34px !important;
+    font-size: 12px !important;
+    border-radius: 20px !important;
+}
+
+}
+@media (max-width:768px){
+
+nav{
+    padding: 6px 5px !important;
+}
+
+nav ul{
+    gap: 8px !important;
+}
+
+nav a{
+    font-size: 12px !important;
+    font-weight: 600;
+}
+
+}
+@media (max-width:768px){
+
+footer{
+    padding: 6px 10px !important;
+    font-size: 0.65rem !important;
+    line-height: 1.3 !important;
+}
+
+}
+@media (max-width:768px){
+
+.contatos div,
+.endereco{
+    padding: 10px !important;
+}
+
+.contatos h3{
+    font-size: 0.9rem !important;
+}
+
+.contatos p,
+.contatos a{
+    font-size: 0.75rem !important;
+}
+
+}
