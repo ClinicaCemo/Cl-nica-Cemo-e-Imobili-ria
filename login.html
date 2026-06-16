@@ -24,8 +24,8 @@ align-items:center;
 
 background:linear-gradient(
 135deg,
-#07182f,
-#0c2d52
+#18448b,
+#02e8f8
 );
 
 }
@@ -38,7 +38,7 @@ max-width:90%;
 
 padding:40px;
 
-background:rgba(255,255,255,.05);
+background:rgba(17, 38, 221, 0.05);
 
 backdrop-filter:blur(15px);
 
@@ -46,7 +46,7 @@ border-radius:20px;
 
 border:1px solid rgba(255,255,255,.1);
 
-box-shadow:0 0 40px rgba(0,0,0,.3);
+box-shadow:0 0 40px #39b0ff4d;
 
 }
 
@@ -56,7 +56,7 @@ text-align:center;
 
 margin-bottom:30px;
 
-color:#00e676;
+color:#f4faf7;
 
 }
 
@@ -72,9 +72,9 @@ border:none;
 
 border-radius:12px;
 
-background:rgba(255,255,255,.08);
+background:rgba(2, 158, 248, 0.08);
 
-color:white;
+color:rgb(61, 184, 255);
 
 }
 
@@ -88,7 +88,7 @@ border:none;
 
 border-radius:12px;
 
-background:#00e676;
+background:#68eff8;
 
 color:black;
 
@@ -116,7 +116,7 @@ margin-bottom:20px;
 
 .logo-login img{
 
-width:120px;
+width: 250px;
 
 }
 
@@ -144,7 +144,7 @@ color:#ff4d4d;
 
 <div class="logo-login">
 
-<img src="assets/logo-imobiliaria.png">
+<img src="assets/logo-admin.png">
 
 </div>
 
@@ -153,12 +153,12 @@ color:#ff4d4d;
 <input
 type="text"
 id="usuario"
-placeholder="Usuário">
+placeholder="Usuário:">
 
 <input
 type="password"
 id="senha"
-placeholder="Senha">
+placeholder="Senha:">
 
 <button onclick="fazerLogin()">
 
@@ -168,7 +168,7 @@ Entrar
 
 <div class="erro" id="erro">
 
-Usuário ou senha inválidos
+Credenciais inválidas. Verifique e tente novamente.
 
 </div>
 
