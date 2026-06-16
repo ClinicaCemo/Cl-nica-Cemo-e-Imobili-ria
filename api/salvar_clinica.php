@@ -13,4 +13,3 @@ if ($conn->query($sql)) {
     echo "sucesso";
 } else {
     echo "ERRO MYSQL: " . $conn->error;
-}

@@ -1107,33 +1107,35 @@ nav{
 
 @media (max-width: 768px) {
     /* 1. Redução Global */
-   html { font-size: 14px; } /* Diminui tudo proporcionalmente */
+   html { font-size: 16px; } /* Diminui tudo proporcionalmente */
 
     /* 2. Menu Compacto e Botão Área do Proprietário */@media (max-width: 768px){
 
     /* HERO */
     .hero h1{
-        font-size: 2rem !important;
-    }
+    font-size: 1.6rem !important;
+}
 
     .hero h2{
-        font-size: 1.2rem !important;
+        font-size: 1.3rem !important;
     }
 
     .hero p{
-        font-size: 0.95rem !important;
-        line-height: 1.6;
+        font-size: 1rem !important;
+        line-height: 1.7;
     }
 
     .hero-content{
-        padding: 20px !important;
+        padding: 30px 20px !important;
+        border-radius: 25px !important;
     }
 
     /* BOTÕES */
     .hero-buttons a{
-        min-width: 160px !important;
-        padding: 12px 18px !important;
-        font-size: 0.85rem !important;
+        min-width: 220px !important;
+        height: 52px;
+        font-size: 1rem !important;
+        border-radius: 30px !important;
     }
 
     /* SEÇÕES */
@@ -1250,7 +1252,7 @@ nav{
     }
 
     .media h1{
-        font-size: 2rem !important;
+        font-size: 3rem !important;
     }
 
     .media p{
@@ -1259,9 +1261,9 @@ nav{
 
     /* 🧾 FORMULÁRIO */
     input, textarea{
-        padding: 10px !important;
-        font-size: 0.85rem !important;
-        border-radius: 12px !important;
+        padding: 16px !important;
+        font-size: 1rem !important;
+        border-radius: 15px !important;
     }
 
     textarea{
@@ -1272,7 +1274,7 @@ nav{
     button{
         padding: 12px !important;
         font-size: 0.9rem !important;
-        border-radius: 25px !important;
+        border-radius: 20px !important;
     }
 
     /* 📞 CONTATO */
@@ -1364,4 +1366,194 @@ nav{
     margin: 40px 20px;
     padding: 60px 8%;
     overflow: hidden;
+}
+/* ================================= */
+/* MOBILE COMPACTO PROFISSIONAL */
+/* ================================= */
+
+@media (max-width:768px){
+
+/* GERAL */
+section{
+    padding: 22px 14px !important;
+    margin: 10px 8px !important;
+    border-radius: 18px !important;
+}
+
+h2{
+    font-size: 1.7rem !important;
+    margin-bottom: 8px !important;
+}
+
+p{
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+}
+
+
+/* MENU */
+nav{
+    padding: 8px 10px !important;
+}
+
+nav a{
+    font-size: 13px !important;
+}
+
+.nav-links,
+nav ul{
+    gap: 10px !important;
+}
+
+
+/* CARD PRINCIPAL */
+.hero{
+    padding: 15px 10px !important;
+}
+
+.hero-content{
+    padding: 18px 15px !important;
+    border-radius: 18px !important;
+}
+
+.hero-badge{
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+}
+
+.hero h1{
+    font-size: 1.8rem !important;
+}
+
+.hero h2{
+    font-size: 1rem !important;
+}
+
+.hero p{
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+
+/* BOTÕES */
+.hero-buttons{
+    gap: 8px !important;
+}
+
+.hero-buttons a{
+    height: 42px !important;
+    max-width: 200px !important;
+    font-size: 0.85rem !important;
+    border-radius: 25px !important;
+}
+
+
+/* IMÓVEIS */
+.cards{
+    gap: 12px !important;
+}
+
+.imovel{
+    border-radius: 18px !important;
+}
+
+.imagem{
+    aspect-ratio: 16/10 !important;
+}
+
+.imovel h3{
+    font-size: 1rem !important;
+}
+
+.imovel p{
+    font-size: 0.85rem !important;
+}
+
+.preco{
+    font-size: 1rem !important;
+    padding: 10px !important;
+}
+
+
+/* LOGOS */
+.logo-imobiliaria-central img,
+.titulo-clinica img{
+    width: 150px !important;
+}
+
+
+/* SERVIÇOS */
+.servicos{
+    gap: 10px !important;
+}
+
+.botao-servico{
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+    border-radius: 15px !important;
+}
+
+
+/* AVALIAÇÕES */
+.media{
+    padding: 15px !important;
+    border-radius: 16px !important;
+}
+
+.media h1{
+    font-size: 2rem !important;
+}
+
+.media p{
+    font-size: 0.8rem !important;
+}
+
+
+/* FORMULÁRIOS */
+input,
+select,
+textarea{
+    padding: 12px !important;
+    font-size: 14px !important;
+    border-radius: 12px !important;
+}
+
+textarea{
+    min-height: 90px !important;
+}
+
+form button{
+    height: 44px !important;
+    font-size: 14px !important;
+    border-radius: 22px !important;
+}
+
+
+/* CONTATO */
+.contatos{
+    gap: 10px !important;
+}
+
+.contatos div,
+.endereco{
+    padding: 15px !important;
+    border-radius: 16px !important;
+}
+
+.contatos h3{
+    font-size: 1rem !important;
+}
+
+.contatos p,
+.contatos a{
+    font-size: 0.85rem !important;
+}
+
+
+/* RODAPÉ */
+footer{
+    padding: 12px !important;
+    font-size: 0.75rem !important;
+}
+
 }
