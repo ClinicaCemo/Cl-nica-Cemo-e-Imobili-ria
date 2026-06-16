@@ -1834,3 +1834,35 @@ footer p{
 }
 
 }
+@media (max-width:768px){
+
+/* Menu extremamente compacto */
+nav{
+    padding: 2px 0 !important;
+}
+
+nav ul,
+.nav-links{
+    gap: 3px !important;
+}
+
+nav li{
+    margin: 0 !important;
+}
+
+nav a{
+    font-size: 10px !important;
+    padding: 2px 3px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+/* Área do proprietário menor */
+.area-proprietario,
+.proprietario{
+    font-size: 10px !important;
+    padding: 2px !important;
+    margin: 2px 0 !important;
+}
+
+}
