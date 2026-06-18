@@ -5,7 +5,7 @@ html {
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+    font-family:'Gill Sans','Trebuchet MS','Segoe UI',sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -851,7 +851,7 @@ p, span, small{
     display:inline-block;
     padding:10px 20px;
     border-radius:30px;
-    background:rgb(212, 247, 219);
+    background:rgb(244, 245, 253);
     color:#0011ff;
     font-weight:600;
     margin-bottom:20px;
@@ -2393,4 +2393,219 @@ footer a {
     padding: 30px !important;
     box-sizing: border-box !important;
     display: block !important;
+}
+/* ===== FONTE E TIPOGRAFIA  ===== */
+
+*{
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Títulos */
+h1{
+    font-size: 4rem !important;
+    font-weight: 800 !important;
+    color: #004aad !important;
+    letter-spacing: -1px;
+}
+
+h2{
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #0066cc !important;
+}
+
+h3{
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #008f5a !important;
+}
+
+/* Textos */
+p,
+span,
+li,
+a{
+    color: #2f4e6b !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    font-weight: 500 !important;
+}
+
+/* Hero */
+.hero h1{
+    color: #004aad !important;
+    text-shadow: none !important;
+}
+
+.hero h2{
+    color: #00a86b !important;
+}
+
+.hero p{
+    color: #3d5874 !important;
+}
+
+/* Subtítulos */
+.subtitulo{
+    color: #5a748f !important;
+    font-size: 1.1rem !important;
+}
+
+/* Imóveis */
+.imovel h3{
+    color: #004aad !important;
+}
+
+.preco{
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+/* Clínica */
+.botao-servico{
+    font-weight: 700 !important;
+    color: #004aad !important;
+}
+
+/* Contato */
+.contatos h3{
+    color: #0066cc !important;
+}
+
+/* Rodapé */
+footer p,
+footer a{
+    color: #ffffff !important;
+}
+/* ===== CEMO PREMIUM ===== */
+
+/* Fonte mais elegante */
+*{
+    font-family: "Segoe UI", "Trebuchet MS", sans-serif !important;
+}
+
+/* Texto geral */
+body{
+    color:#1e3a5f !important;
+}
+
+p,
+span,
+small,
+li{
+    color:#4a6480 !important;
+    font-size:1.05rem !important;
+    line-height:1.8 !important;
+    font-weight:500 !important;
+}
+
+/* Títulos */
+h1{
+    font-size:4.5rem !important;
+    font-weight:900 !important;
+    color:#0052cc !important;
+    letter-spacing:-2px !important;
+}
+
+h2{
+    font-size:3rem !important;
+    font-weight:800 !important;
+    color:#0077ff !important;
+    letter-spacing:-1px !important;
+}
+
+h3{
+    font-size:1.6rem !important;
+    font-weight:700 !important;
+    color:#00a86b !important;
+}
+
+/* Subtítulos */
+.subtitulo{
+    color:#5b7694 !important;
+    font-size:1.15rem !important;
+    line-height:1.8 !important;
+}
+
+/* Hero */
+.hero h1{
+    color:#0066ff !important;
+}
+
+.hero h2{
+    color:#00c878 !important;
+    font-size:2rem !important;
+}
+
+.hero p{
+    color:#36526d !important;
+    font-size:1.15rem !important;
+}
+
+/* Links */
+a{
+    color:#0077ff !important;
+    font-weight:600 !important;
+}
+
+a:hover{
+    color:#00c878 !important;
+}
+
+/* Imóveis */
+.imovel h3{
+    color:#0052cc !important;
+}
+
+.imovel p{
+    color:#607d9b !important;
+}
+
+/* Preço */
+.preco{
+    background:linear-gradient(
+        135deg,
+        #0066ff,
+        #00c878
+    ) !important;
+
+    color:#ffffff !important;
+    font-size:1.6rem !important;
+    font-weight:800 !important;
+}
+
+/* Clínica */
+.botao-servico{
+    color:#0052cc !important;
+    font-weight:700 !important;
+}
+
+/* Contato */
+.contatos h3{
+    color:#0077ff !important;
+}
+
+.contatos p,
+.contatos a{
+    color:#486581 !important;
+}
+
+/* Avaliações */
+.media h1{
+    color:#0066ff !important;
+}
+
+/* Rodapé */
+footer{
+    background:linear-gradient(
+        135deg,
+        #0052cc,
+        #008cff,
+        #00c878
+    ) !important;
+}
+
+footer p,
+footer a{
+    color:#ffffff !important;
 }
