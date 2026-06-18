@@ -10,7 +10,7 @@ html {
 }
 
 body{
-    background:#1970f3;
+    background:#9ef1ff;
     color:#9ac6ff;
     overflow-x:hidden;
     padding-top:0;
@@ -122,8 +122,8 @@ nav a:hover{
 
 .hero h1{
     font-size:5rem;
-    color:#64ffda;
-    text-shadow:0 0 30px rgba(100, 255, 218, 0.4);
+    color:#00ff6a;
+    text-shadow:0 0 30px rgb(0, 255, 64);
     transition: 0.3s;
 }
 
@@ -537,8 +537,8 @@ footer{
 
 
 body{
-    background: linear-gradient(180deg,#3e83fa,#1067f3) !important;
-    color:#0b1f3a !important;
+    background: linear-gradient(180deg,#0004ff,#03f5f5) !important;
+    color:#66a5f8 !important;
 }
 
 /* NAVBAR TOP */
@@ -581,13 +581,13 @@ nav a:hover{
 
 /* TEXTO HERO */
 .hero h1{
-    color:#4894FFF8 !important;
+    color:#001aff !important;
     font-size:3.2rem !important;
     text-shadow:none !important;
 }
 
 .hero h2{
-    color:#166dc9 !important;
+    color:#00ff37 !important;
 }
 
 .hero p{
@@ -615,7 +615,7 @@ section{
 
 /* TÍTULOS */
 h2{
-    color:#0b1f3a !important;
+    color:#056ffa !important;
 }
 
 /* CARDS DAORA */
@@ -851,8 +851,8 @@ p, span, small{
     display:inline-block;
     padding:10px 20px;
     border-radius:30px;
-    background:rgb(226, 249, 255);
-    color:#2984fc;
+    background:rgb(212, 247, 219);
+    color:#0011ff;
     font-weight:600;
     margin-bottom:20px;
     backdrop-filter:blur(10px);
@@ -2075,7 +2075,7 @@ nav{
     font-size: .95rem !important;
     line-height: 1.7 !important;
     margin-bottom: 25px !important;
-    color:#4b5563 !important;
+    color:#4082dd !important;
 }
 
 /* botões */
