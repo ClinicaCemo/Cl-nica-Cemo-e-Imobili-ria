@@ -2,39 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CEMO Imobiliária e Clínica Ocupacional</title>
-
-
-<meta name="description" content="Soluções completas em imóveis, medicina ocupacional e engenharia de segurança do trabalho em Pirapora-MG.">
-<meta name="keywords" content="Imobiliária, Clínica Ocupacional, Medicina do Trabalho, Pirapora, Segurança do Trabalho">
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clinica.css" id="css-clinica" disabled>
+    <link rel="stylesheet" href="imobiliaria.css" id="css-imobiliaria" disabled>
 </head>
 
 <body>
-
-<header class="header-container">
-
-<nav>
+    <nav>
 
 <ul class="nav-links">
-
-<li><a href="#inicio">Início</a></li>
-
-<li><a href="#imobiliaria">Imobiliária</a></li>
-
-<li><a href="#clinica">Clínica</a></li>
 
 <li><a href="#avaliacoes">Avaliações</a></li>
 
@@ -47,6 +23,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 </a>
 
 </nav>
+
+<section id="home-principal">
+    <h1>Bem-vindo à CEMO</h1>
+    <button onclick="window.location.href='clinica.html'">Ir para Clínica</button>
+    <button onclick="window.location.href='imobiliaria.html'">Ir para Imobiliária</button>
+</section>
+
+<section id="portal-clinica">
+    <h2>Conteúdo da Clínica</h2>
+</section>
+
+<section id="portal-imobiliaria">
+    <h2>Conteúdo da Imobiliária</h2>
+</section>
+
+<header class="header-container">
 
 <section id="inicio" class="hero">
 
@@ -76,75 +68,51 @@ Conte com uma equipe qualificada, atendimento especializado e soluções eficien
 
 <div class="hero-buttons">
 
-<a href="#imobiliaria" class="btn-primary">
-Ver Imóveis
-</a>
+   <div class="cards-principais">
 
-<a href="#clinica" class="btn-secondary">
-Conhecer Clínica
-</a>
+<div class="card-principal">
+
+<div class="icone-card">
+🏥
+</div>
+
+<h3>Clínica CEMO</h3>
+
+<p>
+
+Saúde ocupacional, exames, engenharia de segurança e atendimento empresarial.
+
+</p>
+
+</div>
+
+<div class="card-principal">
+
+<div class="icone-card">
+🏠
+</div>
+
+<h3>CEMO Imobiliária</h3>
+
+<p>
+
+Compra, venda, locação e administração de imóveis em Pirapora e região.
+
+</p>
+
+
+</div>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
-
 </header>
 
-<!-- Seção Imobiliária -->
-<section id="imobiliaria">
-    <div class="logo-imobiliaria-central">
-        <img src="assets/logo-imobiliaria.png" alt="Logo CEMO Imobiliária">
-    </div>
-    <h2 class="titulo-secao">CEMO IMOBILIÁRIA</h2>
-   <p class="subtitulo">
-    Conectamos pessoas aos melhores imóveis em Pirapora e região.<br><br>
 
-    Atuamos com compra, venda, locação e administração imobiliária, oferecendo soluções seguras e atendimento personalizado para clientes e investidores.<br><br>
-
-    Para proprietários, disponibilizamos um serviço completo de gestão imobiliária, incluindo divulgação, captação de inquilinos, administração de contratos e acompanhamento contínuo do imóvel, garantindo mais rentabilidade e menos preocupações.<br><br>
-
-    Nossa missão é oferecer confiança, transparência e excelência em cada etapa do negócio.
-</p>
-    <div class="cards" id="lista-imoveis-site"></div>
-</section>
-
-<!-- Seção Clínica -->
-<section id="clinica">
-    <div class="titulo-clinica">
-        <img src="assets/logo-clinica.png" alt="Logo Clínica CEMO">
-        <h2 class="titulo-secao">CLÍNICA CEMO E ENGENHARIA</h2>
-        <p class="subtitulo">
-    A CEMO oferece soluções completas em saúde ocupacional, segurança do trabalho e engenharia, atendendo empresas de diversos segmentos com qualidade, agilidade e responsabilidade.<br><br>
-
-    Realizamos exames ocupacionais admissionais, periódicos, demissionais, de retorno ao trabalho e mudança de função, além de programas, laudos e assessoria especializada para o cumprimento das normas regulamentadoras.<br><br>
-
-    Também atuamos nas áreas de engenharia de segurança do trabalho, engenharia ambiental e engenharia florestal, desenvolvendo projetos e soluções técnicas que promovem conformidade, sustentabilidade e segurança para sua empresa.<br><br>
-
-    Nosso compromisso é cuidar da saúde dos trabalhadores e oferecer suporte completo para o crescimento seguro e sustentável dos negócios.
-</p>
-    </div>
-
-    <div class="servicos">
-        <!-- O estilo será aplicado automaticamente pela classe .botao-servico no CSS -->
-        <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Engenharia de Segurança do Trabalho" class="botao-servico" target="_blank">Engenharia de Segurança do Trabalho</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre o PCMSO" class="botao-servico" target="_blank">PCMSO</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exame Admissional" class="botao-servico" target="_blank">Exame Admissional</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exames Periódicos" class="botao-servico" target="_blank">Exames Periódicos</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exame Demissional" class="botao-servico" target="_blank">Exame Demissional</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Exames Cardiológicos" class="botao-servico" target="_blank">Exames Cardiológicos</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Eletroencefalograma" class="botao-servico" target="_blank">Eletroencefalograma</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Eletrocardiograma" class="botao-servico" target="_blank">Eletrocardiograma</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre MAPA/Holter" class="botao-servico" target="_blank">MAPA e Holter</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Espirometria" class="botao-servico" target="_blank">Espirometria</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Acuidade Visual" class="botao-servico" target="_blank">Acuidade Visual</a>
-        <a href="https://wa.me/5538991610939?text=Olá, gostaria de mais informações sobre Audiometria" class="botao-servico" target="_blank">Audiometria</a>
-        <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Terapia da Voz e Fala" class="botao-servico" target="_blank">Terapia da Voz e Fala</a>
-        <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Engenharia Ambiental e Florestal" class="botao-servico" target="_blank">Engenharia Ambiental e Florestal</a>
-        <a href="https://wa.me/5538991361872?text=Olá, gostaria de mais informações sobre Treinamentos e Palestras" class="botao-servico" target="_blank">Treinamentos e Palestras</a>
-    </div>
-</section>
 
 <section id="avaliacoes">
 
@@ -166,24 +134,73 @@ Conhecer Clínica
             <!-- Seus comentários aparecerão aqui e a caixa rolará automaticamente -->
         </div>
     </div>
+<div class="estatisticas-site">
 
+<div class="estatistica">
+
+<h3>+500</h3>
+
+<p>Clientes Atendidos</p>
+
+</div>
+
+<div class="estatistica">
+
+<h3>+100</h3>
+
+<p>Empresas Parceiras</p>
+
+</div>
+
+<div class="estatistica">
+
+<h3>5.0</h3>
+
+<p>Avaliação Média</p>
+
+</div>
+
+</div>
     <form id="form-avaliacao" onsubmit="enviarAvaliacao(event)">
         <input type="text" id="nome" placeholder="Seu nome" required>
+<input
+type="email"
+id="email"
+placeholder="Seu e-mail"
+required>
+        <select id="nota" required>
 
-        <input 
-          type="number" 
-          id="nota" 
-          min="1" 
-          max="5" 
-          step="1"
-          placeholder="Sua nota de 1 a 5 ⭐" 
-          required 
-          oninput="limitarNota(this)"
-          style="color: #000; background: #fff; border: 1px solid #ccc; padding: 12px; border-radius: 4px; width: 100%; box-sizing: border-box; margin-bottom: 15px;"
-        >
+<option value="">
+Escolha uma nota
+</option>
+
+<option value="5">
+⭐⭐⭐⭐⭐ Excelente
+</option>
+
+<option value="4">
+⭐⭐⭐⭐ Muito Bom
+</option>
+
+<option value="3">
+⭐⭐⭐ Bom
+</option>
+
+<option value="2">
+⭐⭐ Regular
+</option>
+
+<option value="1">
+⭐ Ruim
+</option>
+
+</select>
 
         <textarea id="comentario" placeholder="Digite sua avaliação" required></textarea>
-
+<input
+type="text"
+id="site"
+style="display:none">
         <button type="submit" class="btn-submit">
             Enviar Avaliação
         </button>
@@ -197,55 +214,55 @@ Conhecer Clínica
 Contato
 </h2>
 
-<div class="contatos">
 
 <div class="contato-box">
 
-<h3>Imobiliária</h3>
+<h3>🏠 CEMO Imobiliária</h3>
 
 <p>
-
-📞 (38) 99136-1872
-
-</p>
-
-<p>
-
-Instagram:
-
-<a target="_blank"
-href="https://www.instagram.com/cemoimobiliariapirapora">
-
-@cemoimobiliariapirapora
-
+📲 WhatsApp:
+<a href="https://wa.me/5538991361872" target="_blank">
+(38) 99136-1872
 </a>
-
 </p>
+
+<p>
+📸 Instagram:
+<a href="https://www.instagram.com/cemoimobiliariapirapora" target="_blank">
+@cemoimobiliariapirapora
+</a>
+</p>
+
+<p>
+📘 Facebook:
+<a href="https://www.facebook.com/search/top?q=cemo%20imob%20pirapora" target="_blank">
+Cemo Imob Pirapora
+</a>
+</p>
+
+</div>
 
 </div>
 
 <div class="contato-box">
 
-<h3>Clínica</h3>
+<h3>🏥 Clínica CEMO</h3>
 
 <p>
-
-📞 (38) 99161-0939
-
-</p>
-
-<p>
-
-Instagram:
-
-<a target="_blank"
-href="https://www.instagram.com/cemo.pirapora">
-
-@cemo.pirapora
-
+📲 WhatsApp:
+<a href="https://wa.me/5538991610939" target="_blank">
+(38) 99161-0939
 </a>
-
 </p>
+
+<p>
+📸 Instagram:
+<a href="https://www.instagram.com/cemo.pirapora" target="_blank">
+@cemo.pirapora
+</a>
+</p>
+
+</div>
 
 </div>
 
@@ -253,19 +270,41 @@ href="https://www.instagram.com/cemo.pirapora">
 
 <div class="endereco">
 
-<h3>Endereço</h3>
+<h3>📍 Endereço</h3>
 
 <p>
 
-Rua Argemiro Peixoto, 202
+Rua Argemiro Peixoto, 202<br>
 
-Centro - Pirapora/MG
+Centro - Pirapora/MG<br>
 
-CEP: 39270-092
+CEP: 39270-092<br><br>
 
-Prédio verde ao lado da Prefeitura.
+Prédio verde ao lado da Prefeitura Municipal.
+
 
 </p>
+<div>
+
+<div class="horario-atendimento">
+
+<h3>
+🕒 Horário de Atendimento
+</h3>
+
+<p>
+
+Segunda a Sexta
+
+</p>
+
+<p>
+
+08:00 às 18:00
+
+</p>
+
+</div>
 
 </div>
 
@@ -273,19 +312,20 @@ Prédio verde ao lado da Prefeitura.
 
 <footer style="background-color: #0d1624; text-align: center; padding: 25px 10px; border-top: 1px solid rgba(255,255,255,0.05);">
 
-<p style="color: rgba(255,255,255,0.5); margin: 0; font-size: 14px;">
+<p>
 
-© 2026 CEMO Imobiliária e Clínica CEMO. Todos os direitos reservados. CRECI: MGJ-0009181. 🏠📄
+© 2026 CEMO Imobiliária e Clínica Ocupacional.
+
+Todos os direitos reservados.
+
+</p>
+
+<p>
+
+CRECI: MGJ-0009181
 
 </p>
 
-<!--
-<p style="color: #00ff88; margin: 8px 0 0 0; font-size: 14px; font-weight: bold; letter-spacing: 0.5px;">
-
-Desenvolvido por <span style="color: #ffffff; font-weight: 800;">MrBrozau</span>
-
-</p>
--->
 
 </footer>
 
@@ -348,6 +388,16 @@ async function carregarDepoimentosNoSite() {
 //  ENVIA A AVALIAÇÃO
 async function enviarAvaliacao(event) {
     event.preventDefault(); 
+    const site =
+document.getElementById("site").value;
+
+if(site !== ""){
+
+alert("Spam detectado.");
+
+return;
+
+}
 
     const nome = document.getElementById("nome").value;
     const nota = document.getElementById("nota").value;
@@ -412,116 +462,157 @@ function limitarNota(input) {
 </script>
 
 <script>
-async function carregarImoveisSite() {
-console.log("FUNÇÃO DOS IMÓVEIS EXECUTOU");
 
-    try {
+function mostrarClinica(){
 
-        const resposta = await fetch("api/listar_imoveis.php");
-        const imoveis = await resposta.json();
-        console.log(imoveis);
+document.getElementById("clinica").scrollIntoView({
+behavior:"smooth"
+});
 
-        const container =
-            document.getElementById("lista-imoveis-site");
-
-        container.innerHTML = "";
-
-        imoveis.forEach(imovel => {
-
-           container.innerHTML += `
-    <div class="imovel hover-effect reveal active">
-
-        <div class="imagem" onclick="abrirMidia(this)">
-            <span class="status">
-    🟢 Disponível
-</span>
-    ${
-        imovel.foto && 
-        (imovel.foto.endsWith(".mp4") || imovel.foto.endsWith(".webm"))
-        ?
-        `
-        <video controls>
-            <source src="uploads/${imovel.foto}" type="video/mp4">
-            Seu navegador não suporta vídeo.
-        </video>
-        `
-        :
-        `
-        <img src="${
-            imovel.foto
-            ? 'uploads/' + imovel.foto
-            : 'https://via.placeholder.com/400x250'
-        }" alt="${imovel.titulo}">
-        `
-    }
-</div>
-
-        <h3>${imovel.titulo}</h3>
-
-        <p class="endereco">
-📍 ${imovel.endereco}
-</p>
-
-<p class="descricao">
-${imovel.descricao}
-</p>
-
-        <span class="preco">
- 💰 R$ ${imovel.preco}
-</span>
-<a class="btn-whatsapp" 
-   href="https://wa.me/5538991361872?text=Olá, tenho interesse no imóvel ${imovel.titulo}" 
-   target="_blank">
-   📲 Falar no WhatsApp
-</a>
-    </div>
-`;
-        });
-
-    } catch (erro) {
-        console.log(erro);
-    }
 }
 
-window.addEventListener("load", carregarImoveisSite);
+function mostrarImobiliaria(){
+
+document.getElementById("imobiliaria").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
 </script>
-<style>
-#popup-midia {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.92);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  animation: aparecer .3s ease;
-}
 
-#conteudo-popup {
-  max-width: 90vw;
-  max-height: 90vh;
-}
 
-#conteudo-popup img,
-#conteudo-popup video {
-  max-width: 100%;
-  max-height: 90vh;
-  border-radius: 20px;
-  object-fit: contain;
-}
+<div id="cookie-banner">
 
-@keyframes aparecer {
-  from { opacity: 0; transform: scale(.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-</style>
+<p>
 
-<div id="popup-midia">
-    <button id="fechar-popup" onclick="fecharMidia()">✕</button>
+Utilizamos cookies para melhorar sua experiência.
 
-    <div id="conteudo-popup"></div>
+</p>
+
+<button onclick="aceitarCookies()">
+
+Aceitar
+
+</button>
+
 </div>
+<script>
 
+function aceitarCookies(){
+
+localStorage.setItem(
+"cookiesAceitos",
+"sim"
+);
+
+document
+.getElementById("cookie-banner")
+.style.display =
+"none";
+
+}
+
+window.addEventListener(
+"load",
+function(){
+
+if(
+localStorage.getItem(
+"cookiesAceitos"
+)
+==="sim"
+){
+
+document
+.getElementById(
+"cookie-banner"
+)
+.style.display=
+"none";
+
+}
+
+}
+);
+
+</script>
+<a
+href="https://wa.me/5538991361872"
+target="_blank"
+class="whatsapp-flutuante">
+
+📲
+
+</a>
+<button
+id="btn-topo"
+onclick="voltarTopo()">
+
+⬆
+
+</button>
+<script>
+
+function voltarTopo(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+window.addEventListener("scroll",()=>{
+
+const botao =
+document.getElementById("btn-topo");
+
+if(window.scrollY > 500){
+
+botao.style.display = "block";
+
+}else{
+
+botao.style.display = "none";
+
+}
+
+});
+
+</script>
+
+<script>
+        function trocarPortal(tipo) {
+            // Esconde a Home
+            document.getElementById("home-principal").style.display = "none";
+            
+            // Esconde ambos os portais antes de mostrar
+            document.getElementById("portal-clinica").style.display = "none";
+            document.getElementById("portal-imobiliaria").style.display = "none";
+
+            // Ativa o portal e o CSS correto
+            if (tipo === 'clinica') {
+                document.getElementById("portal-clinica").style.display = "block";
+                document.getElementById("css-clinica").disabled = false;
+                document.getElementById("css-imobiliaria").disabled = true;
+            } else {
+                document.getElementById("portal-imobiliaria").style.display = "block";
+                document.getElementById("css-imobiliaria").disabled = false;
+                document.getElementById("css-clinica").disabled = true;
+            }
+        }
+
+        function voltarInicio() {
+            document.getElementById("home-principal").style.display = "block";
+            document.getElementById("portal-clinica").style.display = "none";
+            document.getElementById("portal-imobiliaria").style.display = "none";
+            document.getElementById("css-clinica").disabled = true;
+            document.getElementById("css-imobiliaria").disabled = true;
+        }
+    </script>
 </body>
 </html>

@@ -33,40 +33,48 @@ async function carregarImoveis() {
 
 // FUNÇÃO QUE CADASTRA UM NOVO IMÓVEL
 async function cadastrarImovel() {
+
     const titulo = document.getElementById("titulo").value;
     const preco = document.getElementById("preco").value;
     const endereco = document.getElementById("endereco").value;
     const descricao = document.getElementById("descricao").value;
-    const foto = document.getElementById("midia").files[0];
+    const arquivo = document.getElementById("midia").files[0];
 
     const formData = new FormData();
+
     formData.append("titulo", titulo);
     formData.append("preco", preco);
     formData.append("endereco", endereco);
     formData.append("descricao", descricao);
 
-    if (foto) {
-        formData.append("foto", foto);
+    if (arquivo) {
+        formData.append("midia", arquivo);
     }
 
     try {
-        const resposta = await fetch(`${API}/cadastrar_imovel.php`, {
-            method: "POST",
-            body: formData
-        });
 
-        await resposta.text();
+        const resposta = await fetch(
+            "api/cadastrar_imovel.php",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
 
+        const texto = await resposta.text();
+
+        console.log(texto);
+        alert(texto);
 
         document.getElementById("form-cadastro").reset();
 
-        window.location.reload();
+    } catch (erro) {
 
-    } catch (error) {
-        console.log(error);
+        console.log(erro);
+        alert("Erro ao enviar.");
+
     }
 }
-
 // FUNÇÃO QUE EXCLUI UM IMÓVEL
 async function excluirImovel(id) {
     if (!confirm("Deseja excluir este imóvel?")) {

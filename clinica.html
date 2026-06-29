@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica CEMO - Pirapora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav style="padding: 20px;">
+        <button onclick="window.location.href='index.html'">
+← Voltar para o início
+</button>
+    </nav>
+
+    <div class="titulo-clinica">
+        <img src="assets/logo-clinica.png" alt="Logo Clínica CEMO">
+        <h2 class="titulo-secao">CLÍNICA CEMO E ENGENHARIA</h2>
+        <p class="subtitulo">
+            A CEMO oferece soluções completas em saúde ocupacional, segurança do trabalho e engenharia, atendendo empresas de diversos segmentos com qualidade, agilidade e responsabilidade.<br><br>
+            Realizamos exames ocupacionais admissionais, periódicos, demissionais, de retorno ao trabalho e mudança de função, além de programas, laudos e assessoria especializada para o cumprimento das normas regulamentadoras.<br><br>
+            Também atuamos nas áreas de engenharia de segurança do trabalho, engenharia ambiental e engenharia florestal, desenvolvendo projetos e soluções técnicas que promovem conformidade, sustentabilidade e segurança para sua empresa.<br><br>
+            Nosso compromisso é cuidar da saúde dos trabalhadores e oferecer suporte completo para o crescimento seguro e sustentável dos negócios.
+        </p>
+    </div>
+
+    <div class="servicos">
+        <button class="botao-servico" onclick="abrirExame('admissional')">Exame Admissional</button>
+        <button class="botao-servico" onclick="abrirExame('periodico')">Exame Periódico</button>
+        <button class="botao-servico" onclick="abrirExame('demissional')">Exame Demissional</button>
+        <button class="botao-servico" onclick="abrirExame('audiometria')">Audiometria</button>
+        <button class="botao-servico" onclick="abrirExame('espirometria')">Espirometria</button>
+        <button class="botao-servico" onclick="abrirExame('eletrocardiograma')">Eletrocardiograma</button>
+        <button class="botao-servico" onclick="abrirExame('eletroencefalograma')">Eletroencefalograma</button>
+        <button class="botao-servico" onclick="abrirExame('holter')">MAPA e Holter</button>
+        <button class="botao-servico" onclick="abrirExame('acuidade')">Acuidade Visual</button>
+        <button class="botao-servico" onclick="abrirExame('pcmso')">PCMSO</button>
+        <button class="botao-servico" onclick="abrirExame('seguranca')">Engenharia de Segurança do Trabalho</button>
+        <button class="botao-servico" onclick="abrirExame('fala')">Terapia da Voz e Fala</button>
+        <button class="botao-servico" onclick="abrirExame('ambiental')">Engenharia Ambiental e Florestal</button>
+        <button class="botao-servico" onclick="abrirExame('treinamentos')">Treinamentos e Palestras</button>
+    </div>
+
+    <section id="detalhes-exames">
+        <h2>Informações dos Exames</h2>
+        <div id="conteudo-exame">
+            <h3>Selecione um exame acima</h3>
+            <p>Clique em um dos exames para visualizar informações detalhadas.</p>
+        </div>
+    </section>
+
+    <section class="vantagens-clinica">
+        <h2>Por que escolher a Clínica CEMO?</h2>
+        <div class="cards-vantagens">
+            <div class="vantagem"><h3>⚡ Agilidade</h3><p>Atendimento rápido e eficiente para empresas e trabalhadores.</p></div>
+            <div class="vantagem"><h3>🏥 Estrutura Completa</h3><p>Equipamentos modernos e profissionais qualificados.</p></div>
+            <div class="vantagem"><h3>📋 Conformidade</h3><p>Atendimento às normas regulamentadoras e exigências legais.</p></div>
+            <div class="vantagem"><h3>🤝 Atendimento Personalizado</h3><p>Soluções específicas para cada empresa.</p></div>
+        </div>
+    </section>
+
+    <script>
+        function abrirExame(tipo) {
+            const conteudo = document.getElementById("conteudo-exame");
+            const exames = {
+                pcmso: { titulo: "PCMSO", descricao: "Programa de Controle Médico de Saúde Ocupacional.", zap: "https://wa.me/5538991610939" },
+                admissional: { titulo: "Exame Admissional", descricao: "Realizado antes da contratação.", zap: "https://wa.me/5538991610939" }
+                // ... cole o restante dos seus exames aqui seguindo o padrão
+            };
+            
+            const exame = exames[tipo];
+            if(exame) {
+                conteudo.innerHTML = `<h3>${exame.titulo}</h3><p>${exame.descricao}</p><a class="btn-whatsapp" href="${exame.zap}" target="_blank">📲 Solicitar Informações</a>`;
+                document.getElementById("detalhes-exames").scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+    <script>
+
+function abrirExame(tipo){
+
+const conteudo =
+document.getElementById("conteudo-exame");
+
+const exames = {
+
+pcmso: {
+titulo: "PCMSO",
+descricao: "Programa de Controle Médico de Saúde Ocupacional. Fundamental para monitorar a saúde dos trabalhadores e atender às exigências legais.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre PCMSO"
+},
+
+admissional: {
+titulo: "Exame Admissional",
+descricao: "Realizado antes da contratação para verificar se o trabalhador está apto para exercer sua função.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Admissional"
+},
+
+periodico: {
+titulo: "Exame Periódico",
+descricao: "Acompanha a saúde do colaborador durante o vínculo empregatício.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Periódico"
+},
+
+demissional: {
+titulo: "Exame Demissional",
+descricao: "Realizado no desligamento para avaliar as condições de saúde do colaborador.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Demissional"
+},
+
+cardiologico: {
+titulo: "Exames Cardiológicos",
+descricao: "Avaliam a saúde cardiovascular e ajudam na prevenção de doenças cardíacas.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exames Cardiológicos"
+},
+
+eletroencefalograma: {
+titulo: "Eletroencefalograma",
+descricao: "Exame utilizado para analisar a atividade elétrica cerebral.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Eletroencefalograma"
+},
+
+eletrocardiograma: {
+titulo: "Eletrocardiograma",
+descricao: "Exame utilizado para avaliar o funcionamento elétrico do coração.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Eletrocardiograma"
+},
+
+holter: {
+titulo: "MAPA e Holter",
+descricao: "Monitoramento cardíaco contínuo para identificar alterações e riscos.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre MAPA e Holter"
+},
+
+espirometria: {
+titulo: "Espirometria",
+descricao: "Avalia a capacidade pulmonar e o desempenho respiratório.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Espirometria"
+},
+
+acuidade: {
+titulo: "Acuidade Visual",
+descricao: "Exame que avalia a capacidade visual do trabalhador.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Acuidade Visual"
+},
+
+audiometria: {
+titulo: "Audiometria",
+descricao: "Avalia a audição e detecta possíveis perdas auditivas.",
+zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Audiometria"
+},
+
+fala: {
+titulo: "Terapia da Voz e Fala",
+descricao: "Tratamentos especializados para voz, fala e comunicação.",
+zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Terapia da Voz e Fala"
+},
+
+ambiental: {
+titulo: "Engenharia Ambiental e Florestal",
+descricao: "Projetos, licenciamento e soluções ambientais para empresas e propriedades.",
+zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Engenharia Ambiental e Florestal"
+},
+
+treinamentos: {
+titulo: "Treinamentos e Palestras",
+descricao: "Capacitações voltadas para saúde ocupacional e segurança do trabalho.",
+zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Treinamentos e Palestras"
+},
+
+seguranca: {
+titulo: "Engenharia de Segurança do Trabalho",
+descricao: "Laudos, programas e acompanhamento técnico para adequação às normas regulamentadoras.",
+zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Engenharia de Segurança do Trabalho"
+}
+
+};
+
+const exame = exames[tipo];
+
+if(!exame) return;
+
+conteudo.innerHTML = `
+
+<h3>${exame.titulo}</h3>
+
+<p>
+${exame.descricao}
+</p>
+
+<a
+class="btn-whatsapp"
+href="${exame.zap}"
+target="_blank">
+
+📲 Solicitar Informações
+
+</a>
+
+`;
+
+document
+.getElementById("detalhes-exames")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+<section id="contato">
+
+<h2>
+Contato
+</h2>
+
+</div>
+
+<div class="contato-box">
+
+<h3>🏥 Clínica CEMO</h3>
+
+<p>
+📲 WhatsApp:
+<a href="https://wa.me/5538991610939" target="_blank">
+(38) 99161-0939
+</a>
+</p>
+
+<p>
+📸 Instagram:
+<a href="https://www.instagram.com/cemo.pirapora" target="_blank">
+@cemo.pirapora
+</a>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="endereco">
+
+<h3>📍 Endereço</h3>
+
+<p>
+
+Rua Argemiro Peixoto, 202<br>
+
+Centro - Pirapora/MG<br>
+
+CEP: 39270-092<br><br>
+
+Prédio verde ao lado da Prefeitura Municipal.
+
+
+</p>
+<div>
+
+<div class="horario-atendimento">
+
+<h3>
+🕒 Horário de Atendimento
+</h3>
+
+<p>
+
+Segunda a Sexta
+
+</p>
+
+<p>
+
+08:00 às 18:00
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer style="background-color: #0d1624; text-align: center; padding: 25px 10px; border-top: 1px solid rgba(255,255,255,0.05);">
+
+<p>
+
+© 2026 CEMO Imobiliária e Clínica Ocupacional.
+
+Todos os direitos reservados.
+
+</p>
+
+<p>
+
+CRECI: MGJ-0009181
+
+</p>
+
+
+</footer>
+
+<script>
+
+</script>
+</body>
+</html>

@@ -1,25 +1,36 @@
 <?php
 
-if (ob_get_length()) ob_clean();
-
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Content-Type: application/json; charset=UTF-8");
+header('Content-Type: application/json; charset=utf-8');
 
 include("conexao.php");
 
-$sql = "SELECT * FROM imoveis ORDER BY id DESC";
+$sql = "SELECT
+            id,
+            titulo,
+            endereco,
+            descricao,
+            preco,
+            foto
+        FROM imoveis
+        ORDER BY id DESC";
+
 $resultado = $conn->query($sql);
 
 $imoveis = [];
 
-if ($resultado) {
-    while ($row = $resultado->fetch_assoc()) {
-        $imoveis[] = $row;
+if ($resultado && $resultado->num_rows > 0) {
+
+    while($row = $resultado->fetch_assoc()) {
+
+        $imoveis[] = [
+            "id" => $row["id"] ?? "",
+            "titulo" => $row["titulo"] ?? "",
+            "endereco" => $row["endereco"] ?? "",
+            "descricao" => $row["descricao"] ?? "",
+            "preco" => $row["preco"] ?? "",
+            "foto" => $row["foto"] ?? ""
+        ];
     }
 }
 
-echo json_encode($imoveis);
-exit;
-?>
+echo json_encode($imoveis, JSON_UNESCAPED_UNICODE);
