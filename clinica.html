@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica CEMO - Pirapora</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clinica.css">
 </head>
 <body>
 
@@ -60,22 +60,7 @@
         </div>
     </section>
 
-    <script>
-        function abrirExame(tipo) {
-            const conteudo = document.getElementById("conteudo-exame");
-            const exames = {
-                pcmso: { titulo: "PCMSO", descricao: "Programa de Controle Médico de Saúde Ocupacional.", zap: "https://wa.me/5538991610939" },
-                admissional: { titulo: "Exame Admissional", descricao: "Realizado antes da contratação.", zap: "https://wa.me/5538991610939" }
-                // ... cole o restante dos seus exames aqui seguindo o padrão
-            };
-            
-            const exame = exames[tipo];
-            if(exame) {
-                conteudo.innerHTML = `<h3>${exame.titulo}</h3><p>${exame.descricao}</p><a class="btn-whatsapp" href="${exame.zap}" target="_blank">📲 Solicitar Informações</a>`;
-                document.getElementById("detalhes-exames").scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    </script>
+    
     <script>
 
 function abrirExame(tipo){
@@ -199,12 +184,6 @@ target="_blank">
 </a>
 
 `;
-
-document
-.getElementById("detalhes-exames")
-.scrollIntoView({
-behavior:"smooth"
-});
 
 }
 

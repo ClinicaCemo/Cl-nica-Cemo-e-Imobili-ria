@@ -1,2 +1,1417 @@
-#portal-clinica { display: block !important; animation: fadeIn 0.5s; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/*=============================
+    CEMO - CLÍNICA OCUPACIONAL
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family: "Segoe UI",sans-serif;
+    color:#fff;
+
+    background:linear-gradient(-45deg,
+    #1883fd,
+    #1201ff,
+    #00ffaa,
+    #01ff23);
+
+    background-size:400% 400%;
+    animation:fundo 15s ease infinite;
+
+    overflow-x:hidden;
+
+}
+
+/* Fundo animado */
+
+@keyframes fundo{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* Barra superior */
+
+nav{
+
+width:100%;
+padding:18px 8% !important;
+
+background:rgba(5,18,35,.65);
+
+backdrop-filter:blur(15px);
+
+position:sticky;
+top:0;
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* Botão voltar */
+
+nav button{
+
+background:linear-gradient(135deg,#15a878,#0d6efd);
+
+border:none;
+
+padding:14px 28px;
+
+border-radius:50px;
+
+font-size:15px;
+
+font-weight:700;
+
+color:white;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+nav button:hover{
+
+transform:translateY(-4px) scale(1.04);
+
+box-shadow:0 18px 35px rgba(0,0,0,.45);
+
+}
+
+/*==========================
+   TOPO DA CLÍNICA
+===========================*/
+
+.titulo-clinica{
+
+width:min(1200px,92%);
+
+margin:70px auto;
+
+padding:60px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:35px;
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.30);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* brilho */
+
+.titulo-clinica::before{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+height:350px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:50%;
+
+top:-180px;
+right:-100px;
+
+filter:blur(20px);
+
+}
+
+.titulo-clinica img{
+
+width:170px;
+
+margin-bottom:30px;
+
+filter:
+
+drop-shadow(0 12px 30px rgba(0,0,0,.30));
+
+transition:.5s;
+
+}
+
+.titulo-clinica img:hover{
+
+transform:scale(1.06) rotate(-3deg);
+
+}
+
+.titulo-secao{
+
+font-size:42px;
+
+font-weight:800;
+
+margin-bottom:30px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+background:linear-gradient(90deg,#fff,#a8fff1);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.subtitulo{
+
+font-size:18px;
+
+line-height:2;
+
+max-width:980px;
+
+margin:auto;
+
+color:#f5f5f5;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.titulo-clinica{
+
+padding:35px 25px;
+
+}
+
+.titulo-secao{
+
+font-size:28px;
+
+}
+
+.subtitulo{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.titulo-clinica img{
+
+width:130px;
+
+}
+
+}
+/*==================================
+      SERVIÇOS / EXAMES
+==================================*/
+
+.servicos{
+
+width:min(1300px,92%);
+
+margin:70px auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:22px;
+
+}
+
+.botao-servico{
+
+position:relative;
+
+padding:22px;
+
+border:none;
+
+border-radius:22px;
+
+cursor:pointer;
+
+font-size:17px;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(135deg,#0f6fb4,#12b886);
+
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.28);
+
+}
+
+.botao-servico::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:70%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+transition:.7s;
+
+}
+
+.botao-servico:hover::before{
+
+left:150%;
+
+}
+
+.botao-servico:hover{
+
+transform:translateY(-8px) scale(1.04);
+
+box-shadow:
+
+0 22px 45px rgba(0,0,0,.35);
+
+background:linear-gradient(135deg,#12b886,#0f6fb4);
+
+}
+
+.botao-servico:active{
+
+transform:scale(.97);
+
+}
+
+/* Borda iluminada */
+
+.botao-servico::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:22px;
+
+padding:2px;
+
+background:linear-gradient(
+
+45deg,
+
+#8fffe3,
+
+#ffffff,
+
+#68d6ff
+
+);
+
+-webkit-mask:
+
+linear-gradient(#fff 0 0) content-box,
+
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.botao-servico:hover::after{
+
+opacity:1;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.servicos{
+
+grid-template-columns:1fr;
+
+gap:16px;
+
+}
+
+.botao-servico{
+
+font-size:16px;
+
+padding:18px;
+
+}
+
+}
+/*==================================
+    INFORMAÇÕES DOS EXAMES
+==================================*/
+
+#detalhes-exames{
+
+width:min(1100px,92%);
+
+margin:80px auto;
+
+padding:50px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+animation:fadeCard .8s;
+
+}
+
+#detalhes-exames h2{
+
+text-align:center;
+
+font-size:34px;
+
+margin-bottom:35px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+color:#fff;
+
+}
+
+#conteudo-exame{
+
+background:rgba(255,255,255,.10);
+
+padding:35px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.4s;
+
+}
+
+#conteudo-exame:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+}
+
+#conteudo-exame h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#8ffff1;
+
+}
+
+#conteudo-exame p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#f3f3f3;
+
+margin-bottom:35px;
+
+}
+
+/*=========================
+      BOTÃO WHATSAPP
+=========================*/
+
+.btn-whatsapp{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 40px;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-size:17px;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(135deg,#00c853,#25d366);
+
+box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn-whatsapp::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:60%;
+
+height:100%;
+
+background:rgba(255,255,255,.35);
+
+transform:skewX(-25deg);
+
+transition:.7s;
+
+}
+
+.btn-whatsapp:hover::before{
+
+left:150%;
+
+}
+
+.btn-whatsapp:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.btn-whatsapp:active{
+
+transform:scale(.96);
+
+}
+
+/*=========================
+      ANIMAÇÃO
+=========================*/
+
+@keyframes fadeCard{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================
+      RESPONSIVO
+=========================*/
+
+@media(max-width:768px){
+
+#detalhes-exames{
+
+padding:30px 20px;
+
+}
+
+#detalhes-exames h2{
+
+font-size:26px;
+
+}
+
+#conteudo-exame{
+
+padding:22px;
+
+}
+
+#conteudo-exame h3{
+
+font-size:22px;
+
+}
+
+#conteudo-exame p{
+
+font-size:16px;
+
+}
+
+.btn-whatsapp{
+
+width:100%;
+
+padding:16px;
+
+font-size:16px;
+
+}
+
+}
+/*==================================
+      VANTAGENS DA CLÍNICA
+==================================*/
+
+.vantagens-clinica{
+
+width:min(1200px,92%);
+
+margin:90px auto;
+
+padding:60px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:35px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+}
+
+.vantagens-clinica h2{
+
+text-align:center;
+
+font-size:36px;
+
+font-weight:800;
+
+margin-bottom:50px;
+
+color:#fff;
+
+letter-spacing:1px;
+
+}
+
+.cards-vantagens{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:28px;
+
+}
+
+.vantagem{
+
+position:relative;
+
+padding:35px 25px;
+
+border-radius:25px;
+
+background:linear-gradient(135deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.05));
+
+border:1px solid rgba(255,255,255,.15);
+
+overflow:hidden;
+
+transition:.4s;
+
+cursor:default;
+
+}
+
+.vantagem::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+
+right:-80px;
+
+width:180px;
+
+height:180px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+transition:.5s;
+
+}
+
+.vantagem:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 45px rgba(0,0,0,.30);
+
+background:linear-gradient(135deg,#0d6efd,#16b98b);
+
+}
+
+.vantagem:hover::before{
+
+transform:scale(1.5);
+
+}
+
+.vantagem h3{
+
+font-size:24px;
+
+margin-bottom:18px;
+
+color:#fff;
+
+}
+
+.vantagem p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#f2f2f2;
+
+}
+
+/*==================================
+      RESPONSIVO
+==================================*/
+
+@media(max-width:768px){
+
+.vantagens-clinica{
+
+padding:35px 20px;
+
+}
+
+.vantagens-clinica h2{
+
+font-size:28px;
+
+}
+
+.cards-vantagens{
+
+grid-template-columns:1fr;
+
+}
+
+.vantagem{
+
+padding:28px 20px;
+
+}
+
+.vantagem h3{
+
+font-size:22px;
+
+}
+
+.vantagem p{
+
+font-size:16px;
+
+}
+
+}
+/*==================================
+         CONTATO
+==================================*/
+
+#contato{
+
+width:min(1200px,92%);
+
+margin:90px auto;
+
+padding:60px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:35px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+}
+
+#contato h2{
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:800;
+
+margin-bottom:50px;
+
+letter-spacing:2px;
+
+color:#fff;
+
+}
+
+.contato-box,
+.endereco,
+.horario-atendimento{
+
+background:rgba(255,255,255,.10);
+
+padding:30px;
+
+margin-bottom:25px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.35s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.20);
+
+}
+
+.contato-box:hover,
+.endereco:hover,
+.horario-atendimento:hover{
+
+transform:translateY(-8px);
+
+background:linear-gradient(135deg,#0d6efd,#14b889);
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.contato-box h3,
+.endereco h3,
+.horario-atendimento h3{
+
+font-size:24px;
+
+margin-bottom:18px;
+
+color:#fff;
+
+}
+
+.contato-box p,
+.endereco p,
+.horario-atendimento p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#f3f3f3;
+
+}
+
+.contato-box a{
+
+color:#9dfce9;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.contato-box a:hover{
+
+color:#fff;
+
+text-decoration:underline;
+
+}
+
+/*==================================
+           RODAPÉ
+==================================*/
+
+footer{
+
+margin-top:80px !important;
+
+padding:35px 20px !important;
+
+background:linear-gradient(135deg,#071523,#0d2d4d) !important;
+
+border-top:1px solid rgba(255,255,255,.10);
+
+text-align:center;
+
+}
+
+footer p{
+
+color:#d9e9ef;
+
+font-size:15px;
+
+line-height:1.8;
+
+letter-spacing:.5px;
+
+}
+
+footer p:first-child{
+
+margin-bottom:8px;
+
+}
+
+/*==================================
+         RESPONSIVO
+==================================*/
+
+@media(max-width:768px){
+
+#contato{
+
+padding:35px 20px;
+
+}
+
+#contato h2{
+
+font-size:30px;
+
+}
+
+.contato-box,
+.endereco,
+.horario-atendimento{
+
+padding:22px;
+
+}
+
+.contato-box h3,
+.endereco h3,
+.horario-atendimento h3{
+
+font-size:20px;
+
+}
+
+.contato-box p,
+.endereco p,
+.horario-atendimento p{
+
+font-size:16px;
+
+}
+
+footer{
+
+padding:25px 15px !important;
+
+}
+
+}
+/*====================================
+      MOBILE COMPACTO 
+=====================================*/
+
+@media screen and (max-width:768px){
+
+body{
+font-size:12px !important;
+}
+
+/* TOPO */
+
+nav{
+padding:8px 10px !important;
+}
+
+nav button{
+padding:8px 12px !important;
+font-size:12px !important;
+border-radius:8px;
+}
+
+/* TÍTULO */
+
+.titulo-clinica{
+width:96%;
+padding:15px !important;
+margin:15px auto !important;
+border-radius:15px;
+}
+
+.titulo-clinica img{
+width:60px !important;
+margin-bottom:10px;
+}
+
+.titulo-secao{
+font-size:17px !important;
+margin-bottom:10px;
+}
+
+.subtitulo{
+font-size:11px !important;
+line-height:1.45 !important;
+}
+
+/* BOTÕES */
+
+.servicos{
+width:96%;
+grid-template-columns:repeat(2,1fr) !important;
+gap:8px !important;
+margin:18px auto !important;
+}
+
+.botao-servico{
+padding:10px 6px !important;
+font-size:11px !important;
+border-radius:10px;
+font-weight:600;
+}
+
+/* EXAMES */
+
+#detalhes-exames{
+width:96%;
+padding:15px !important;
+margin:20px auto !important;
+}
+
+#detalhes-exames h2{
+font-size:18px !important;
+}
+
+#conteudo-exame{
+padding:14px !important;
+}
+
+#conteudo-exame h3{
+font-size:16px !important;
+}
+
+#conteudo-exame p{
+font-size:11px !important;
+line-height:1.45 !important;
+}
+
+.btn-whatsapp{
+padding:10px !important;
+font-size:11px !important;
+border-radius:10px;
+}
+
+/* VANTAGENS */
+
+.vantagens-clinica{
+width:96%;
+padding:16px !important;
+margin:20px auto !important;
+}
+
+.vantagens-clinica h2{
+font-size:18px !important;
+margin-bottom:15px;
+}
+
+.cards-vantagens{
+grid-template-columns:1fr !important;
+gap:8px;
+}
+
+.vantagem{
+padding:14px !important;
+}
+
+.vantagem h3{
+font-size:15px !important;
+}
+
+.vantagem p{
+font-size:11px !important;
+line-height:1.45;
+}
+
+/* CONTATO */
+
+#contato{
+width:96%;
+padding:16px !important;
+margin:20px auto !important;
+}
+
+#contato h2{
+font-size:18px !important;
+}
+
+.contato-box,
+.endereco,
+.horario-atendimento{
+padding:14px !important;
+}
+
+.contato-box h3,
+.endereco h3,
+.horario-atendimento h3{
+font-size:15px !important;
+}
+
+.contato-box p,
+.endereco p,
+.horario-atendimento p{
+font-size:11px !important;
+line-height:1.45;
+}
+
+footer{
+padding:15px !important;
+}
+
+footer p{
+font-size:10px !important;
+}
+
+}
+/*==============================
+      MELHORIAS PARA PC
+===============================*/
+
+@media (min-width:992px){
+
+.titulo-clinica{
+
+max-width:1100px;
+
+padding:55px 70px;
+
+}
+
+.titulo-secao{
+
+font-size:46px;
+
+}
+
+.subtitulo{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+}
+
+.servicos{
+
+max-width:1200px;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+.botao-servico{
+
+padding:18px;
+
+font-size:15px;
+
+min-height:75px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+#detalhes-exames{
+
+max-width:1000px;
+
+padding:45px;
+
+}
+
+#conteudo-exame{
+
+padding:30px;
+
+}
+
+#conteudo-exame h3{
+
+font-size:30px;
+
+}
+
+#conteudo-exame p{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.vantagens-clinica{
+
+max-width:1200px;
+
+}
+
+.cards-vantagens{
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.vantagem{
+
+padding:28px;
+
+}
+
+#contato{
+
+max-width:1000px;
+
+}
+
+.contato-box,
+.endereco,
+.horario-atendimento{
+
+padding:28px;
+
+}
+
+}
+/*==================================
+   TOPO DA CLÍNICA - MOBILE 
+===================================*/
+
+@media (max-width:768px){
+
+.titulo-clinica{
+
+width:95% !important;
+
+margin:12px auto 18px !important;
+
+padding:16px 14px !important;
+
+border-radius:16px !important;
+
+}
+
+.titulo-clinica img{
+
+width:55px !important;
+
+display:block;
+
+margin:0 auto 10px;
+
+}
+
+.titulo-secao{
+
+font-size:18px !important;
+
+line-height:1.25 !important;
+
+margin-bottom:10px !important;
+
+letter-spacing:.5px !important;
+
+}
+
+.subtitulo{
+
+font-size:11px !important;
+
+line-height:1.55 !important;
+
+text-align:justify !important;
+
+color:#eef8f7;
+
+}
+
+.subtitulo br{
+
+display:none;
+
+}
+
+.subtitulo p{
+
+margin-bottom:10px;
+
+}
+
+}
+/*==================================
+      TAMANHO DA LOGO
+===================================*/
+
+/* PC */
+
+.titulo-clinica img{
+
+width:220px !important;
+
+max-width:100%;
+
+margin-bottom:25px;
+
+transition:.4s;
+
+}
+
+.titulo-clinica img:hover{
+
+transform:scale(1.06);
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.titulo-clinica img{
+
+width:100px !important;
+
+max-width:100%;
+
+margin:0 auto 15px;
+
+display:block;
+
+}
+
+}
