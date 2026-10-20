@@ -1,258 +1,1081 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica CEMO - Pirapora</title>
-    <link rel="stylesheet" href="clinica.css">
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CEMO | Clínica e Engenharia Ocupacional</title>
+
+<meta name="description" content="A CEMO oferece soluções completas em Medicina Ocupacional, Engenharia de Segurança, Engenharia Ambiental, Exames Ocupacionais, Consultorias e Treinamentos.">
+
+<meta name="theme-color" content="#0b5ed7">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="clinica.css">
+
+<link rel="icon" href="">
+
 </head>
+
 <body>
 
-    <nav style="padding: 20px;">
-        <button onclick="window.location.href='index.html'">
-← Voltar para o início
-</button>
-    </nav>
 
-    <div class="titulo-clinica">
-        <img src="assets/logo-clinica.png" alt="Logo Clínica CEMO">
-        <h2 class="titulo-secao">CLÍNICA CEMO E ENGENHARIA</h2>
-        <p class="subtitulo">
-            A CEMO oferece soluções completas em saúde ocupacional, segurança do trabalho e engenharia, atendendo empresas de diversos segmentos com qualidade, agilidade e responsabilidade.<br><br>
-            Realizamos exames ocupacionais admissionais, periódicos, demissionais, de retorno ao trabalho e mudança de função, além de programas, laudos e assessoria especializada para o cumprimento das normas regulamentadoras.<br><br>
-            Também atuamos nas áreas de engenharia de segurança do trabalho, engenharia ambiental e engenharia florestal, desenvolvendo projetos e soluções técnicas que promovem conformidade, sustentabilidade e segurança para sua empresa.<br><br>
-            Nosso compromisso é cuidar da saúde dos trabalhadores e oferecer suporte completo para o crescimento seguro e sustentável dos negócios.
-        </p>
-    </div>
+<!-- ===========================
+            LOADER
+============================ -->
 
-    <div class="servicos">
-        <button class="botao-servico" onclick="abrirExame('admissional')">Exame Admissional</button>
-        <button class="botao-servico" onclick="abrirExame('periodico')">Exame Periódico</button>
-        <button class="botao-servico" onclick="abrirExame('demissional')">Exame Demissional</button>
-        <button class="botao-servico" onclick="abrirExame('audiometria')">Audiometria</button>
-        <button class="botao-servico" onclick="abrirExame('espirometria')">Espirometria</button>
-        <button class="botao-servico" onclick="abrirExame('eletrocardiograma')">Eletrocardiograma</button>
-        <button class="botao-servico" onclick="abrirExame('eletroencefalograma')">Eletroencefalograma</button>
-        <button class="botao-servico" onclick="abrirExame('holter')">MAPA e Holter</button>
-        <button class="botao-servico" onclick="abrirExame('acuidade')">Acuidade Visual</button>
-        <button class="botao-servico" onclick="abrirExame('pcmso')">PCMSO</button>
-        <button class="botao-servico" onclick="abrirExame('seguranca')">Engenharia de Segurança do Trabalho</button>
-        <button class="botao-servico" onclick="abrirExame('fala')">Terapia da Voz e Fala</button>
-        <button class="botao-servico" onclick="abrirExame('ambiental')">Engenharia Ambiental e Florestal</button>
-        <button class="botao-servico" onclick="abrirExame('treinamentos')">Treinamentos e Palestras</button>
-    </div>
+<div id="loader">
 
-    <section id="detalhes-exames">
-        <h2>Informações dos Exames</h2>
-        <div id="conteudo-exame">
-            <h3>Selecione um exame acima</h3>
-            <p>Clique em um dos exames para visualizar informações detalhadas.</p>
-        </div>
-    </section>
+<div class="loader-container">
 
-    <section class="vantagens-clinica">
-        <h2>Por que escolher a Clínica CEMO?</h2>
-        <div class="cards-vantagens">
-            <div class="vantagem"><h3>⚡ Agilidade</h3><p>Atendimento rápido e eficiente para empresas e trabalhadores.</p></div>
-            <div class="vantagem"><h3>🏥 Estrutura Completa</h3><p>Equipamentos modernos e profissionais qualificados.</p></div>
-            <div class="vantagem"><h3>📋 Conformidade</h3><p>Atendimento às normas regulamentadoras e exigências legais.</p></div>
-            <div class="vantagem"><h3>🤝 Atendimento Personalizado</h3><p>Soluções específicas para cada empresa.</p></div>
-        </div>
-    </section>
+<img src=""
+class="loader-logo"
+alt="Logo CEMO">
 
-    
-    <script>
+<div class="loader-circle"></div>
 
-function abrirExame(tipo){
-
-const conteudo =
-document.getElementById("conteudo-exame");
-
-const exames = {
-
-pcmso: {
-titulo: "PCMSO",
-descricao: "Programa de Controle Médico de Saúde Ocupacional. Fundamental para monitorar a saúde dos trabalhadores e atender às exigências legais.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre PCMSO"
-},
-
-admissional: {
-titulo: "Exame Admissional",
-descricao: "Realizado antes da contratação para verificar se o trabalhador está apto para exercer sua função.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Admissional"
-},
-
-periodico: {
-titulo: "Exame Periódico",
-descricao: "Acompanha a saúde do colaborador durante o vínculo empregatício.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Periódico"
-},
-
-demissional: {
-titulo: "Exame Demissional",
-descricao: "Realizado no desligamento para avaliar as condições de saúde do colaborador.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exame Demissional"
-},
-
-cardiologico: {
-titulo: "Exames Cardiológicos",
-descricao: "Avaliam a saúde cardiovascular e ajudam na prevenção de doenças cardíacas.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Exames Cardiológicos"
-},
-
-eletroencefalograma: {
-titulo: "Eletroencefalograma",
-descricao: "Exame utilizado para analisar a atividade elétrica cerebral.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Eletroencefalograma"
-},
-
-eletrocardiograma: {
-titulo: "Eletrocardiograma",
-descricao: "Exame utilizado para avaliar o funcionamento elétrico do coração.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Eletrocardiograma"
-},
-
-holter: {
-titulo: "MAPA e Holter",
-descricao: "Monitoramento cardíaco contínuo para identificar alterações e riscos.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre MAPA e Holter"
-},
-
-espirometria: {
-titulo: "Espirometria",
-descricao: "Avalia a capacidade pulmonar e o desempenho respiratório.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Espirometria"
-},
-
-acuidade: {
-titulo: "Acuidade Visual",
-descricao: "Exame que avalia a capacidade visual do trabalhador.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Acuidade Visual"
-},
-
-audiometria: {
-titulo: "Audiometria",
-descricao: "Avalia a audição e detecta possíveis perdas auditivas.",
-zap: "https://wa.me/5538991610939?text=Olá, gostaria de informações sobre Audiometria"
-},
-
-fala: {
-titulo: "Terapia da Voz e Fala",
-descricao: "Tratamentos especializados para voz, fala e comunicação.",
-zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Terapia da Voz e Fala"
-},
-
-ambiental: {
-titulo: "Engenharia Ambiental e Florestal",
-descricao: "Projetos, licenciamento e soluções ambientais para empresas e propriedades.",
-zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Engenharia Ambiental e Florestal"
-},
-
-treinamentos: {
-titulo: "Treinamentos e Palestras",
-descricao: "Capacitações voltadas para saúde ocupacional e segurança do trabalho.",
-zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Treinamentos e Palestras"
-},
-
-seguranca: {
-titulo: "Engenharia de Segurança do Trabalho",
-descricao: "Laudos, programas e acompanhamento técnico para adequação às normas regulamentadoras.",
-zap: "https://wa.me/5538991361872?text=Olá, gostaria de informações sobre Engenharia de Segurança do Trabalho"
-}
-
-};
-
-const exame = exames[tipo];
-
-if(!exame) return;
-
-conteudo.innerHTML = `
-
-<h3>${exame.titulo}</h3>
+<h2>CEMO</h2>
 
 <p>
-${exame.descricao}
+Preparando sua experiência...
 </p>
+
+<div class="loader-bar">
+
+<div class="loader-progress"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ===========================
+          OVERLAY MENU
+============================ -->
+
+<div id="overlay-menu"></div>
+
+
+
+<!-- ===========================
+         MENU MOBILE
+============================ -->
+
+<nav id="mobile-menu">
+
+<div class="mobile-topo">
+
+<h2>CEMO</h2>
+
+<button id="fechar-menu">
+
+✕
+
+</button>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="#inicio">
+
+🏠 Início
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#sobre">
+
+🏥 Sobre
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#exames">
+
+📋 Exames
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#estrutura">
+
+🏢 Estrutura
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#contato">
+
+📞 Contato
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+⬅ Voltar
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- ===========================
+        HEADER
+============================ -->
+
+<header class="navbar">
+
+<div class="logo-area">
+
+<img src="assets/logo-clinica.png"
+alt="Logo CEMO">
+
+<div>
+
+<h2>CEMO</h2>
+
+<span>
+Clínica e Engenharia
+</span>
+
+</div>
+
+</div>
+
+
+
+<nav class="desktop-menu">
+
+<ul>
+
+<li>
+
+<a href="#inicio">
+
+Início
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#sobre">
+
+Sobre
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#exames">
+
+Exames
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#estrutura">
+
+Estrutura
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#contato">
+
+Contato
+
+</a>
+
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<div class="header-buttons">
+
+<a href="index.html"
+class="btn-voltar">
+
+← Voltar
+
+</a>
+
+<button id="abrir-menu">
+
+<svg
+width="32"
+height="32"
+viewBox="0 0 24 24"
+fill="none">
+
+<path
+d="M3 6H21M3 12H21M3 18H21"
+stroke="currentColor"
+stroke-width="2"
+stroke-linecap="round"/>
+
+</svg>
+
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- ===========================
+          HERO
+============================ -->
+
+<section class="hero"
+id="inicio">
+
+<div class="hero-content">
+
+<div class="tag">
+
+<span>
+
+✔ Referência em Saúde Ocupacional
+
+</span>
+
+</div>
+
+<h1>
+
+Cuidamos da saúde da sua equipe com tecnologia, segurança e qualidade.
+
+</h1>
+
+<p>
+
+A CEMO oferece soluções completas em Medicina Ocupacional, Engenharia de Segurança, Engenharia Ambiental, Exames Ocupacionais, Programas Legais, Consultorias e Treinamentos para empresas de todos os portes.
+
+</p>
+
+<div class="hero-buttons">
 
 <a
-class="btn-whatsapp"
-href="${exame.zap}"
-target="_blank">
+href="#exames"
+class="btn-primary">
 
-📲 Solicitar Informações
+Conheça nossos serviços
 
 </a>
 
-`;
+<a
+href="https://wa.me/5538991610939"
+target="_blank"
+class="btn-whatsapp">
 
-}
+Falar pelo WhatsApp
 
-</script>
-<section id="contato">
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-image">
+
+<img
+src="assets/hero-clinica.png"
+alt="Equipe CEMO">
+
+</div>
+
+</section>
+<!-- ===================================
+            NÚMEROS
+=================================== -->
+
+<section class="numeros">
+
+<div class="numero">
+
+<h2>500+</h2>
+
+<p>Empresas atendidas</p>
+
+</div>
+
+<div class="numero">
+
+<h2>20.000+</h2>
+
+<p>Exames realizados</p>
+
+</div>
+
+<div class="numero">
+
+<h2>10+</h2>
+
+<p>Anos de experiência</p>
+
+</div>
+
+<div class="numero">
+
+<h2>100%</h2>
+
+<p>Conformidade com as Normas Regulamentadoras</p>
+
+</div>
+
+</section>
+
+
+<!-- ===================================
+             SOBRE
+=================================== -->
+
+<section class="sobre" id="sobre">
+
+<div class="titulo-section">
+
+<span>Quem Somos</span>
+
+<h2>Excelência em Saúde Ocupacional e Engenharia</h2>
+
+</div>
+
+<div class="sobre-container">
+
+<div class="sobre-texto">
+
+<p>
+
+A <strong>CEMO</strong> atua oferecendo soluções completas em Medicina
+Ocupacional, Engenharia de Segurança do Trabalho,
+Engenharia Ambiental, Engenharia Florestal, programas
+legais, treinamentos e consultorias.
+
+</p>
+
+<p>
+
+Nosso compromisso é proporcionar segurança,
+agilidade, qualidade e atendimento humanizado,
+garantindo que empresas estejam em conformidade
+com toda a legislação vigente.
+
+</p>
+
+<p>
+
+Contamos com uma equipe altamente qualificada,
+estrutura moderna e equipamentos de última geração,
+oferecendo um atendimento rápido e eficiente.
+
+</p>
+
+</div>
+
+<div class="sobre-info">
+
+<div class="info-box">
+
+<h3>Missão</h3>
+
+<p>
+
+Promover saúde, segurança e qualidade de vida
+no ambiente de trabalho.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Visão</h3>
+
+<p>
+
+Ser referência regional em Medicina Ocupacional
+e Engenharia.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Valores</h3>
+
+<p>
+
+Ética, responsabilidade, qualidade,
+inovação e compromisso com nossos clientes.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================
+            EXAMES
+=================================== -->
+
+<!-- ===================================
+            EXAMES
+=================================== -->
+
+<section id="exames">
+
+<div class="titulo-section">
+
+<span>Nossos Serviços</span>
+
+<h2>Nossos Exames e Soluções</h2>
+
+<p class="descricao-section">
+
+A CEMO oferece uma linha completa de exames ocupacionais,
+programas de saúde, engenharia e treinamentos para empresas,
+sempre seguindo rigorosamente as normas regulamentadoras.
+
+</p>
+
+</div>
+
+<div class="grid">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img src="assets/exames/admissional.jpg" alt="Exame Admissional">
+
+<div class="card-content">
+
+<h3>Exame Admissional</h3>
+
+<p>
+
+Avaliação médica obrigatória realizada antes da contratação do colaborador.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Admissional.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img src="assets/exames/periodico.jpg" alt="Exame Periódico">
+
+<div class="card-content">
+
+<h3>Exame Periódico</h3>
+
+<p>
+
+Acompanhamento periódico da saúde ocupacional dos colaboradores.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Periódico.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img src="assets/exames/demissional.jpg" alt="Exame Demissional">
+
+<div class="card-content">
+
+<h3>Exame Demissional</h3>
+
+<p>
+
+Avaliação clínica realizada no encerramento do vínculo empregatício.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Demissional.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card">
+
+<img src="assets/exames/audiometria.jpg" alt="Audiometria">
+
+<div class="card-content">
+
+<h3>Audiometria</h3>
+
+<p>
+
+Exame para avaliação da capacidade auditiva do trabalhador.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Audiometria.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card">
+
+<img src="assets/exames/espirometria.jpg" alt="Espirometria">
+
+<div class="card-content">
+
+<h3>Espirometria</h3>
+
+<p>
+
+Avaliação da função pulmonar para monitoramento ocupacional.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Espirometria.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+<img src="assets/exames/eletrocardiograma.jpg" alt="Eletrocardiograma">
+
+<div class="card-content">
+
+<h3>Eletrocardiograma</h3>
+
+<p>
+
+Avaliação da atividade elétrica cardíaca com equipamentos modernos.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Eletrocardiograma.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 7 -->
+
+<div class="card">
+
+<img src="assets/exames/eletroencefalograma.jpg" alt="Eletroencefalograma">
+
+<div class="card-content">
+
+<h3>Eletroencefalograma</h3>
+
+<p>
+
+Análise da atividade cerebral para avaliações específicas.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Eletroencefalograma.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 8 -->
+
+<div class="card">
+
+<img src="assets/exames/mapa.jpg" alt="MAPA">
+
+<div class="card-content">
+
+<h3>MAPA</h3>
+
+<p>
+
+Monitoramento Ambulatorial da Pressão Arterial durante 24 horas.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20MAPA.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+<!-- CARD 9 -->
+
+<div class="card">
+
+<img src="assets/exames/holter.jpg" alt="Holter">
+
+<div class="card-content">
+
+<h3>Holter 24 Horas</h3>
+
+<p>
+
+Monitoramento contínuo da atividade cardíaca para diagnósticos mais precisos.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Holter.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 10 -->
+
+<div class="card">
+
+<img src="assets/exames/acuidade.jpg" alt="Acuidade Visual">
+
+<div class="card-content">
+
+<h3>Acuidade Visual</h3>
+
+<p>
+
+Avaliação da capacidade visual do colaborador para atividades ocupacionais.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Acuidade%20Visual.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 11 -->
+
+<div class="card">
+
+<img src="assets/exames/pcmso.jpg" alt="PCMSO">
+
+<div class="card-content">
+
+<h3>PCMSO</h3>
+
+<p>
+
+Programa de Controle Médico de Saúde Ocupacional elaborado conforme a legislação.
+
+</p>
+
+<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20PCMSO.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 12 -->
+
+<div class="card">
+
+<img src="assets/exames/seguranca.jpg" alt="Engenharia de Segurança">
+
+<div class="card-content">
+
+<h3>Engenharia de Segurança</h3>
+
+<p>
+
+Elaboração de PGR, LTCAT, laudos técnicos, consultorias e projetos de segurança.
+
+</p>
+
+<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Engenharia%20de%20Segurança.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 13 -->
+
+<div class="card">
+
+<img src="assets/exames/fala.jpg" alt="Terapia da Voz">
+
+<div class="card-content">
+
+<h3>Terapia da Voz e Fala</h3>
+
+<p>
+
+Atendimento especializado em voz, comunicação e reabilitação fonoaudiológica.
+
+</p>
+
+<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Terapia%20da%20Voz%20e%20Fala.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 14 -->
+
+<div class="card">
+
+<img src="assets/exames/ambiental.jpg" alt="Engenharia Ambiental">
+
+<div class="card-content">
+
+<h3>Engenharia Ambiental</h3>
+
+<p>
+
+Licenciamentos, regularizações ambientais, projetos e consultorias técnicas.
+
+</p>
+
+<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Engenharia%20Ambiental.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CARD 15 -->
+
+<div class="card">
+
+<img src="assets/exames/treinamentos.jpg" alt="Treinamentos">
+
+<div class="card-content">
+
+<h3>Treinamentos e Palestras</h3>
+
+<p>
+
+Capacitações, palestras e treinamentos corporativos conforme as Normas Regulamentadoras.
+
+</p>
+
+<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20os%20Treinamentos.">
+
+Solicitar Informações
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cta-exames">
+
+<div class="cta-conteudo">
 
 <h2>
-Contato
+
+Não encontrou o serviço que procura?
+
 </h2>
 
+<p>
+
+A CEMO possui diversos outros serviços nas áreas de Medicina Ocupacional, Engenharia, Segurança do Trabalho, Meio Ambiente e Consultorias Técnicas.
+
+Entre em contato com nossa equipe e receba um atendimento personalizado.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://wa.me/5538991610939"
+class="btn-whatsapp"
+target="_blank">
+
+Solicitar Atendimento
+
+</a>
+
+<a href="#contato"
+class="btn-primary">
+
+Falar com um Especialista
+
+</a>
+
 </div>
 
-<div class="contato-box">
+</div>
 
-<h3>🏥 Clínica CEMO</h3>
+</div>
 
-<p>
-📲 WhatsApp:
+</section>
+
+
+<!-- ===================================
+           ESTRUTURA
+=================================== -->
+
+<section id="estrutura">
+
+<div class="titulo-section">
+
+<span>Conheça</span>
+
+<h2>Nossa Estrutura</h2>
+
+</div>
+
+<p class="descricao-section">
+
+Ambientes modernos, confortáveis e preparados para
+oferecer um atendimento ágil, seguro e humanizado.
+
+</p>
+
+<div class="galeria">
+
+<img src="assets/galeria/foto1.jpg" alt="Recepção da Clínica">
+
+<img src="assets/galeria/foto2.jpg" alt="Consultório Médico">
+
+<img src="assets/galeria/foto3.jpg" alt="Sala de Exames">
+
+<img src="assets/galeria/foto4.jpg" alt="Equipamentos">
+
+<img src="assets/galeria/foto5.jpg" alt="Estrutura da Clínica">
+
+<img src="assets/galeria/foto6.jpg" alt="Área de Atendimento">
+
+</div>
+
+</section>
+<!-- ===================================
+            CONTATO
+=================================== -->
+
+<section id="contato">
+
+<div class="titulo-section">
+
+<span>Fale Conosco</span>
+
+<h2>Estamos prontos para atender você</h2>
+
+</div>
+
+<p class="descricao-section">
+
+Entre em contato com nossa equipe e solicite um orçamento ou tire suas dúvidas.
+
+</p>
+
+<div class="contato-grid">
+
+<div class="contato-card">
+
+<div class="contato-icon">
+📱
+</div>
+
+<h3>WhatsApp</h3>
+
+<p>(38) 99161-0939</p>
+
 <a href="https://wa.me/5538991610939" target="_blank">
-(38) 99161-0939
+
+Conversar Agora
+
 </a>
-</p>
 
-<p>
-📸 Instagram:
-<a href="https://www.instagram.com/cemo.pirapora" target="_blank">
-@cemo.pirapora
+</div>
+
+
+<div class="contato-card">
+
+<div class="contato-icon">
+📸
+</div>
+
+<h3>Instagram</h3>
+
+<p>@cemo.pirapora</p>
+
+<a href="https://instagram.com/cemo.pirapora" target="_blank">
+
+Visitar Perfil
+
 </a>
-</p>
 
 </div>
 
+
+<div class="contato-card">
+
+<div class="contato-icon">
+📍
 </div>
 
-</div>
-
-<div class="endereco">
-
-<h3>📍 Endereço</h3>
+<h3>Endereço</h3>
 
 <p>
 
 Rua Argemiro Peixoto, 202<br>
 
-Centro - Pirapora/MG<br>
-
-CEP: 39270-092<br><br>
-
-Prédio verde ao lado da Prefeitura Municipal.
-
-
-</p>
-<div>
-
-<div class="horario-atendimento">
-
-<h3>
-🕒 Horário de Atendimento
-</h3>
-
-<p>
-
-Segunda a Sexta
+Centro - Pirapora/MG
 
 </p>
 
+<a href="https://maps.google.com" target="_blank">
+
+Abrir no Maps
+
+</a>
+
+</div>
+
+
+<div class="contato-card">
+
+<div class="contato-icon">
+🕒
+</div>
+
+<h3>Horário</h3>
+
 <p>
 
-08:00 às 18:00
+Segunda à Sexta<br>
+
+07:30 às 18:00
 
 </p>
 
@@ -262,27 +1085,160 @@ Segunda a Sexta
 
 </section>
 
-<footer style="background-color: #0d1624; text-align: center; padding: 25px 10px; border-top: 1px solid rgba(255,255,255,0.05);">
+
+
+<!-- ===================================
+          VOLTAR AO TOPO
+=================================== -->
+
+<button id="btn-topo">
+
+↑
+
+</button>
+
+
+
+<!-- ===================================
+             FOOTER
+=================================== -->
+
+<footer>
+
+<div class="footer-logo">
+
+<img
+src="assets/logo-clinica.png"
+alt="Logo CEMO">
+
+<h2>CEMO</h2>
+
+</div>
 
 <p>
 
-© 2026 CEMO Imobiliária e Clínica Ocupacional.
-
-Todos os direitos reservados.
+Clínica e Engenharia Ocupacional
 
 </p>
 
 <p>
 
-CRECI: MGJ-0009181
+© 2026 CEMO - Todos os direitos reservados.
 
 </p>
-
 
 </footer>
 
+
+
+<!-- ===================================
+          JAVASCRIPT
+=================================== -->
+
 <script>
 
+window.addEventListener("load",function(){
+
+const loader=document.getElementById("loader");
+
+setTimeout(function(){
+
+loader.classList.add("loader-hidden");
+
+},900);
+
+});
+
+
+const abrir=document.getElementById("abrir-menu");
+
+const fechar=document.getElementById("fechar-menu");
+
+const menu=document.getElementById("mobile-menu");
+
+const overlay=document.getElementById("overlay-menu");
+
+
+abrir.onclick=function(){
+
+menu.classList.add("ativo");
+
+overlay.classList.add("ativo");
+
+document.body.style.overflow="hidden";
+
+};
+
+
+fechar.onclick=function(){
+
+menu.classList.remove("ativo");
+
+overlay.classList.remove("ativo");
+
+document.body.style.overflow="";
+
+};
+
+
+overlay.onclick=function(){
+
+menu.classList.remove("ativo");
+
+overlay.classList.remove("ativo");
+
+document.body.style.overflow="";
+
+};
+
+
+document.querySelectorAll("#mobile-menu a").forEach(function(item){
+
+item.onclick=function(){
+
+menu.classList.remove("ativo");
+
+overlay.classList.remove("ativo");
+
+document.body.style.overflow="";
+
+};
+
+});
+
+
+const topo=document.getElementById("btn-topo");
+
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>500){
+
+topo.classList.add("mostrar");
+
+}else{
+
+topo.classList.remove("mostrar");
+
+}
+
+});
+
+
+topo.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
 </script>
+
 </body>
+
 </html>

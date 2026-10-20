@@ -1,618 +1,527 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CEMO Pirapora: clínica ocupacional e imobiliária. Conheça nossos serviços, encontre imóveis e entre em contato.">
+
+    <meta name="theme-color" content="#071426">
+
+    <title>CEMO | Clínica Ocupacional e Imobiliária</title>
+
+    <!-- Arquivos CSS: vamos criar depois -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="clinica.css" id="css-clinica" disabled>
     <link rel="stylesheet" href="imobiliaria.css" id="css-imobiliaria" disabled>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <nav>
 
-<ul class="nav-links">
-
-<li><a href="#avaliacoes">Avaliações</a></li>
-
-<li><a href="#contato">Contato</a></li>
-
-</ul>
-
-<a class="btn-login" href="login.html">
-Área do Proprietário
-</a>
-
-</nav>
-
-<section id="home-principal">
-    <h1>Bem-vindo à CEMO</h1>
-    <button onclick="window.location.href='clinica.html'">Ir para Clínica</button>
-    <button onclick="window.location.href='imobiliaria.html'">Ir para Imobiliária</button>
-</section>
-
-<section id="portal-clinica">
-    <h2>Conteúdo da Clínica</h2>
-</section>
-
-<section id="portal-imobiliaria">
-    <h2>Conteúdo da Imobiliária</h2>
-</section>
-
-<header class="header-container">
-
-<section id="inicio" class="hero">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content fade-in">
-
-<div class="hero-badge">
- Imobiliária • Medicina Ocupacional • Engenharia
-</div>
-
-<h1>
-CLÍNICA CEMO OCUPACIONAL PIRAPORA-MG
-</h1>
-
-<h2>
-E CEMO IMOBILIÁRIA
-</h2>
-
-<p>
-A Clínica CEMO Ocupacional e a CEMO Imobiliária, localizadas em Pirapora/MG, oferecem soluções completas com profissionalismo, segurança e confiança.<br><br>
-
-Atuamos nas áreas de medicina ocupacional, engenharia de segurança do trabalho e serviços imobiliários, atendendo pessoas e empresas com excelência e compromisso.<br><br>
-
-Conte com uma equipe qualificada, atendimento especializado e soluções eficientes para cuidar da sua empresa, dos seus colaboradores e do seu patrimônio.
-</p>
-
-<div class="hero-buttons">
-
-   <div class="cards-principais">
-
-<div class="card-principal">
-
-<div class="icone-card">
-🏥
-</div>
-
-<h3>Clínica CEMO</h3>
-
-<p>
-
-Saúde ocupacional, exames, engenharia de segurança e atendimento empresarial.
-
-</p>
-
-</div>
-
-<div class="card-principal">
-
-<div class="icone-card">
-🏠
-</div>
-
-<h3>CEMO Imobiliária</h3>
-
-<p>
-
-Compra, venda, locação e administração de imóveis em Pirapora e região.
-
-</p>
-
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-</header>
-
-
-
-<section id="avaliacoes">
-
-    <h2>Avaliações dos Clientes</h2>
-
-    <p class="subtitulo">
-        A confiança de nossos clientes é a nossa maior conquista.<br><br>
-        Conheça a experiência de quem já escolheu nossos serviços e veja por que somos referência em qualidade, compromisso e atendimento.
-    </p>
-
-    <div class="media">
-        <h1 id="media-nota-num">5.0 ⭐</h1>
-        <p id="media-aprovacao-txt">100% de aprovação</p>
-    </div>
-
-    <!-- AQUI ESTÁ A MUDANÇA: O mural agora fica dentro de um container com scroll -->
-    <div class="container-avaliacoes">
-        <div id="mural-depoimentos" style="margin: 0 auto; text-align: left;">
-            <!-- Seus comentários aparecerão aqui e a caixa rolará automaticamente -->
+    <!-- TELA DE CARREGAMENTO -->
+    <div id="loader" class="loader" aria-label="Carregando site">
+        <div class="loader-logo">CEMO<span></span></div>
+        <p>Conectando você às melhores oportunidades</p>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
         </div>
     </div>
-<div class="estatisticas-site">
 
-<div class="estatistica">
-
-<h3>+500</h3>
-
-<p>Clientes Atendidos</p>
-
-</div>
-
-<div class="estatistica">
-
-<h3>+100</h3>
-
-<p>Empresas Parceiras</p>
-
-</div>
-
-<div class="estatistica">
-
-<h3>5.0</h3>
-
-<p>Avaliação Média</p>
-
-</div>
-
-</div>
-    <form id="form-avaliacao" onsubmit="enviarAvaliacao(event)">
-        <input type="text" id="nome" placeholder="Seu nome" required>
-<input
-type="email"
-id="email"
-placeholder="Seu e-mail"
-required>
-        <select id="nota" required>
-
-<option value="">
-Escolha uma nota
-</option>
-
-<option value="5">
-⭐⭐⭐⭐⭐ Excelente
-</option>
-
-<option value="4">
-⭐⭐⭐⭐ Muito Bom
-</option>
-
-<option value="3">
-⭐⭐⭐ Bom
-</option>
-
-<option value="2">
-⭐⭐ Regular
-</option>
-
-<option value="1">
-⭐ Ruim
-</option>
-
-</select>
-
-        <textarea id="comentario" placeholder="Digite sua avaliação" required></textarea>
-<input
-type="text"
-id="site"
-style="display:none">
-        <button type="submit" class="btn-submit">
-            Enviar Avaliação
-        </button>
-    </form>
-
-</section>
-
-<section id="contato">
-
-<h2>
-Contato
-</h2>
-
-
-<div class="contato-box">
-
-<h3>🏠 CEMO Imobiliária</h3>
-
-<p>
-📲 WhatsApp:
-<a href="https://wa.me/5538991361872" target="_blank">
-(38) 99136-1872
-</a>
-</p>
-
-<p>
-📸 Instagram:
-<a href="https://www.instagram.com/cemoimobiliariapirapora" target="_blank">
-@cemoimobiliariapirapora
-</a>
-</p>
-
-<p>
-📘 Facebook:
-<a href="https://www.facebook.com/search/top?q=cemo%20imob%20pirapora" target="_blank">
-Cemo Imob Pirapora
-</a>
-</p>
-
-</div>
-
-</div>
-
-<div class="contato-box">
-
-<h3>🏥 Clínica CEMO</h3>
-
-<p>
-📲 WhatsApp:
-<a href="https://wa.me/5538991610939" target="_blank">
-(38) 99161-0939
-</a>
-</p>
-
-<p>
-📸 Instagram:
-<a href="https://www.instagram.com/cemo.pirapora" target="_blank">
-@cemo.pirapora
-</a>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="endereco">
-
-<h3>📍 Endereço</h3>
-
-<p>
-
-Rua Argemiro Peixoto, 202<br>
-
-Centro - Pirapora/MG<br>
-
-CEP: 39270-092<br><br>
-
-Prédio verde ao lado da Prefeitura Municipal.
-
-
-</p>
-<div>
-
-<div class="horario-atendimento">
-
-<h3>
-🕒 Horário de Atendimento
-</h3>
-
-<p>
-
-Segunda a Sexta
-
-</p>
-
-<p>
-
-08:00 às 18:00
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<footer style="background-color: #0d1624; text-align: center; padding: 25px 10px; border-top: 1px solid rgba(255,255,255,0.05);">
-
-<p>
-
-© 2026 CEMO Imobiliária e Clínica Ocupacional.
-
-Todos os direitos reservados.
-
-</p>
-
-<p>
-
-CRECI: MGJ-0009181
-
-</p>
-
-
-</footer>
-
-<script>
-// CARREGAR AS AVALIAÇÕES E FAZER OS CÁLCULOS
-async function carregarDepoimentosNoSite() {
-    try {
-        const resposta = await fetch("api/listar_avaliacoes.php");
-        const avaliacoes = await resposta.json();
-
-        const mural = document.getElementById("mural-depoimentos");
-        if (!mural) return;
-
-        mural.innerHTML = ""; 
-
-        if (avaliacoes.length === 0) {
-            mural.innerHTML = "<p style='color: rgba(255,255,255,0.4); text-align: center;'>Nenhuma avaliação ainda. Seja o primeiro!</p>";
-            document.getElementById("media-nota-num").innerText = "0.0 ⭐";
-            document.getElementById("media-aprovacao-txt").innerText = "Nenhuma avaliação";
-            return;
-        }
-
-        let somaNotas = 0;
-        let totalNotasPositivas = 0; 
-
-        avaliacoes.forEach(item => {
-            const notaNum = parseInt(item.nota); 
-            somaNotas += notaNum; 
-            
-            if (notaNum >= 4) {
-                totalNotasPositivas++;
-            }
-
-            const estrelas = "⭐".repeat(notaNum);
-            
-            mural.innerHTML += `
-                <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #00ff88; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <strong style="color: #0d1b2a; font-size: 16px;">${item.nome}</strong>
-                        <span style="font-size: 14px;">${estrelas}</span>
+    <!-- CABEÇALHO -->
+    <header class="header" id="inicio">
+        <div class="container header-container">
+
+            <a href="#inicio" class="logo" aria-label="CEMO - Página inicial">
+                CEMO<span>.</span>
+                <small>CLÍNICA E IMOBILIÁRIA</small>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="main-nav" aria-label="Menu principal">
+                <a href="#inicio" data-i18n="navHome">Início</a>
+                <a href="#sobre" data-i18n="navAbout">Sobre nós</a>
+                <a href="#servicos" data-i18n="navServices">Serviços</a>
+                <a href="#avaliacoes" data-i18n="navReviews">Avaliações</a>
+                <a href="#contato" data-i18n="navContact">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <label class="language-label" for="language-select">
+                    Idioma
+                </label>
+                <select id="language-select" aria-label="Selecionar idioma">
+                    <option value="pt">PT</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO PRINCIPAL -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <span class="eyebrow" data-i18n="heroEyebrow">
+                    CEMO • PIRAPORA, MINAS GERAIS
+                </span>
+
+                <h1 data-i18n="heroTitle">
+                    Cuidando de pessoas.
+                    <br>
+                    Conectando oportunidades.
+                </h1>
+
+                <p data-i18n="heroDescription">
+                    Soluções em saúde ocupacional e oportunidades imobiliárias,
+                    com atendimento próximo, transparência e compromisso.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="clinica.html" class="button button-primary">
+                        Conheça a clínica
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="imobiliaria.html" class="button button-outline">
+                        Encontre seu imóvel
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="hero-location">
+                    <span aria-hidden="true">⌖</span>
+                    Pirapora – MG, Brasil
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section class="highlights">
+            <div class="container highlights-grid">
+
+                <article class="highlight-item">
+                    <span class="highlight-number">01</span>
+                    <div>
+                        <h3>Saúde ocupacional</h3>
+                        <p>Soluções voltadas para empresas e trabalhadores.</p>
                     </div>
-                    <p style="color: rgba(255,255,255,0.8); margin: 0; font-style: italic; line-height: 1.4;">
-                        "${item.comentario}"
+                </article>
+
+                <article class="highlight-item">
+                    <span class="highlight-number">02</span>
+                    <div>
+                        <h3>Mercado imobiliário</h3>
+                        <p>Atendimento para comprar, vender e investir.</p>
+                    </div>
+                </article>
+
+                <article class="highlight-item">
+                    <span class="highlight-number">03</span>
+                    <div>
+                        <h3>Atendimento próximo</h3>
+                        <p>Informação clara e atenção a cada cliente.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    <!-- SOBRE A CEMO -->
+<section class="section about" id="sobre">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img
+                src="assets/home.jpeg"
+                alt="Vista de Pirapora, Minas Gerais"
+                loading="lazy">
+
+            <div class="image-caption">
+                <span>PRESENÇA LOCAL</span>
+                <strong>Pirapora, Minas Gerais</strong>
+            </div>
+        </div>
+
+                <div class="about-content">
+                    <span class="section-label">SOBRE A CEMO</span>
+
+                    <h2>Mais que serviços, uma relação de confiança.</h2>
+
+                    <p>
+                        A CEMO reúne duas áreas de atuação: saúde ocupacional
+                        e mercado imobiliário. Nosso objetivo é oferecer
+                        atendimento organizado, comunicação transparente e
+                        soluções alinhadas às necessidades de cada cliente.
+                    </p>
+
+                    <p>
+                        Trabalhamos para tornar cada etapa mais simples,
+                        seja na busca por serviços ocupacionais, na compra
+                        de um imóvel, na venda ou em um novo investimento.
+                    </p>
+
+                    <a href="#contato" class="text-link">
+                        Fale com nossa equipe <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="section services" id="servicos">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">NOSSAS ÁREAS</span>
+                    <h2>Como podemos ajudar?</h2>
+                    <p>
+                        Escolha a área que você procura e conheça os serviços.
                     </p>
                 </div>
-            `;
-        });
 
-        const mediaGeral = (somaNotas / avaliacoes.length).toFixed(1);
-        const porcentagemAprovacao = Math.round((totalNotasPositivas / avaliacoes.length) * 100);
+                <div class="services-grid">
 
-        document.getElementById("media-nota-num").innerText = `${mediaGeral} ⭐`;
-        document.getElementById("media-aprovacao-txt").innerText = `${porcentagemAprovacao}% de aprovação`;
+                    <article class="service-card service-clinic">
+                        <div class="service-icon" aria-hidden="true">✚</div>
 
-    } catch (error) {
-        console.error("Erro ao carregar mural:", error);
-    }
-}
+                        <span class="card-category">CEMO OCUPACIONAL</span>
 
-//  ENVIA A AVALIAÇÃO
-async function enviarAvaliacao(event) {
-    event.preventDefault(); 
-    const site =
-document.getElementById("site").value;
+                        <h3>Clínica ocupacional</h3>
 
-if(site !== ""){
+                        <p>
+                            Atendimento e soluções em saúde ocupacional
+                            para empresas e trabalhadores. Consulte nossa
+                            equipe sobre os serviços disponíveis.
+                        </p>
 
-alert("Spam detectado.");
+                        <a href="clinica.html" class="button button-dark">
+                            Acessar clínica <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
 
-return;
+                    <article class="service-card service-real-estate">
+                        <div class="service-icon" aria-hidden="true">⌂</div>
 
-}
+                        <span class="card-category">CEMO IMOBILIÁRIA</span>
 
-    const nome = document.getElementById("nome").value;
-    const nota = document.getElementById("nota").value;
-    const comentario = document.getElementById("comentario").value;
+                        <h3>Imóveis e investimentos</h3>
 
-    const formData = new FormData();
-    formData.append("nome", nome);
-    formData.append("nota", nota);
-    formData.append("comentario", comentario);
+                        <p>
+                            Encontre oportunidades para comprar, vender
+                            ou investir em imóveis com orientação durante
+                            as etapas da negociação.
+                        </p>
 
-    try {
-        const resposta = await fetch("api/cadastrar_avaliacoes.php", {
-            method: "POST",
-            body: formData
-        });
+                        <a href="imobiliaria.html" class="button button-dark">
+                            Acessar imobiliária <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
 
-        await resposta.text();
-      
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="section differentials">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">NOSSO COMPROMISSO</span>
+                    <h2>Um atendimento que valoriza você.</h2>
+                </div>
+
+                <div class="differentials-grid">
+
+                    <article class="differential">
+                        <span class="differential-icon" aria-hidden="true">◇</span>
+                        <h3>Transparência</h3>
+                        <p>Informações claras para ajudar você a decidir.</p>
+                    </article>
+
+                    <article class="differential">
+                        <span class="differential-icon" aria-hidden="true">◎</span>
+                        <h3>Atenção</h3>
+                        <p>Atendimento com foco nas suas necessidades.</p>
+                    </article>
+
+                    <article class="differential">
+                        <span class="differential-icon" aria-hidden="true">↗</span>
+                        <h3>Praticidade</h3>
+                        <p>Canais de contato para facilitar sua comunicação.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AVALIAÇÕES -->
+        <section class="section reviews" id="avaliacoes">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">EXPERIÊNCIAS DOS CLIENTES</span>
+                    <h2>O que dizem sobre a CEMO</h2>
+                    <p>
+                        As avaliações publicadas devem representar experiências
+                        reais de clientes.
+                    </p>
+                </div>
+
+                <div class="reviews-summary">
+                    <div>
+                        <strong id="reviews-count">0</strong>
+                        <span>avaliações cadastradas</span>
+                    </div>
+
+                    <div class="reviews-stars" aria-label="Avaliações por estrelas">
+                        ★★★★★
+                    </div>
+                </div>
+
+                <div id="reviews-list" class="reviews-grid" aria-live="polite">
+                    <p class="reviews-message">
+                        As avaliações serão exibidas aqui quando o sistema
+                        de avaliações estiver conectado ao banco de dados.
+                    </p>
+                </div>
+
+                <div class="review-form-container">
+                    <h3>Compartilhe sua experiência</h3>
+
+                    <p>
+                        Preencha os campos abaixo para enviar sua avaliação.
+                        A publicação dependerá da configuração do sistema.
+                    </p>
+
+                    <form id="review-form">
+                        <div class="form-group">
+                            <label for="review-name">Seu nome</label>
+                            <input
+                                type="text"
+                                id="review-name"
+                                name="name"
+                                maxlength="80"
+                                placeholder="Digite seu nome"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-area">Área avaliada</label>
+                            <select id="review-area" name="area" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="clinica">Clínica ocupacional</option>
+                                <option value="imobiliaria">Imobiliária</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-rating">Sua nota</label>
+                            <select id="review-rating" name="rating" required>
+                                <option value="">Selecione sua nota</option>
+                                <option value="5">★★★★★ — Excelente</option>
+                                <option value="4">★★★★☆ — Muito bom</option>
+                                <option value="3">★★★☆☆ — Bom</option>
+                                <option value="2">★★☆☆☆ — Regular</option>
+                                <option value="1">★☆☆☆☆ — Precisa melhorar</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review-comment">Sua avaliação</label>
+                            <textarea
+                                id="review-comment"
+                                name="comment"
+                                rows="5"
+                                maxlength="1000"
+                                placeholder="Conte como foi sua experiência"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="button button-primary">
+                            Enviar avaliação
+                        </button>
+
+                        <p id="review-status" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <section class="section location" id="localizacao">
+            <div class="container location-grid">
+
+                <div class="location-content">
+                    <span class="section-label">ONDE ESTAMOS</span>
+
+                    <h2>Perto de você, em Pirapora.</h2>
+
+                    <p>
+                        Consulte o endereço e abra o mapa para planejar sua visita.
+                    </p>
+
+                    <address id="company-address">
+                        Rua Argemiro Peixoto, 202<br>
+                        Centro — Pirapora/MG<br>
+                        CEP 39270-092
+                    </address>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Rua+Argemiro+Peixoto+202+Pirapora+MG"
+                        id="maps-link"
+                        class="button button-primary"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Abrir no Google Maps <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+
+                <div class="location-map">
+                    <iframe
+                        id="maps-frame"
+                        title="Mapa da localização da CEMO em Pirapora"
+                        src="https://maps.google.com/maps?q=Rua%20Argemiro%20Peixoto%20202%20Pirapora%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section contact" id="contato">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">FALE CONOSCO</span>
+                    <h2>Escolha a equipe que deseja contatar.</h2>
+                    <p>
+                        Para agilizar o atendimento, entre em contato
+                        diretamente com a área desejada.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- CONTATO DA CLÍNICA -->
+                    <article class="contact-card">
+                        <span class="contact-tag">CEMO OCUPACIONAL</span>
+
+                        <h3>Clínica ocupacional</h3>
+
+                        <p>
+                            Para informações sobre serviços e atendimento
+                            ocupacional.
+                        </p>
+
+                        <div class="contact-detail">
+                            <span>Telefone / WhatsApp</span>
+                            <a href="https://wa.me/5538991610939"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               id="clinic-whatsapp">
+                                (38) 99161-0939
+                            </a>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span>Instagram</span>
+                            <a href="https://www.instagram.com/cemo.pirapora"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               id="clinic-instagram">
+                                @cemo.pirapora
+                            </a>
+                        </div>
+
+                        <a href="clinica.html" class="text-link">
+                            Conhecer a clínica <span aria-hidden="true">→</span>
+                        </a>
+                    </article>
+
+                    <!-- CONTATO DA IMOBILIÁRIA -->
+                    <article class="contact-card">
+                        <span class="contact-tag">CEMO IMOBILIÁRIA</span>
+
+                        <h3>Imóveis e negociações</h3>
+
+                        <p>
+                            Para consultar imóveis, anunciar propriedades
+                            ou conversar sobre investimentos.
+                        </p>
+
+                        <div class="contact-detail">
+                            <span>Telefone / WhatsApp</span>
+                            <a href="https://wa.me/5538991361872"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               id="real-estate-whatsapp">
+                                (38) 99136-1872
+                            </a>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span>Instagram</span>
+                            <a href="https://www.instagram.com/cemoimobiliariapirapora"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               id="real-estate-instagram">
+                                @cemoimobiliariapirapora
+                            </a>
+                        </div>
+
+                        <a href="imobiliaria.html" class="text-link">
+                            Conhecer a imobiliária <span aria-hidden="true">→</span>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <a href="#inicio" class="logo footer-logo">
+                    CEMO<span>.</span>
+                </a>
+
+                <p>
+                    &copy; <span id="current-year">2024</span> CEMO. Todos os direitos reservados.
+
+                </p>
         
-        window.location.reload();
-
-    } catch (error) {
-        console.error("Erro ao enviar avaliação:", error);
-    
-    
-    }
-}
-
-window.onload = () => {
-    carregarDepoimentosNoSite();
-};
-</script>
-
-<script>
-const reveals = document.querySelectorAll('.imovel, .botao-servico, .contatos div');
-
-function revealOnScroll(){
-    const windowHeight = window.innerHeight;
-
-    reveals.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 100){
-            el.classList.add('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-</script>
-
-<script>
-function limitarNota(input) {
-    let valor = parseInt(input.value);
-
-    if (isNaN(valor)) return;
-
-    if (valor > 5) input.value = 5;
-    if (valor < 1) input.value = 1;
-}
-</script>
-
-<script>
-
-function mostrarClinica(){
-
-document.getElementById("clinica").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-function mostrarImobiliaria(){
-
-document.getElementById("imobiliaria").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-</script>
-
-
-<div id="cookie-banner">
-
-<p>
-
-Utilizamos cookies para melhorar sua experiência.
-
-</p>
-
-<button onclick="aceitarCookies()">
-
-Aceitar
-
-</button>
-
-</div>
-<script>
-
-function aceitarCookies(){
-
-localStorage.setItem(
-"cookiesAceitos",
-"sim"
-);
-
-document
-.getElementById("cookie-banner")
-.style.display =
-"none";
-
-}
-
-window.addEventListener(
-"load",
-function(){
-
-if(
-localStorage.getItem(
-"cookiesAceitos"
-)
-==="sim"
-){
-
-document
-.getElementById(
-"cookie-banner"
-)
-.style.display=
-"none";
-
-}
-
-}
-);
-
-</script>
-<a
-href="https://wa.me/5538991361872"
-target="_blank"
-class="whatsapp-flutuante">
-
-📲
-
-</a>
-<button
-id="btn-topo"
-onclick="voltarTopo()">
-
-⬆
-
-</button>
-<script>
-
-function voltarTopo(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-}
-
-window.addEventListener("scroll",()=>{
-
-const botao =
-document.getElementById("btn-topo");
-
-if(window.scrollY > 500){
-
-botao.style.display = "block";
-
-}else{
-
-botao.style.display = "none";
-
-}
-
-});
-
-</script>
-
-<script>
-        function trocarPortal(tipo) {
-            // Esconde a Home
-            document.getElementById("home-principal").style.display = "none";
-            
-            // Esconde ambos os portais antes de mostrar
-            document.getElementById("portal-clinica").style.display = "none";
-            document.getElementById("portal-imobiliaria").style.display = "none";
-
-            // Ativa o portal e o CSS correto
-            if (tipo === 'clinica') {
-                document.getElementById("portal-clinica").style.display = "block";
-                document.getElementById("css-clinica").disabled = false;
-                document.getElementById("css-imobiliaria").disabled = true;
-            } else {
-                document.getElementById("portal-imobiliaria").style.display = "block";
-                document.getElementById("css-imobiliaria").disabled = false;
-                document.getElementById("css-clinica").disabled = true;
-            }
-        }
-
-        function voltarInicio() {
-            document.getElementById("home-principal").style.display = "block";
-            document.getElementById("portal-clinica").style.display = "none";
-            document.getElementById("portal-imobiliaria").style.display = "none";
-            document.getElementById("css-clinica").disabled = true;
-            document.getElementById("css-imobiliaria").disabled = true;
-        }
-    </script>
-</body>
-</html>
+          </div>
+         </div>
+        </footer>
+        
+        </body>
+        </html>
+        
