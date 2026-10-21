@@ -1077,5 +1077,431 @@ textarea:focus-visible {
     color: var(--navy);
     font-weight: 700;
     transition: color var(--transition);
+    /* =========================================
+AJUSTES EXCLUSIVOS PARA CELULAR
+CEMO 
+========================================= */
 
+}
 
+@media (max-width: 768px) {
+
+/* Evita que elementos aumentem a largura da tela */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: calc(100% - 36px);
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.section {
+    padding: 58px 0;
+}
+
+/* CABEÇALHO */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    position: relative;
+    min-height: 76px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+.logo small {
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+}
+
+.menu-toggle {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.header-actions {
+    grid-column: 3;
+    grid-row: 1;
+    gap: 5px;
+}
+
+.language-label {
+    display: none;
+}
+
+#language-select {
+    min-width: 53px;
+    padding: 9px 5px;
+}
+
+.nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 18px 16px;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 12px 20px rgba(8, 43, 73, 0.10);
+}
+
+.nav.nav-open {
+    display: flex;
+}
+
+.nav a {
+    display: block;
+    padding: 12px 4px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav a:last-child {
+    border-bottom: 0;
+}
+
+/* APRESENTAÇÃO PRINCIPAL */
+.hero {
+    min-height: auto;
+}
+
+.hero-content {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.eyebrow {
+    max-width: 100%;
+    font-size: 0.67rem;
+    letter-spacing: 0.8px;
+    flex-wrap: wrap;
+}
+
+.hero h1 {
+    max-width: 100%;
+    margin-top: 24px;
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -1.3px;
+    line-height: 1.13;
+    overflow-wrap: break-word;
+}
+
+.hero-content > p {
+    margin-top: 18px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.hero-buttons .button {
+    width: 100%;
+    min-height: 50px;
+}
+
+.hero-location {
+    margin-top: 24px;
+}
+
+/* DESTAQUES */
+.highlights {
+    padding-bottom: 15px;
+}
+
+.highlights-grid {
+    grid-template-columns: 1fr;
+    padding: 18px 0;
+}
+
+.highlight-item {
+    gap: 14px;
+    padding: 16px 4px;
+}
+
+.highlight-item + .highlight-item {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+}
+
+.highlight-item h3 {
+    font-size: 1rem;
+}
+
+.highlight-item p {
+    font-size: 0.9rem;
+}
+
+/* SOBRE A CEMO */
+.about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+}
+
+.about-image {
+    width: 100%;
+    min-height: 0;
+    height: 340px;
+    border-radius: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-caption {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 14px 16px;
+}
+
+.image-caption strong {
+    font-size: 1rem;
+}
+
+.about-content h2 {
+    margin-bottom: 18px;
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 0.97rem;
+    line-height: 1.75;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.section h2 {
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+    letter-spacing: -0.7px;
+    line-height: 1.25;
+}
+
+.section-heading > p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+/* SERVIÇOS */
+.services-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+}
+
+.service-card {
+    width: 100%;
+    min-height: auto;
+    padding: 25px 22px;
+    border-radius: 18px;
+}
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.service-card .button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* DIFERENCIAIS */
+.differentials-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+}
+
+.differential {
+    padding: 23px 20px;
+}
+
+/* AVALIAÇÕES */
+.reviews-summary {
+    padding: 18px;
+    gap: 12px;
+}
+
+.reviews-stars {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.reviews-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.review-form-container {
+    margin-top: 30px;
+    padding: 22px 18px;
+}
+
+#review-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+.form-group:last-of-type {
+    grid-column: auto;
+}
+
+#review-form > .button {
+    width: 100%;
+    justify-self: stretch;
+}
+
+/* LOCALIZAÇÃO: texto em cima, mapa embaixo */
+.location-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+}
+
+.location-content h2 {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+}
+
+.location-content address {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+}
+
+.location-content .button {
+    max-width: 100%;
+}
+
+.location-map {
+    width: 100%;
+    min-height: 280px;
+    height: 300px;
+    border-width: 4px;
+    border-radius: 18px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+}
+
+/* CONTATO */
+.contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+}
+
+.contact-card {
+    min-width: 0;
+    padding: 25px 22px;
+}
+
+.contact-card h3 {
+    font-size: 1.35rem;
+}
+
+.contact-detail a {
+    overflow-wrap: anywhere;
+}
+
+/* IMPEDE IMAGENS E ELEMENTOS DE ESTOURAREM A TELA */
+img,
+iframe {
+    max-width: 100%;
+}
+
+.button {
+    white-space: normal;
+    text-align: center;
+}
+
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 380px) {
+
+.container {
+    width: calc(100% - 28px);
+}
+
+.header-container {
+    gap: 7px;
+}
+
+.logo {
+    font-size: 1.55rem;
+}
+
+.logo small {
+    font-size: 0.42rem;
+    letter-spacing: 0.7px;
+}
+
+.menu-toggle {
+    width: 39px;
+    height: 39px;
+}
+
+#language-select {
+    min-width: 46px;
+    font-size: 0.85rem;
+}
+
+.hero h1 {
+    font-size: 1.9rem;
+}
+
+.service-card,
+.contact-card {
+    padding: 21px 17px;
+}
+
+.about-image {
+    height: 290px;
+}
+
+}

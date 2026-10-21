@@ -1,221 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="same-origin">
 
-<title>Login - CEMO</title>
+    <title>Área do Proprietário | CEMO Imobiliária</title>
 
-<link rel="stylesheet" href="style.css">
-<style>
-
-.login-container{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:linear-gradient(
-135deg,
-#18448b,
-#02e8f8
-);
-
-}
-
-.login-box{
-
-width:400px;
-
-max-width:90%;
-
-padding:40px;
-
-background:rgba(17, 38, 221, 0.05);
-
-backdrop-filter:blur(15px);
-
-border-radius:20px;
-
-border:1px solid rgba(255,255,255,.1);
-
-box-shadow:0 0 40px #39b0ff4d;
-
-}
-
-.login-box h1{
-
-text-align:center;
-
-margin-bottom:30px;
-
-color:#f4faf7;
-
-}
-
-.login-box input{
-
-width:100%;
-
-padding:15px;
-
-margin-bottom:15px;
-
-border:none;
-
-border-radius:12px;
-
-background:rgba(2, 158, 248, 0.08);
-
-color:rgb(61, 184, 255);
-
-}
-
-.login-box button{
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:12px;
-
-background:#68eff8;
-
-color:black;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.login-box button:hover{
-
-transform:translateY(-3px);
-
-}
-
-.logo-login{
-
-text-align:center;
-
-margin-bottom:20px;
-
-}
-
-.logo-login img{
-
-width: 250px;
-
-}
-
-.erro{
-
-display:none;
-
-margin-top:15px;
-
-text-align:center;
-
-color:#ff4d4d;
-
-}
-
-</style>
-
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
 </head>
 
 <body>
+    <main class="login-container">
+        <section class="login-box" aria-labelledby="titulo-login">
 
-<div class="login-container">
+            <a class="voltar-site" href="imobiliaria.html">
+                ← Voltar ao site
+            </a>
 
-<div class="login-box">
+            <div class="logo-login">
+                <img
+                    src="assets/logo-admin.png"
+                    alt="CEMO Imobiliária"
+                    width="220"
+                >
+            </div>
 
-<div class="logo-login">
+            <div class="login-cabecalho">
+                <span class="login-etiqueta">ACESSO RESTRITO</span>
 
-<img src="assets/logo-admin.png">
+                <h1 id="titulo-login">Área do Proprietário</h1>
 
-</div>
+                <p>
+                    Entre com suas credenciais para administrar os imóveis.
+                </p>
+            </div>
 
-<h1>Área do Proprietário</h1>
+            <form id="form-login" action="login.php" method="post">
+                <div class="campo-login">
+                    <label for="usuario">Usuário</label>
 
-<input
-type="text"
-id="usuario"
-placeholder="Usuário:">
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Digite seu usuário"
+                        autocomplete="username"
+                        maxlength="100"
+                        required
+                    >
+                </div>
 
-<input
-type="password"
-id="senha"
-placeholder="Senha:">
+                <div class="campo-login">
+                    <label for="senha">Senha</label>
 
-<button onclick="fazerLogin()">
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        maxlength="128"
+                        required
+                    >
+                </div>
 
-Entrar
+                <p
+                    id="mensagem-login"
+                    class="mensagem-login"
+                    role="alert"
+                    aria-live="polite"
+                    hidden
+                ></p>
 
-</button>
+                <button
+                    id="botao-login"
+                    type="submit"
+                >
+                    Entrar com segurança
+                </button>
+            </form>
 
-<div class="erro" id="erro">
+            <div class="aviso-seguranca">
+                <span aria-hidden="true">🔒</span>
+                Acesso exclusivo ao responsável pela imobiliária.
+            </div>
 
-Credenciais inválidas. Verifique e tente novamente.
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-function fazerLogin(){
-
-const usuario =
-document.getElementById(
-'usuario'
-).value;
-
-const senha =
-document.getElementById(
-'senha'
-).value;
-
-if(
-usuario === 'admin'
-&&
-senha === '24681022@Cemo2026'
-){
-
-localStorage.setItem(
-'logado',
-'true'
-);
-
-window.location =
-'admin.html';
-
-}
-else{
-
-document
-.getElementById('erro')
-.style.display =
-'block';
-
-}
-
-}
-
-</script>
-
+            <footer class="login-rodape">
+                CEMO Imobiliária
+            </footer>
+        </section>
+    </main>
 </body>
 </html>

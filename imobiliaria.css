@@ -1,900 +1,1287 @@
-/* ======================================================================================
-   CEMO IMOBILIÁRIA - DESIGN SYSTEM V10.0 (PROFISSIONAL CORPORATIVO)
-   ====================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --primary-blue: #007bff;
-    --primary-dark: #0f172a;
-    --accent-green: #25d366;
-    --bg-app: #ffffff;
-    --bg-card: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #475569;
-    --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
-    --radius: 16px;
-    --transition: 0.4s ease;
+  --navy: #071b35;
+  --blue: #1456a0;
+  --blue2: #2677d9;
+  --ink: #172337;
+  --muted: #687487;
+  --paper: #f5f7fa;
+  --line: #e1e7ef;
+  --white: #fff;
+  --radius: 18px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-
-    background: linear-gradient(
-        180deg,
-        #e0dddd 0%,
-        #fcfcfc 40%,
-        #d7dce4 100%
-    );
-
-    color: var(--text-main);
-    line-height: 1.6;
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* --- HEADER E HERO SECTION --- */
-.logo-imobiliaria-central {
-
-   background: linear-gradient(
-    135deg,
-    #010d41 0%,
-    #012475 25%,
-    #0151ff 70%,
-    #00bfff 100%
-);
-    padding: 70px 5% 120px;
-
-    text-align: center;
-
-    color: white;
-
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 90%,
-        0 100%
-    );
-
-    position: relative;
-
-    z-index: 2;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.18);
-}
-.logo-imobiliaria-central::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-25px;
-
-    width:100%;
-
-    height:50px;
-
-    background:radial-gradient(
-        ellipse at center,
-        rgba(0,0,0,.18) 0%,
-        rgba(0,0,0,.08) 45%,
-        rgba(0,0,0,0) 100%
-    );
-
-    pointer-events:none;
-
-    z-index:-1;
-}
-@keyframes flutuar{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-12px);
-    }
-}
-.btn-voltar{
-    position:absolute;
-    top:30px;
-    left:30px;
-    background:white;
-    color:#0f172a;
-    border:none;
-    padding:14px 28px;
-    border-radius:50px;
-    font-weight:700;
-    cursor:pointer;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
-    transition:.3s;
+a {
+  color: inherit;
 }
 
-.btn-voltar:hover{
-    transform:translateY(-4px);
-    background:#007bff;
-    color:white;
-}
-/* --- CONTADOR DE ESTATÍSTICAS --- */
-.contador-imoveis { display: flex; justify-content: center; gap: 60px; margin: 40px 0; color: white; }
-.contador-box h3{
-
-    font-size: 3rem;
-
-    font-weight: 900;
-
-    color: #ffffff;
-
-    margin-bottom: 8px;
-
-    text-shadow:
-    0 0 20px rgba(255,255,255,.3);
-}
-.contador-box p{
-
-    color: #dbeafe;
-
-    font-size: .9rem;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
+button,
+input,
+select {
+  font: inherit;
 }
 
-/* --- SEÇÃO SOBRE E BENEFÍCIOS --- */
-.sobre-imobiliaria{
-
-    padding:120px 5% 80px;
-
-    text-align:center;
-
-    background:linear-gradient(
-        180deg,
-        #b3c3d4 0%,
-        #ecf2f8 30%,
-        #fcfcfc 100%
-    );
-
-    margin-top:-40px;
-
-
-.sobre-imobiliaria h2{
-
-    font-size:3.5rem;
-
-    font-weight:900;
-
-    color:#0f172a;
-
-    margin-bottom:25px;
-
-    line-height:1.1;
-}
-.sobre-imobiliaria p{
-
-    font-size:1.15rem;
-
-    line-height:2;
-
-    color:#475569;
-
-    max-width:950px;
-
-    margin:0 auto;
-}
-}
-.beneficios-imobiliaria {
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,250px));
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-top:50px;
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
 }
 
-    .beneficios-imobiliaria div{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:25px;
-
-    border:1px solid #e2e8f0;
-
-    font-size:1.3rem;
-
-    font-weight:800;
-
-    color:#0f172a;
-
-    text-align:center;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
-
-    transition:.4s;
-
-    cursor:pointer;
+button {
+  cursor: pointer;
 }
 
-.beneficios-imobiliaria div:hover{
-
-    transform:
-    translateY(-12px)
-    scale(1.03);
-
-    background:
-    linear-gradient(
-    135deg,
-    #007bff,
-    #00bfff
-    );
-
-    color:white;
-
-    border-color:#007bff;
-
-    box-shadow:
-    0 25px 50px rgba(0,123,255,.25);
-}
-/* --- GRID DE IMÓVEIS E MÍDIA --- */
-#lista-imoveis-site { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 40px; padding: 60px 5%; }
-.imovel {
-
-    background: var(--bg-card);
-
-    border-radius: var(--radius);
-
-    overflow: hidden;
-
-    box-shadow: var(--shadow-soft);
-
-    border: 1px solid #edf2f7;
-
-    transition:
-    transform .4s ease,
-    box-shadow .4s ease,
-    border-color .4s ease;
-}
-.imovel:hover {
-
-    transform:
-    translateY(-12px)
-    scale(1.02);
-
-    border-color:#007bff;
-
-    box-shadow:
-    0 25px 50px rgba(0,123,255,.18);
-}
-/* --- Ajuste da área da imagem/vídeo --- */
-/* Isso garante que a caixa (.imagem) sempre tenha o formato quadrado */
-/* Isso define a "caixa" quadrada */
-.imagem {
-    position: relative;
-    width: 100%;
-    height: 300px; 
-    background: #000;
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
+.pular-conteudo {
+  position: absolute;
+  left: -9999px;
 }
 
-/* Isso força o que estiver dentro da caixa (foto ou vídeo) a preencher o espaço */
-.imagem img, 
-.imagem video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz o recorte automático */
-    display: block;
-}
-.imovel h3 { padding: 20px 20px 5px; font-size: 1.4rem; }
-.imovel .endereco,
-.imovel .descricao{
-
-    padding:0 20px;
-
-    color:var(--text-muted);
-
-    font-size:.95rem;
-
-    overflow:hidden;
-
-    display:-webkit-box;
-
-    -webkit-line-clamp:3;
-
-    -webkit-box-orient:vertical;
-
-    min-height:70px;
-
-    max-height:70px;
-}
-.preco { display: block; padding: 15px 20px; font-size: 1.7rem; font-weight: 900; color: var(--primary-blue); }
-.btn-whatsapp { 
-    display: block; margin: 10px 20px 25px; padding: 16px; background: var(--accent-green); 
-    color: white; text-align: center; border-radius: 12px; font-weight: bold; text-decoration: none; 
+.pular-conteudo:focus {
+  left: 12px;
+  top: 12px;
+  background: white;
+  padding: 10px;
+  z-index: 1000;
 }
 
-/* --- CONTATO E FOOTER CORPORATIVO --- */
-.contato-imobiliaria{
+/* CABEÇALHO */
 
-    padding:70px 5%;
-
-    text-align:center;
-
-    background:linear-gradient(
-        135deg,
-        #1e40af,
-        #3b82f6
-    );
-
-    border-radius:30px;
-
-    margin:60px auto;
-
-    width:90%;
-
-    box-shadow:
-    0 25px 50px rgba(37,99,235,.25);
+.topo {
+  height: 82px;
+  padding: 0 clamp(18px, 5vw, 78px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  background: #fff;
+  border-bottom: 1px solid #edf0f5;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
-.contato-imobiliaria h2{
-    font-size:2.5rem;
-    color:#02309b;
-    margin-bottom:20px;
+.marca {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  min-width: 120px;
 }
 
-.contato-imobiliaria p{
-    color:#fcfcfc;
-    max-width:700px;
-    margin:auto;
-    margin-bottom:30px;
-}
-.contato-imobiliaria a{
-    display:inline-block;
-    margin-top:25px;
-    padding:18px 40px;
-    background:hwb(234 9% 0%);
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-    font-size:1.1rem;
-    box-shadow:0 10px 25px rgba(37,211,102,.35);
-    transition:.3s;
+.marca img {
+  width: 150px;
+  max-height: 58px;
+  object-fit: contain;
 }
 
-.contato-imobiliaria a:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(37,211,102,.45);
-}
-.contato-imobiliaria{
-    padding:60px 5%;
-    text-align:center;
-
-    background:linear-gradient(
-        135deg,
-        #0331fd,
-        #00fff2
-    );
-
-    border-radius:30px;
-
-    margin:40px auto;
-
-    width:90%;
-}
-.footer { background: #020617; color: #475569; padding: 40px; text-align: center; font-size: 0.9rem; }
-.creci-fixo { background: var(--primary-dark); color: #334155; padding: 15px; text-align: center; font-size: 0.8rem; }
-
-/* --- POPUP DE VÍDEO (UX AVANÇADA) --- */
-#popup-final { 
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); 
-    display: none; justify-content: center; align-items: center; z-index: 9999; backdrop-filter: blur(10px); 
-}
-#conteudo-popup video { width: 90%; max-width: 800px; border-radius: 15px; outline: none; }
-.fechar-popup { position: absolute; top: 30px; right: 40px; font-size: 3rem; color: white; cursor: pointer; }
-
-/* ==========================
-   ÁREA DE CONTATO 
-========================== */
-
-#contato{
-
-    background:linear-gradient(
-        180deg,
-        #fcfcfc 0%,
-        #e0dede 30%,
-        #ecf2f8 70%,
-        #c6d8ec 100%
-    );
-
-    padding:100px 5%;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3, minmax(280px, 380px));
-
-    justify-content:center;
-
-    align-items:stretch;
-
-    gap:30px;
+.marca-fallback {
+  display: none;
+  color: var(--navy);
+  font: 800 20px Manrope, sans-serif;
+  line-height: 1.05;
 }
 
-.contato-box,
-.endereco,
-.horario-atendimento{
-width:100%;
-max-width:380px;
-    background:white;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
-
-    border:1px solid #e5e7eb;
-
-    transition:.3s;
-    min-height: 280px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-height: 100%;
+.marca-fallback small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 5px;
 }
 
-#contato .contato-box:hover,
-#contato .endereco:hover,
-#contato .horario-atendimento:hover{
-
-    transform:
-    translateY(-10px)
-    scale(1.02);
-
-    border-color:#007bff;
-
-    box-shadow:
-    0 25px 50px rgba(0,123,255,.20);
-}
-.contato-box h3,
-.endereco h3,
-.horario-atendimento h3{
-
-    color:#0066ff;
-
-    margin-bottom:20px;
-
-    font-size:1.4rem;
+.nav-desktop {
+  display: flex;
+  gap: clamp(14px, 2.2vw, 34px);
 }
 
-.contato-box p,
-.endereco p,
-.horario-atendimento p{
-
-    color:#475569;
-
-    margin-bottom:10px;
-
-    line-height:1.8;
+.nav-desktop a,
+.rodape a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #49566a;
 }
 
-.contato-box a{
-
-    color:#0066ff;
-
-    text-decoration:none;
-
-    font-weight:600;
+.nav-desktop a:hover,
+.rodape a:hover {
+  color: var(--blue2);
 }
 
-.contato-box a:hover{
-
-    text-decoration:underline;
-}
-#contato h2{
-
-    grid-column:1/-1;
-
-    text-align:center;
-
-    font-size:2.5rem;
-
-    color:#0f172a;
-
-    margin-bottom:20px;
+.topo-acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer-premium{
-
-    background:linear-gradient(
-        135deg,
-        #1e40af,
-        #3b82f6
-    );
-
-    color:white;
-
-    text-align:center;
-
-    padding:35px 20px;
-
-    margin-top:50px;
+.idioma-label {
+  font-size: 11px;
+  color: var(--muted);
 }
 
-.footer-premium p{
-
-    margin:8px 0;
-
-    font-size:15px;
+#idioma,
+#idioma-menu {
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 8px 9px;
+  background: #fff;
+  color: var(--ink);
+  max-width: 145px;
+  font-size: 12px;
 }
 
-.creci-fixo{
-
-    background:#dbeafe;
-
-    color:#1e40af;
-
-    font-weight:700;
-
-    padding:15px;
-
-    text-align:center;
-
-    border-top:1px solid #93c5fd;
-}
-@media(max-width:1000px){
-
-    #contato{
-        grid-template-columns:1fr;
-    }
-
-    .contato-box,
-    .endereco,
-    .horario-atendimento{
-        max-width:500px;
-        margin:auto;
-    }
-}
-.imovel:active{
-
-    transform:
-    scale(.97);
-
-    transition:.15s;
-}
-.imovel{
-
-    display:flex;
-
-    flex-direction:column;
-
-    height:100%;
+.hamburguer {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-.preco{
-
-    margin-top:auto;
-}
-.imagem img,
-.imagem video{
-
-    transition:.5s;
+.hamburguer span {
+  width: 18px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
 }
 
-.imovel:hover img,
-.imovel:hover video{
+/* MENU LATERAL */
 
-    transform:scale(1.08);
-}
-.logo-imobiliaria-central img{
-    width:px;
-    max-width:80%;
-    height:425px;
-}
-.logo-imobiliaria-central img{
-
-    filter:
-    drop-shadow(0 0 10px rgba(255,255,255,.3))
-    drop-shadow(0 0 20px rgba(0,191,255,.4));
-
-    transition:.4s;
+.fundo-menu {
+  position: fixed;
+  inset: 0;
+  background: #071b3570;
+  z-index: 29;
 }
 
-.logo-imobiliaria-central img:hover{
-
-    transform:scale(1.05);
-
-    filter:
-    drop-shadow(0 0 15px rgba(255,255,255,.5))
-    drop-shadow(0 0 30px rgba(0,191,255,.6));
+.menu-lateral {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(380px, 88vw);
+  background: white;
+  z-index: 30;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  transform: translateX(105%);
+  transition: transform .25s ease;
+  box-shadow: -15px 0 50px #071b351a;
 }
-.contador-box{
 
-    background: rgba(255,255,255,.12);
-
-    backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255,255,255,.15);
-
-    border-radius: 20px;
-
-    padding: 25px;
-
-    min-width: 180px;
-
-    transition: .4s;
+.menu-lateral.aberto {
+  transform: translateX(0);
 }
-.contador-box:hover{
 
-    transform: translateY(-8px);
-
-    background: rgba(255,255,255,.18);
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,.2);
+.menu-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: 800 24px Manrope;
+  margin-bottom: 20px;
 }
-.logo-imobiliaria-central h1{
 
-    font-size: 3rem;
+.fechar-menu,
+.fechar-popup {
+  border: 0;
+  background: #edf2f8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 27px;
+  line-height: 1;
+  color: var(--navy);
+}
 
-    font-weight: 900;
+.menu-lateral > a {
+  padding: 13px 10px;
+  border-bottom: 1px solid #edf0f5;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    color: #ffffff;
+.menu-lateral > a:hover {
+  background: var(--paper);
+}
 
-    margin-top: 50px;
+.menu-idioma {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+}
 
+/* CAPA PRINCIPAL */
+
+.hero {
+  background: var(--navy);
+  color: #fff;
+  min-height: 570px;
+  padding: clamp(50px, 8vw, 112px) clamp(22px, 8vw, 120px);
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 40px;
+  overflow: hidden;
+}
+
+.hero-conteudo {
+  max-width: 700px;
+}
+
+.sobretitulo {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+  color: #4d91e8;
+  display: block;
+  margin-bottom: 17px;
+}
+
+.hero h1 {
+  font: 800 clamp(37px, 5.2vw, 66px)/1.08 Manrope, sans-serif;
+  letter-spacing: -2.4px;
+  margin: 0 0 23px;
+  max-width: 700px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #77b6ff;
+}
+
+.hero-conteudo > p {
+  color: #c6d2e2;
+  max-width: 550px;
+  font-size: 16px;
+}
+
+.hero-acoes {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 30px 0 50px;
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: transform .2s, background .2s;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+}
+
+.botao-claro {
+  background: white;
+  color: var(--navy);
+}
+
+.botao-primario {
+  background: var(--blue);
+  color: white;
+}
+
+.botao-secundario {
+  background: #eef2f7;
+  color: var(--navy);
+}
+
+.link-whatsapp {
+  font-size: 13px;
+  text-decoration: none;
+  color: #e1e9f5;
+}
+
+.hero-numeros {
+  display: flex;
+  gap: clamp(20px, 4vw, 50px);
+  flex-wrap: wrap;
+}
+
+.hero-numeros div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-numeros strong {
+  font: 800 22px Manrope;
+}
+
+.hero-numeros span {
+  font-size: 11px;
+  color: #aab9cc;
+}
+
+/* ILUSTRAÇÃO DA CAPA */
+
+.hero-visual {
+  height: 370px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-arco {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px solid #426080;
+  border-radius: 50%;
+  box-shadow: 0 0 0 38px #ffffff05, 0 0 0 76px #ffffff03;
+}
+
+.hero-cartao {
+  width: min(300px, 80%);
+  height: 310px;
+  position: relative;
+  background: linear-gradient(150deg, #dfeaf4, #9cb8d3);
+  border-radius: 150px 150px 18px 18px;
+  color: var(--navy);
+  padding: 30px 25px;
+  box-shadow: 0 25px 60px #0003;
+  overflow: hidden;
+}
+
+.hero-cartao > span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.hero-cartao > strong {
+  display: block;
+  font: 800 28px/1.15 Manrope;
+  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.casinha {
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  right: 15px;
+  height: 145px;
+  background: #f9fbfd;
+  border-radius: 4px 4px 0 0;
+}
+
+.casinha:before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: -8px;
+  right: -8px;
+  height: 80px;
+  background: #f9fbfd;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.casinha span {
+  position: absolute;
+  bottom: 0;
+  left: 38%;
+  width: 48px;
+  height: 84px;
+  background: #8eabc9;
+  z-index: 1;
+}
+
+.casinha i,
+.casinha b {
+  position: absolute;
+  bottom: 62px;
+  width: 26px;
+  height: 28px;
+  background: #b7cce0;
+  z-index: 1;
+}
+
+.casinha i {
+  left: 15%;
+}
+
+.casinha b {
+  right: 15%;
+}
+
+.hero-selo {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  border: 1px solid #7e9abb;
+  border-radius: 50%;
+  width: 83px;
+  height: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font: 800 15px Manrope;
+  transform: rotate(10deg);
+  background: #0c294a;
+}
+
+.hero-selo small {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+
+/* SEÇÕES */
+
+.secao {
+  padding: clamp(54px, 7vw, 95px) clamp(20px, 7vw, 100px);
+}
+
+.imoveis-secao {
+  background: var(--paper);
+}
+
+.titulo-secao {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.titulo-secao h2,
+.sobre-texto h2,
+.anuncie-secao h2 {
+  font: 800 clamp(28px, 3.5vw, 42px)/1.15 Manrope, sans-serif;
+  letter-spacing: -1.2px;
+  margin: 0 0 12px;
+  color: var(--navy);
+}
+
+.titulo-secao p,
+.sobre-texto p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.resultado {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-bottom: 5px;
+}
+
+/* FILTROS */
+
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  padding: 22px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+  box-shadow: 0 8px 30px #142b4507;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #45536a;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  background: #fff;
+  padding: 11px 10px;
+  color: var(--ink);
+  font-size: 12px;
+  outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--blue2);
+  box-shadow: 0 0 0 3px #2677d91c;
+}
+
+.filtro-botoes {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  grid-column: span 2;
+}
+
+.filtro-botoes .botao {
+  padding: 11px 14px;
+  font-size: 12px;
+}
+
+/* CARDS DE IMÓVEIS */
+
+.grade-imoveis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.estado-vazio {
+  grid-column: 1 / -1;
+  background: white;
+  border: 1px dashed #c9d4e2;
+  border-radius: 14px;
+  padding: 35px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.imovel-card {
+  background: white;
+  border: 1px solid #e6ebf1;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 8px 25px #0c234008;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.imovel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px #0c234012;
+}
+
+.imovel-foto {
+  height: 225px;
+  background: #e5ebf2;
+  position: relative;
+  overflow: hidden;
+}
+
+.imovel-foto img,
+.imovel-foto video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: white;
+  color: var(--navy);
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.imovel-corpo {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.imovel-corpo h3 {
+  font: 800 18px/1.3 Manrope;
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.imovel-local {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.imovel-descricao {
+  font-size: 12px;
+  color: #59677a;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.imovel-detalhes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: auto 0 15px;
+}
+
+.imovel-detalhes span {
+  font-size: 10px;
+  background: #f0f4f8;
+  color: #47566a;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.imovel-preco {
+  font: 800 20px Manrope;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.btn-whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #e9f7ef;
+  color: #146c3b;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.btn-whatsapp:hover {
+  background: #d8f1e2;
+}
+
+/* SOBRE A IMOBILIÁRIA */
+
+.sobre-secao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(35px, 7vw, 100px);
+  align-items: center;
+}
+
+.sobre-texto h2 {
+  max-width: 520px;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p {
+  margin-bottom: 15px;
+  line-height: 1.9;
+}
+
+.link-escuro {
+  display: inline-block;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.beneficios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.beneficios article {
+  padding: 23px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.beneficios article:first-child {
+  background: #f1f6fc;
+}
+
+.beneficios article span {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--blue2);
+}
+
+.beneficios h3 {
+  font: 800 15px Manrope;
+  margin: 17px 0 8px;
+}
+
+.beneficios p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ANUNCIE SEU IMÓVEL */
+
+.anuncie-secao {
+  background: var(--navy);
+  color: white;
+  padding: clamp(35px, 5vw, 65px) clamp(22px, 7vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.anuncie-secao h2 {
+  color: white;
+  max-width: 620px;
+}
+
+.anuncie-secao p {
+  color: #c6d2e2;
+  font-size: 14px;
+  max-width: 680px;
+  margin-bottom: 0;
+}
+
+.anuncie-secao .botao {
+  white-space: nowrap;
+}
+
+/* CONTATO */
+
+.contato-secao {
+  background: #fff;
+}
+
+.contato-grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.contato-grade article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  min-width: 0;
+}
+
+.contato-icone {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #edf4fd;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.contato-grade h3 {
+  font: 800 15px Manrope;
+  margin: 17px 0 7px;
+}
+
+.contato-grade p,
+.contato-grade small {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contato-grade a {
+  display: block;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  background: #06152a;
+  color: #fff;
+  padding: 28px clamp(20px, 7vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.marca-rodape .marca-fallback {
+  color: white;
+}
+
+.rodape p {
+  font-size: 11px;
+  color: #a8b7ca;
+  margin: 0;
+}
+
+.rodape > div {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.rodape a {
+  color: #c5d0df;
+  font-size: 11px;
+}
+
+.legal-bloco {
+  padding: 25px clamp(20px, 7vw, 100px);
+  border-top: 1px solid #e9edf2;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.legal-bloco h2 {
+  font: 800 15px Manrope;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.legal-bloco p {
+  margin: 0;
+  max-width: 950px;
+}
+
+.legal-cookies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #f6f8fb;
+}
+
+.legal-cookies .botao {
+  flex-shrink: 0;
+}
+
+/* VISUALIZADOR DE FOTOS E VÍDEOS */
+
+.popup-midia {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #020916ed;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.popup-midia.aberto {
+  display: flex;
+}
+
+.popup-midia #conteudo-popup img,
+.popup-midia #conteudo-popup video {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.fechar-popup {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+  .nav-desktop {
+    gap: 12px;
+  }
+
+  .nav-desktop a {
+    font-size: 11px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr .7fr;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero-visual {
+    transform: scale(.9);
+  }
+
+  .filtros {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-imoveis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contato-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  .topo {
+    height: 70px;
+    padding: 0 15px;
+    gap: 8px;
+  }
+
+  .marca img {
+    width: 112px;
+    max-height: 48px;
+  }
+
+  .marca-fallback {
+    font-size: 16px;
+  }
+
+  .marca-fallback small {
+    font-size: 7px;
     letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    text-shadow:
-    0 0 25px rgba(255,255,255,.25);
-}
-.logo-imobiliaria-central p{
-
-    color: #e2e8f0;
-
-    font-size: 1.05rem;
-
-    line-height: 1.9;
-
-    max-width: 900px;
-
-    margin-left: auto;
-
-    margin-right: auto;
-}
-.logo-imobiliaria-central p:last-child{
-
-    font-weight: 700;
-
-    color: #ffffff;
-
-    letter-spacing: 1px;
-
-    margin-top: 25px;
-
-    text-shadow:
-    0 0 15px rgba(255,255,255,.3);
-}
-.beneficios-imobiliaria h3{
-
-    font-size:1.5rem;
-
-    color:#0f172a;
-
-    margin-bottom:15px;
-
-    font-weight:800;
-}
-.beneficios-imobiliaria p{
-
-    font-size:1rem;
-
-    color:#64748b;
-
-    line-height:1.8;
-}
-.sobre-imobiliaria h2{
-
-    font-size:2.5rem !important;
-
-    font-weight:900 !important;
-
-    color:#0f172a !important;
-
-    line-height:1.1;
-
-    margin-bottom:35px;
-}
-.sobre-imobiliaria p{
-
-    font-size:1.35rem !important;
-
-    line-height:2.1 !important;
-
-    color:#475569 !important;
-
-    max-width:1000px;
-
-    margin:auto;
-}
-@media (max-width: 768px){
-
-    .beneficios-imobiliaria{
-
-        gap:8px;
-
-        margin-top:25px;
-    }
-
-    .beneficios-imobiliaria div{
-
-        padding:10px;
-
-        font-size:.75rem;
-
-        border-radius:12px;
-    }
-
-}
-@media (min-width: 768px) {
-  .horario-atendimento {
-    min-height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
-    padding: 20px !important;
   }
-  .horario-atendimento h3 {
-    margin: 0 0 12px 0 !important;
-    width: 100%;
+
+  .nav-desktop {
+    display: none;
   }
-  .horario-atendimento p {
-    margin: 6px 0 !important;
-    padding: 0 !important;
-    line-height: 1.4 !important;
-    width: 100%;
+
+  .idioma-label {
+    display: none;
   }
-  .horario-atendimento .destaque-dia {
-    color: #0d6efd !important;
-    font-weight: 700 !important;
-    background: #e7f1ff !important;
-    padding: 2px 8px !important;
-    border-radius: 6px !important;
-    display: inline-block !important;
+
+  #idioma {
+    max-width: 105px;
+    padding: 7px 5px;
+    font-size: 10px;
   }
-}
-@media (max-width: 768px){
 
-  #lista-imoveis-site{
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    gap: 30px;
-}
+  .topo-acoes {
+    gap: 7px;
+  }
 
-    .imovel{
-        border-radius: 16px;
-    }
+  .hamburguer {
+    width: 39px;
+    height: 39px;
+  }
 
-    .imagem img{
-        height: 220px;
-    }
-
-    .imagem video{
-        width: 100%;
-        max-height: 260px;
-        height: auto;
-        object-fit: contain;
-        background: #000;
-    }
-
-    .imovel h3{
-        font-size: 1.1rem;
-    }
-
-    .imovel .endereco,
-    .imovel .descricao{
-        font-size: .92rem;
-        min-height: auto;
-        max-height: none;
-        -webkit-line-clamp: unset;
-    }
-
-    .preco{
-        font-size: 1.35rem;
-    }
-
-    .btn-whatsapp{
-        font-size: .95rem;
-        padding: 14px;
-    }
-}
-#conteudo-popup video {
-    width: 100%;
-    max-height: 80vh; /* Garante que o vídeo não fique maior que a tela */
+  .hero {
     display: block;
-    background: #000;
-}
-/* ==========================
-   CARD PROFISSIONAL IMÓVEIS
-========================== */
+    min-height: 0;
+    padding: 53px 22px 38px;
+  }
 
-.imovel{
-    display:flex;
-    flex-direction:column;
-    height:100%;
-    min-height:650px;
+  .hero h1 {
+    font-size: clamp(36px, 10vw, 49px);
+    letter-spacing: -1.7px;
+  }
+
+  .hero-conteudo > p {
+    font-size: 14px;
+  }
+
+  .hero-acoes {
+    gap: 17px;
+    margin: 25px 0 33px;
+  }
+
+  .hero-numeros {
+    gap: 20px;
+  }
+
+  .hero-numeros strong {
+    font-size: 18px;
+  }
+
+  .hero-numeros span {
+    font-size: 10px;
+  }
+
+  .hero-visual {
+    height: 250px;
+    margin-top: 18px;
+    transform: none;
+  }
+
+  .hero-arco {
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 0 0 24px #ffffff05, 0 0 0 48px #ffffff03;
+  }
+
+  .hero-cartao {
+    width: 200px;
+    height: 225px;
+    padding: 24px 18px;
+    border-radius: 100px 100px 14px 14px;
+  }
+
+  .hero-cartao > strong {
+    font-size: 22px;
+  }
+
+  .casinha {
+    height: 100px;
+  }
+
+  .casinha:before {
+    top: -30px;
+    height: 55px;
+  }
+
+  .casinha span {
+    height: 55px;
+    width: 34px;
+  }
+
+  .casinha i,
+  .casinha b {
+    bottom: 45px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-selo {
+    width: 65px;
+    height: 65px;
+    font-size: 12px;
+    right: 5%;
+  }
+
+  .hero-selo small {
+    font-size: 5px;
+  }
+
+  .secao {
+    padding: 50px 17px;
+  }
+
+  .titulo-secao {
+    display: block;
+    margin-bottom: 23px;
+  }
+
+  .titulo-secao h2,
+  .sobre-texto h2,
+  .anuncie-secao h2 {
+    font-size: 29px;
+    letter-spacing: -.7px;
+  }
+
+  .titulo-secao p {
+    font-size: 13px;
+  }
+
+  .resultado {
+    display: block;
+    margin-top: 12px;
+  }
+
+  .filtros {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 13px;
+  }
+
+  .campo label {
+    font-size: 10px;
+  }
+
+  .campo input,
+  .campo select {
+    font-size: 11px;
+    padding: 10px 7px;
+  }
+
+  .filtro-botoes {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .filtro-botoes .botao {
+    padding: 11px 10px;
+    font-size: 11px;
+  }
+
+  .grade-imoveis {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .imovel-foto {
+    height: 220px;
+  }
+
+  .imovel-corpo {
+    padding: 16px;
+  }
+
+  .imovel-corpo h3 {
+    font-size: 17px;
+  }
+
+  .sobre-secao {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .beneficios {
+    gap: 10px;
+  }
+
+  .beneficios article {
+    padding: 17px;
+  }
+
+  .beneficios h3 {
+    font-size: 13px;
+  }
+
+  .beneficios p {
+    font-size: 11px;
+  }
+
+  .anuncie-secao {
+    padding: 36px 20px;
+    display: block;
+  }
+
+  .anuncie-secao p {
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
+
+  .contato-grade {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .contato-grade article {
+    padding: 15px;
+  }
+
+  .contato-grade h3 {
+    font-size: 13px;
+  }
+
+  .contato-grade p,
+  .contato-grade small {
+    font-size: 11px;
+  }
+
+  .rodape {
+    padding: 25px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .rodape p {
+    line-height: 1.8;
+  }
+
+  .rodape > div {
+    gap: 15px;
+  }
+
+  .legal-bloco {
+    padding: 23px 20px;
+  }
+
+  .legal-cookies {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .popup-midia {
+    padding: 15px;
+  }
 }
 
-.imovel h3{
-    font-size:1.4rem;
-    font-weight:800;
-    line-height:1.3;
-    margin-bottom:10px;
+/* CELULARES PEQUENOS */
+
+@media (max-width: 370px) {
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .filtro-botoes {
+    grid-column: 1;
+  }
+
+  .contato-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-numeros {
+    gap: 14px;
+  }
+
+  .hero-numeros strong {
+    font-size: 16px;
+  }
 }
 
-/* Limita endereço */
-.imovel .endereco{
-    overflow:hidden;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    min-height:50px;
-}
+/* ACESSIBILIDADE */
 
-/* Limita descrição */
-.imovel .descricao{
-    overflow:hidden;
-    display:-webkit-box;
-    -webkit-line-clamp:4;
-    -webkit-box-orient:vertical;
-    min-height:95px;
-}
-
-/* Botão sempre alinhado */
-.preco{
-    margin-top:auto;
-}
-
-.btn-whatsapp{
-    margin-top:15px;
-}
-
-/* Efeito bonito */
-.imovel{
-    backdrop-filter:blur(12px);
-    transition:all .35s ease;
-}
-
-.imovel:hover{
-    transform:translateY(-8px);
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.15),
-    0 0 20px rgba(0,123,255,.15);
-}
-
-/* Selo de características */
-.caracteristicas{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    padding:0 20px 15px;
-}
-
-.caracteristicas span{
-    background:#eef6ff;
-    color:#0066ff;
-    padding:6px 12px;
-    border-radius:999px;
-    font-size:.85rem;
-    font-weight:600;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }

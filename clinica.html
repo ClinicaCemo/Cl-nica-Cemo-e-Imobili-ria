@@ -1,1244 +1,563 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073b4c">
+  <meta name="description" content="CEMO Clínica e Engenharia Ocupacional: saúde ocupacional, exames, segurança do trabalho, engenharia ambiental e treinamentos em Pirapora/MG.">
+  <title>CEMO | Clínica e Engenharia Ocupacional</title>
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<title>CEMO | Clínica e Engenharia Ocupacional</title>
-
-<meta name="description" content="A CEMO oferece soluções completas em Medicina Ocupacional, Engenharia de Segurança, Engenharia Ambiental, Exames Ocupacionais, Consultorias e Treinamentos.">
-
-<meta name="theme-color" content="#0b5ed7">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="clinica.css">
-
-<link rel="icon" href="">
-
+  <link rel="stylesheet" href="clinica.css">
+  <script src="clinica.js" defer></script>
 </head>
-
 <body>
 
-
-<!-- ===========================
-            LOADER
-============================ -->
-
-<div id="loader">
-
-<div class="loader-container">
-
-<img src=""
-class="loader-logo"
-alt="Logo CEMO">
-
-<div class="loader-circle"></div>
-
-<h2>CEMO</h2>
-
-<p>
-Preparando sua experiência...
-</p>
-
-<div class="loader-bar">
-
-<div class="loader-progress"></div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- ===========================
-          OVERLAY MENU
-============================ -->
-
-<div id="overlay-menu"></div>
-
-
-
-<!-- ===========================
-         MENU MOBILE
-============================ -->
-
-<nav id="mobile-menu">
-
-<div class="mobile-topo">
-
-<h2>CEMO</h2>
-
-<button id="fechar-menu">
-
-✕
-
-</button>
-
-</div>
-
-<ul>
-
-<li>
-
-<a href="#inicio">
-
-🏠 Início
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#sobre">
-
-🏥 Sobre
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#exames">
-
-📋 Exames
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#estrutura">
-
-🏢 Estrutura
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#contato">
-
-📞 Contato
-
-</a>
-
-</li>
-
-<li>
-
-<a href="index.html">
-
-⬅ Voltar
-
-</a>
-
-</li>
-
-</ul>
-
-</nav>
-
-
-
-<!-- ===========================
-        HEADER
-============================ -->
-
-<header class="navbar">
-
-<div class="logo-area">
-
-<img src="assets/logo-clinica.png"
-alt="Logo CEMO">
-
-<div>
-
-<h2>CEMO</h2>
-
-<span>
-Clínica e Engenharia
-</span>
-
-</div>
-
-</div>
-
-
-
-<nav class="desktop-menu">
-
-<ul>
-
-<li>
-
-<a href="#inicio">
-
-Início
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#sobre">
-
-Sobre
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#exames">
-
-Exames
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#estrutura">
-
-Estrutura
-
-</a>
-
-</li>
-
-<li>
-
-<a href="#contato">
-
-Contato
-
-</a>
-
-</li>
-
-</ul>
-
-</nav>
-
-
-
-<div class="header-buttons">
-
-<a href="index.html"
-class="btn-voltar">
-
-← Voltar
-
-</a>
-
-<button id="abrir-menu">
-
-<svg
-width="32"
-height="32"
-viewBox="0 0 24 24"
-fill="none">
-
-<path
-d="M3 6H21M3 12H21M3 18H21"
-stroke="currentColor"
-stroke-width="2"
-stroke-linecap="round"/>
-
-</svg>
-
-</button>
-
-</div>
-
-</header>
-
-
-
-<!-- ===========================
-          HERO
-============================ -->
-
-<section class="hero"
-id="inicio">
-
-<div class="hero-content">
-
-<div class="tag">
-
-<span>
-
-✔ Referência em Saúde Ocupacional
-
-</span>
-
-</div>
-
-<h1>
-
-Cuidamos da saúde da sua equipe com tecnologia, segurança e qualidade.
-
-</h1>
-
-<p>
-
-A CEMO oferece soluções completas em Medicina Ocupacional, Engenharia de Segurança, Engenharia Ambiental, Exames Ocupacionais, Programas Legais, Consultorias e Treinamentos para empresas de todos os portes.
-
-</p>
-
-<div class="hero-buttons">
-
-<a
-href="#exames"
-class="btn-primary">
-
-Conheça nossos serviços
-
-</a>
-
-<a
-href="https://wa.me/5538991610939"
-target="_blank"
-class="btn-whatsapp">
-
-Falar pelo WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="hero-image">
-
-<img
-src="assets/hero-clinica.png"
-alt="Equipe CEMO">
-
-</div>
-
-</section>
-<!-- ===================================
-            NÚMEROS
-=================================== -->
-
-<section class="numeros">
-
-<div class="numero">
-
-<h2>500+</h2>
-
-<p>Empresas atendidas</p>
-
-</div>
-
-<div class="numero">
-
-<h2>20.000+</h2>
-
-<p>Exames realizados</p>
-
-</div>
-
-<div class="numero">
-
-<h2>10+</h2>
-
-<p>Anos de experiência</p>
-
-</div>
-
-<div class="numero">
-
-<h2>100%</h2>
-
-<p>Conformidade com as Normas Regulamentadoras</p>
-
-</div>
-
-</section>
-
-
-<!-- ===================================
-             SOBRE
-=================================== -->
-
-<section class="sobre" id="sobre">
-
-<div class="titulo-section">
-
-<span>Quem Somos</span>
-
-<h2>Excelência em Saúde Ocupacional e Engenharia</h2>
-
-</div>
-
-<div class="sobre-container">
-
-<div class="sobre-texto">
-
-<p>
-
-A <strong>CEMO</strong> atua oferecendo soluções completas em Medicina
-Ocupacional, Engenharia de Segurança do Trabalho,
-Engenharia Ambiental, Engenharia Florestal, programas
-legais, treinamentos e consultorias.
-
-</p>
-
-<p>
-
-Nosso compromisso é proporcionar segurança,
-agilidade, qualidade e atendimento humanizado,
-garantindo que empresas estejam em conformidade
-com toda a legislação vigente.
-
-</p>
-
-<p>
-
-Contamos com uma equipe altamente qualificada,
-estrutura moderna e equipamentos de última geração,
-oferecendo um atendimento rápido e eficiente.
-
-</p>
-
-</div>
-
-<div class="sobre-info">
-
-<div class="info-box">
-
-<h3>Missão</h3>
-
-<p>
-
-Promover saúde, segurança e qualidade de vida
-no ambiente de trabalho.
-
-</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Visão</h3>
-
-<p>
-
-Ser referência regional em Medicina Ocupacional
-e Engenharia.
-
-</p>
-
-</div>
-
-<div class="info-box">
-
-<h3>Valores</h3>
-
-<p>
-
-Ética, responsabilidade, qualidade,
-inovação e compromisso com nossos clientes.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ===================================
-            EXAMES
-=================================== -->
-
-<!-- ===================================
-            EXAMES
-=================================== -->
-
-<section id="exames">
-
-<div class="titulo-section">
-
-<span>Nossos Serviços</span>
-
-<h2>Nossos Exames e Soluções</h2>
-
-<p class="descricao-section">
-
-A CEMO oferece uma linha completa de exames ocupacionais,
-programas de saúde, engenharia e treinamentos para empresas,
-sempre seguindo rigorosamente as normas regulamentadoras.
-
-</p>
-
-</div>
-
-<div class="grid">
-
-<!-- CARD 1 -->
-
-<div class="card">
-
-<img src="assets/exames/admissional.jpg" alt="Exame Admissional">
-
-<div class="card-content">
-
-<h3>Exame Admissional</h3>
-
-<p>
-
-Avaliação médica obrigatória realizada antes da contratação do colaborador.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Admissional.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 2 -->
-
-<div class="card">
-
-<img src="assets/exames/periodico.jpg" alt="Exame Periódico">
-
-<div class="card-content">
-
-<h3>Exame Periódico</h3>
-
-<p>
-
-Acompanhamento periódico da saúde ocupacional dos colaboradores.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Periódico.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 3 -->
-
-<div class="card">
-
-<img src="assets/exames/demissional.jpg" alt="Exame Demissional">
-
-<div class="card-content">
-
-<h3>Exame Demissional</h3>
-
-<p>
-
-Avaliação clínica realizada no encerramento do vínculo empregatício.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Exame%20Demissional.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 4 -->
-
-<div class="card">
-
-<img src="assets/exames/audiometria.jpg" alt="Audiometria">
-
-<div class="card-content">
-
-<h3>Audiometria</h3>
-
-<p>
-
-Exame para avaliação da capacidade auditiva do trabalhador.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Audiometria.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 5 -->
-
-<div class="card">
-
-<img src="assets/exames/espirometria.jpg" alt="Espirometria">
-
-<div class="card-content">
-
-<h3>Espirometria</h3>
-
-<p>
-
-Avaliação da função pulmonar para monitoramento ocupacional.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Espirometria.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 6 -->
-
-<div class="card">
-
-<img src="assets/exames/eletrocardiograma.jpg" alt="Eletrocardiograma">
-
-<div class="card-content">
-
-<h3>Eletrocardiograma</h3>
-
-<p>
-
-Avaliação da atividade elétrica cardíaca com equipamentos modernos.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Eletrocardiograma.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 7 -->
-
-<div class="card">
-
-<img src="assets/exames/eletroencefalograma.jpg" alt="Eletroencefalograma">
-
-<div class="card-content">
-
-<h3>Eletroencefalograma</h3>
-
-<p>
-
-Análise da atividade cerebral para avaliações específicas.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Eletroencefalograma.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CARD 8 -->
-
-<div class="card">
-
-<img src="assets/exames/mapa.jpg" alt="MAPA">
-
-<div class="card-content">
-
-<h3>MAPA</h3>
-
-<p>
-
-Monitoramento Ambulatorial da Pressão Arterial durante 24 horas.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20MAPA.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-<!-- CARD 9 -->
-
-<div class="card">
-
-<img src="assets/exames/holter.jpg" alt="Holter">
-
-<div class="card-content">
-
-<h3>Holter 24 Horas</h3>
-
-<p>
-
-Monitoramento contínuo da atividade cardíaca para diagnósticos mais precisos.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20Holter.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 10 -->
-
-<div class="card">
-
-<img src="assets/exames/acuidade.jpg" alt="Acuidade Visual">
-
-<div class="card-content">
-
-<h3>Acuidade Visual</h3>
-
-<p>
-
-Avaliação da capacidade visual do colaborador para atividades ocupacionais.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Acuidade%20Visual.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 11 -->
-
-<div class="card">
-
-<img src="assets/exames/pcmso.jpg" alt="PCMSO">
-
-<div class="card-content">
-
-<h3>PCMSO</h3>
-
-<p>
-
-Programa de Controle Médico de Saúde Ocupacional elaborado conforme a legislação.
-
-</p>
-
-<a href="https://wa.me/5538991610939?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20PCMSO.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 12 -->
-
-<div class="card">
-
-<img src="assets/exames/seguranca.jpg" alt="Engenharia de Segurança">
-
-<div class="card-content">
-
-<h3>Engenharia de Segurança</h3>
-
-<p>
-
-Elaboração de PGR, LTCAT, laudos técnicos, consultorias e projetos de segurança.
-
-</p>
-
-<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Engenharia%20de%20Segurança.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 13 -->
-
-<div class="card">
-
-<img src="assets/exames/fala.jpg" alt="Terapia da Voz">
-
-<div class="card-content">
-
-<h3>Terapia da Voz e Fala</h3>
-
-<p>
-
-Atendimento especializado em voz, comunicação e reabilitação fonoaudiológica.
-
-</p>
-
-<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Terapia%20da%20Voz%20e%20Fala.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 14 -->
-
-<div class="card">
-
-<img src="assets/exames/ambiental.jpg" alt="Engenharia Ambiental">
-
-<div class="card-content">
-
-<h3>Engenharia Ambiental</h3>
-
-<p>
-
-Licenciamentos, regularizações ambientais, projetos e consultorias técnicas.
-
-</p>
-
-<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20Engenharia%20Ambiental.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- CARD 15 -->
-
-<div class="card">
-
-<img src="assets/exames/treinamentos.jpg" alt="Treinamentos">
-
-<div class="card-content">
-
-<h3>Treinamentos e Palestras</h3>
-
-<p>
-
-Capacitações, palestras e treinamentos corporativos conforme as Normas Regulamentadoras.
-
-</p>
-
-<a href="https://wa.me/5538991361872?text=Olá,%20gostaria%20de%20informações%20sobre%20os%20Treinamentos.">
-
-Solicitar Informações
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="cta-exames">
-
-<div class="cta-conteudo">
-
-<h2>
-
-Não encontrou o serviço que procura?
-
-</h2>
-
-<p>
-
-A CEMO possui diversos outros serviços nas áreas de Medicina Ocupacional, Engenharia, Segurança do Trabalho, Meio Ambiente e Consultorias Técnicas.
-
-Entre em contato com nossa equipe e receba um atendimento personalizado.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="https://wa.me/5538991610939"
-class="btn-whatsapp"
-target="_blank">
-
-Solicitar Atendimento
-
-</a>
-
-<a href="#contato"
-class="btn-primary">
-
-Falar com um Especialista
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ===================================
-           ESTRUTURA
-=================================== -->
-
-<section id="estrutura">
-
-<div class="titulo-section">
-
-<span>Conheça</span>
-
-<h2>Nossa Estrutura</h2>
-
-</div>
-
-<p class="descricao-section">
-
-Ambientes modernos, confortáveis e preparados para
-oferecer um atendimento ágil, seguro e humanizado.
-
-</p>
-
-<div class="galeria">
-
-<img src="assets/galeria/foto1.jpg" alt="Recepção da Clínica">
-
-<img src="assets/galeria/foto2.jpg" alt="Consultório Médico">
-
-<img src="assets/galeria/foto3.jpg" alt="Sala de Exames">
-
-<img src="assets/galeria/foto4.jpg" alt="Equipamentos">
-
-<img src="assets/galeria/foto5.jpg" alt="Estrutura da Clínica">
-
-<img src="assets/galeria/foto6.jpg" alt="Área de Atendimento">
-
-</div>
-
-</section>
-<!-- ===================================
-            CONTATO
-=================================== -->
-
-<section id="contato">
-
-<div class="titulo-section">
-
-<span>Fale Conosco</span>
-
-<h2>Estamos prontos para atender você</h2>
-
-</div>
-
-<p class="descricao-section">
-
-Entre em contato com nossa equipe e solicite um orçamento ou tire suas dúvidas.
-
-</p>
-
-<div class="contato-grid">
-
-<div class="contato-card">
-
-<div class="contato-icon">
-📱
-</div>
-
-<h3>WhatsApp</h3>
-
-<p>(38) 99161-0939</p>
-
-<a href="https://wa.me/5538991610939" target="_blank">
-
-Conversar Agora
-
-</a>
-
-</div>
-
-
-<div class="contato-card">
-
-<div class="contato-icon">
-📸
-</div>
-
-<h3>Instagram</h3>
-
-<p>@cemo.pirapora</p>
-
-<a href="https://instagram.com/cemo.pirapora" target="_blank">
-
-Visitar Perfil
-
-</a>
-
-</div>
-
-
-<div class="contato-card">
-
-<div class="contato-icon">
-📍
-</div>
-
-<h3>Endereço</h3>
-
-<p>
-
-Rua Argemiro Peixoto, 202<br>
-
-Centro - Pirapora/MG
-
-</p>
-
-<a href="https://maps.google.com" target="_blank">
-
-Abrir no Maps
-
-</a>
-
-</div>
-
-
-<div class="contato-card">
-
-<div class="contato-icon">
-🕒
-</div>
-
-<h3>Horário</h3>
-
-<p>
-
-Segunda à Sexta<br>
-
-07:30 às 18:00
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- ===================================
-          VOLTAR AO TOPO
-=================================== -->
-
-<button id="btn-topo">
-
-↑
-
-</button>
-
-
-
-<!-- ===================================
-             FOOTER
-=================================== -->
-
-<footer>
-
-<div class="footer-logo">
-
-<img
-src="assets/logo-clinica.png"
-alt="Logo CEMO">
-
-<h2>CEMO</h2>
-
-</div>
-
-<p>
-
-Clínica e Engenharia Ocupacional
-
-</p>
-
-<p>
-
-© 2026 CEMO - Todos os direitos reservados.
-
-</p>
-
-</footer>
-
-
-
-<!-- ===================================
-          JAVASCRIPT
-=================================== -->
-
-<script>
-
-window.addEventListener("load",function(){
-
-const loader=document.getElementById("loader");
-
-setTimeout(function(){
-
-loader.classList.add("loader-hidden");
-
-},900);
-
-});
-
-
-const abrir=document.getElementById("abrir-menu");
-
-const fechar=document.getElementById("fechar-menu");
-
-const menu=document.getElementById("mobile-menu");
-
-const overlay=document.getElementById("overlay-menu");
-
-
-abrir.onclick=function(){
-
-menu.classList.add("ativo");
-
-overlay.classList.add("ativo");
-
-document.body.style.overflow="hidden";
-
-};
-
-
-fechar.onclick=function(){
-
-menu.classList.remove("ativo");
-
-overlay.classList.remove("ativo");
-
-document.body.style.overflow="";
-
-};
-
-
-overlay.onclick=function(){
-
-menu.classList.remove("ativo");
-
-overlay.classList.remove("ativo");
-
-document.body.style.overflow="";
-
-};
-
-
-document.querySelectorAll("#mobile-menu a").forEach(function(item){
-
-item.onclick=function(){
-
-menu.classList.remove("ativo");
-
-overlay.classList.remove("ativo");
-
-document.body.style.overflow="";
-
-};
-
-});
-
-
-const topo=document.getElementById("btn-topo");
-
-
-window.addEventListener("scroll",function(){
-
-if(window.scrollY>500){
-
-topo.classList.add("mostrar");
-
-}else{
-
-topo.classList.remove("mostrar");
-
-}
-
-});
-
-
-topo.onclick=function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-</script>
+  <div class="announcement">
+    <span class="pulse"></span>
+    <span data-i18n="announcement">Saúde, segurança e cuidado para quem move sua empresa.</span>
+    <a href="https://wa.me/5538991610939" target="_blank" rel="noopener" data-i18n="talk">Fale com a equipe ↗</a>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#inicio" aria-label="CEMO - Início">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48">
+          <path d="M24 5v38M5 24h38"/>
+          <circle cx="24" cy="24" r="17"/>
+        </svg>
+      </span>
+      <span>
+        <b>CEMO</b>
+        <small data-i18n="brandline">CLÍNICA & ENGENHARIA OCUPACIONAL</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#inicio" data-i18n="navHome">Início</a>
+      <a href="#sobre" data-i18n="navAbout">A CEMO</a>
+      <a href="#servicos" data-i18n="navServices">Serviços</a>
+      <a href="#estrutura" data-i18n="navStructure">Estrutura</a>
+      <a href="#contato" data-i18n="navContact">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="language-picker">
+        <span class="sr-only" data-i18n="language">Idioma</span>
+        <select id="language-select" aria-label="Language">
+          <option value="pt">PT</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </label>
+
+      <a class="back-link" href="index.html" data-i18n="back">← Voltar ao site</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu móvel">
+    <div class="mobile-nav-head">
+      <span class="brand-mini">CEMO<span>.</span></span>
+      <button id="menu-close" class="icon-button" aria-label="Fechar menu">×</button>
+    </div>
+
+    <a href="#inicio" data-i18n="navHome">Início</a>
+    <a href="#sobre" data-i18n="navAbout">A CEMO</a>
+    <a href="#servicos" data-i18n="navServices">Serviços</a>
+    <a href="#estrutura" data-i18n="navStructure">Estrutura</a>
+    <a href="#contato" data-i18n="navContact">Contato</a>
+    <a href="index.html" class="mobile-back" data-i18n="back">← Voltar ao site</a>
+
+    <div class="mobile-language">
+      <span data-i18n="language">Idioma</span>
+      <button data-lang="pt">PT</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- INÍCIO -->
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span data-i18n="heroEyebrow">Cuidado com propósito. Segurança com excelência.</span>
+        </div>
+
+        <h1 data-i18n="heroTitle">
+          Saúde e segurança para sua equipe.
+          <em>Tranquilidade para sua empresa.</em>
+        </h1>
+
+        <p class="hero-description" data-i18n="heroDesc">
+          Soluções integradas em medicina ocupacional, exames, engenharia e gestão de segurança do trabalho, com atendimento próximo e foco nas necessidades da sua empresa.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#servicos" data-i18n="explore">
+            Conheça nossas soluções <span>↘</span>
+          </a>
+
+          <a class="button button-ghost" href="https://wa.me/5538991610939" target="_blank" rel="noopener">
+            <span class="whatsapp-dot">◉</span>
+            <span data-i18n="whatsapp">Conversar no WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-icon">✓</div>
+          <p>
+            <b data-i18n="proofTitle">Atendimento corporativo integrado</b>
+            <span data-i18n="proofText">Saúde ocupacional, prevenção e orientação técnica em um só lugar.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="assets/hero-clinica.png" alt="Equipe e ambiente de atendimento da CEMO"
+            onerror="this.parentElement.classList.add('image-fallback');this.remove()">
+          <div class="photo-shade"></div>
+
+          <div class="photo-caption">
+            <span class="caption-icon">✚</span>
+            <span>
+              <b data-i18n="photoTitle">Cuidado que faz diferença</b>
+              <small data-i18n="photoText">Pessoas em primeiro lugar</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="floating-card floating-top">
+          <span class="float-icon">⌁</span>
+          <span>
+            <b data-i18n="floatOne">Saúde ocupacional</b>
+            <small data-i18n="floatOneSub">Prevenção e acompanhamento</small>
+          </span>
+        </div>
+
+        <div class="floating-card floating-bottom">
+          <span class="float-check">✓</span>
+          <span>
+            <b data-i18n="floatTwo">Segurança em cada etapa</b>
+            <small data-i18n="floatTwoSub">Orientação técnica e cuidado</small>
+          </span>
+        </div>
+
+        <div class="hero-orbit"></div>
+      </div>
+
+      <div class="hero-bottom-label">
+        <span>01 / 04</span>
+        <span data-i18n="scroll">DESLIZE PARA CONHECER</span>
+        <span>↓</span>
+      </div>
+    </section>
+
+    <!-- INDICADORES -->
+    <section class="metrics-band" aria-label="Indicadores da CEMO">
+      <div class="metrics-inner">
+        <div class="metric">
+          <span class="metric-symbol">↗</span>
+          <div>
+            <strong>500<span>+</span></strong>
+            <p data-i18n="metric1">Empresas atendidas*</p>
+          </div>
+        </div>
+
+        <div class="metric">
+          <span class="metric-symbol">✚</span>
+          <div>
+            <strong>20.000<span>+</span></strong>
+            <p data-i18n="metric2">Exames realizados*</p>
+          </div>
+        </div>
+
+        <div class="metric">
+          <span class="metric-symbol">◷</span>
+          <div>
+            <strong>10<span>+</span></strong>
+            <p data-i18n="metric3">Anos de experiência*</p>
+          </div>
+        </div>
+
+        <div class="metric metric-note">
+          <span data-i18n="metricNote">*Indicadores informados no material institucional.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A CEMO -->
+    <section class="about section-wrap section-space" id="sobre">
+      <div class="section-heading">
+        <span class="section-kicker" data-i18n="aboutKicker">QUEM SOMOS</span>
+        <h2 data-i18n="aboutTitle">Conhecimento técnico. <em>Compromisso humano.</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-lead">
+          <p data-i18n="aboutLead">
+            A CEMO reúne soluções em Medicina Ocupacional, Engenharia de Segurança do Trabalho, Engenharia Ambiental e Florestal, programas legais, treinamentos e consultorias.
+          </p>
+          <a href="#contato" class="text-link" data-i18n="talkSpecialist">
+            Converse com um especialista <span>↗</span>
+          </a>
+        </div>
+
+        <div class="about-detail">
+          <p data-i18n="aboutText">
+            Nosso compromisso é apoiar empresas com atendimento ágil, qualidade técnica e cuidado com as pessoas, contribuindo para ambientes de trabalho mais seguros e para a organização das rotinas ocupacionais.
+          </p>
+
+          <div class="values-grid">
+            <article>
+              <span>01</span>
+              <h3 data-i18n="mission">Missão</h3>
+              <p data-i18n="missionText">Promover saúde, segurança e qualidade de vida no ambiente de trabalho.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3 data-i18n="vision">Visão</h3>
+              <p data-i18n="visionText">Ser referência regional em Medicina Ocupacional e Engenharia.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3 data-i18n="values">Valores</h3>
+              <p data-i18n="valuesText">Ética, responsabilidade, qualidade, inovação e compromisso.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services-section section-space" id="servicos">
+      <div class="section-wrap">
+
+        <div class="section-heading services-heading">
+          <div>
+            <span class="section-kicker" data-i18n="servicesKicker">SOLUÇÕES CEMO</span>
+            <h2 data-i18n="servicesTitle">Tudo conectado para <em>cuidar melhor.</em></h2>
+          </div>
+          <p data-i18n="servicesIntro">
+            Explore as áreas de atuação e encontre a solução adequada para sua empresa.
+          </p>
+        </div>
+
+        <div class="service-tabs" role="tablist" aria-label="Categorias de serviços">
+          <button class="service-tab active" role="tab" aria-selected="true" data-filter="all" data-i18n="tabAll">
+            Todos os serviços <span>15</span>
+          </button>
+          <button class="service-tab" role="tab" aria-selected="false" data-filter="exames" data-i18n="tabExams">
+            Exames ocupacionais
+          </button>
+          <button class="service-tab" role="tab" aria-selected="false" data-filter="programas" data-i18n="tabPrograms">
+            Programas e laudos
+          </button>
+          <button class="service-tab" role="tab" aria-selected="false" data-filter="engenharia" data-i18n="tabEngineering">
+            Engenharia
+          </button>
+          <button class="service-tab" role="tab" aria-selected="false" data-filter="treinamentos" data-i18n="tabTraining">
+            Treinamentos
+          </button>
+        </div>
+
+        <div class="services-grid" id="services-grid">
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">✚</span><span class="service-number">01</span></div>
+            <h3 data-i18n="s1">Exame Admissional</h3>
+            <p data-i18n="d1">Avaliação médica realizada antes do início do vínculo de trabalho.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20o%20Exame%20Admissional." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">◷</span><span class="service-number">02</span></div>
+            <h3 data-i18n="s2">Exame Periódico</h3>
+            <p data-i18n="d2">Acompanhamento da saúde ocupacional dos colaboradores ao longo do tempo.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20o%20Exame%20Periódico." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">✓</span><span class="service-number">03</span></div>
+            <h3 data-i18n="s3">Exame Demissional</h3>
+            <p data-i18n="d3">Avaliação clínica relacionada ao encerramento do vínculo empregatício.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20o%20Exame%20Demissional." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">♫</span><span class="service-number">04</span></div>
+            <h3 data-i18n="s4">Audiometria</h3>
+            <p data-i18n="d4">Avaliação da capacidade auditiva em contextos ocupacionais.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Audiometria." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">〰</span><span class="service-number">05</span></div>
+            <h3 data-i18n="s5">Espirometria</h3>
+            <p data-i18n="d5">Avaliação da função pulmonar para acompanhamento ocupacional.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Espirometria." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">♡</span><span class="service-number">06</span></div>
+            <h3 data-i18n="s6">Eletrocardiograma</h3>
+            <p data-i18n="d6">Registro da atividade elétrica cardíaca para avaliação clínica.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Eletrocardiograma." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">◉</span><span class="service-number">07</span></div>
+            <h3 data-i18n="s7">Eletroencefalograma</h3>
+            <p data-i18n="d7">Registro da atividade elétrica cerebral para avaliações específicas.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Eletroencefalograma." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">◴</span><span class="service-number">08</span></div>
+            <h3 data-i18n="s8">MAPA</h3>
+            <p data-i18n="d8">Monitoramento ambulatorial da pressão arterial por 24 horas.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20MAPA." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">⌁</span><span class="service-number">09</span></div>
+            <h3 data-i18n="s9">Holter 24 Horas</h3>
+            <p data-i18n="d9">Monitoramento contínuo da atividade cardíaca durante o período indicado.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Holter." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">◌</span><span class="service-number">10</span></div>
+            <h3 data-i18n="s10">Acuidade Visual</h3>
+            <p data-i18n="d10">Avaliação da capacidade visual para atividades ocupacionais.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Acuidade%20Visual." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="programas">
+            <div class="service-card-top"><span class="service-icon">▤</span><span class="service-number">11</span></div>
+            <h3 data-i18n="s11">PCMSO</h3>
+            <p data-i18n="d11">Programa de Controle Médico de Saúde Ocupacional conforme a legislação aplicável.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20PCMSO." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="engenharia programas">
+            <div class="service-card-top"><span class="service-icon">⌂</span><span class="service-number">12</span></div>
+            <h3 data-i18n="s12">Engenharia de Segurança</h3>
+            <p data-i18n="d12">PGR, LTCAT, laudos técnicos, consultorias e projetos de segurança do trabalho.</p>
+            <a class="service-link" href="https://wa.me/5538991361872?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Engenharia%20de%20Segurança." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="exames">
+            <div class="service-card-top"><span class="service-icon">〽</span><span class="service-number">13</span></div>
+            <h3 data-i18n="s13">Terapia da Voz e Fala</h3>
+            <p data-i18n="d13">Atendimento em voz, comunicação e reabilitação fonoaudiológica.</p>
+            <a class="service-link" href="https://wa.me/5538991610939?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Terapia%20da%20Voz%20e%20Fala." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="engenharia">
+            <div class="service-card-top"><span class="service-icon">♧</span><span class="service-number">14</span></div>
+            <h3 data-i18n="s14">Engenharia Ambiental</h3>
+            <p data-i18n="d14">Licenciamentos, regularizações ambientais, projetos e consultorias técnicas.</p>
+            <a class="service-link" href="https://wa.me/5538991361872?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Engenharia%20Ambiental." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+          <article class="service-card" data-category="treinamentos">
+            <div class="service-card-top"><span class="service-icon">↗</span><span class="service-number">15</span></div>
+            <h3 data-i18n="s15">Treinamentos e Palestras</h3>
+            <p data-i18n="d15">Capacitações e treinamentos corporativos conforme as necessidades da empresa e as NRs aplicáveis.</p>
+            <a class="service-link" href="https://wa.me/5538991361872?text=Olá%2C%20gostaria%20de%20informações%20sobre%20Treinamentos." target="_blank" rel="noopener" data-i18n="details">Solicitar informações <span>↗</span></a>
+          </article>
+
+        </div>
+
+        <div class="services-footer">
+          <p data-i18n="servicesFooter">Precisa de outro serviço ou quer montar um plano para sua empresa?</p>
+          <a class="button button-dark" href="https://wa.me/5538991610939" target="_blank" rel="noopener" data-i18n="requestQuote">
+            Solicite um atendimento <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="process-section section-space">
+      <div class="section-wrap process-grid">
+        <div>
+          <span class="section-kicker" data-i18n="processKicker">SIMPLES E DIRETO</span>
+          <h2 data-i18n="processTitle">Da primeira conversa ao <em>cuidado contínuo.</em></h2>
+          <p class="muted" data-i18n="processIntro">A gente entende sua necessidade e ajuda a organizar os próximos passos.</p>
+        </div>
+
+        <div class="process-steps">
+          <article>
+            <span>01</span>
+            <div>
+              <h3 data-i18n="step1Title">Conte o que precisa</h3>
+              <p data-i18n="step1Text">Fale com a equipe e explique o contexto da sua empresa.</p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div>
+              <h3 data-i18n="step2Title">Alinhe a solução</h3>
+              <p data-i18n="step2Text">Receba orientação inicial sobre serviços e próximos passos.</p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div>
+              <h3 data-i18n="step3Title">Siga com confiança</h3>
+              <p data-i18n="step3Text">Combine atendimento, agenda e detalhes diretamente com a CEMO.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA -->
+    <section class="structure-section section-space" id="estrutura">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="section-kicker" data-i18n="structureKicker">NOSSO ESPAÇO</span>
+          <h2 data-i18n="structureTitle">Estrutura preparada para <em>receber e cuidar.</em></h2>
+          <p data-i18n="structureText">Ambientes de atendimento pensados para oferecer conforto, organização e uma experiência acolhedora.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-large">
+            <img src="assets/galeria/foto1.jpg" alt="Recepção da clínica" loading="lazy" onerror="this.parentElement.classList.add('gallery-fallback');this.remove()">
+            <span data-i18n="gallery1">Recepção</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/galeria/foto2.jpg" alt="Consultório médico" loading="lazy" onerror="this.parentElement.classList.add('gallery-fallback');this.remove()">
+            <span data-i18n="gallery2">Consultórios</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/galeria/foto3.jpg" alt="Sala de exames" loading="lazy" onerror="this.parentElement.classList.add('gallery-fallback');this.remove()">
+            <span data-i18n="gallery3">Salas de exames</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/galeria/foto4.jpg" alt="Equipamentos de atendimento" loading="lazy" onerror="this.parentElement.classList.add('gallery-fallback');this.remove()">
+            <span data-i18n="gallery4">Equipamentos</span>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/galeria/foto5.jpg" alt="Estrutura da CEMO" loading="lazy" onerror="this.parentElement.classList.add('gallery-fallback');this.remove()">
+            <span data-i18n="gallery5">Ambientes</span>
+          </div>
+        </div>
+
+        <p class="gallery-note" data-i18n="galleryNote">
+          As imagens são carregadas da pasta assets/galeria. Caso ainda não estejam disponíveis, serão exibidos espaços reservados.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact-section section-space" id="contato">
+      <div class="section-wrap contact-layout">
+
+        <div class="contact-copy">
+          <span class="section-kicker" data-i18n="contactKicker">VAMOS CONVERSAR</span>
+          <h2 data-i18n="contactTitle">Sua empresa merece um cuidado <em>bem planejado.</em></h2>
+          <p data-i18n="contactText">Fale com a CEMO para tirar dúvidas, conhecer os serviços ou solicitar informações para sua empresa.</p>
+
+          <a class="button button-light" href="https://wa.me/5538991610939" target="_blank" rel="noopener" data-i18n="contactButton">
+            Iniciar conversa no WhatsApp ↗
+          </a>
+
+          <div class="contact-decoration">CEMO<span>.</span></div>
+        </div>
+
+        <div class="contact-details">
+          <a class="contact-row" href="https://wa.me/5538991610939" target="_blank" rel="noopener">
+            <span class="contact-icon">↗</span>
+            <span>
+              <small data-i18n="contactWhatsapp">WHATSAPP</small>
+              <b>(38) 99161-0939</b>
+              <em data-i18n="contactClick">Clique para conversar</em>
+            </span>
+          </a>
+
+          <a class="contact-row" href="https://instagram.com/cemo.pirapora" target="_blank" rel="noopener">
+            <span class="contact-icon">◎</span>
+            <span>
+              <small>INSTAGRAM</small>
+              <b>@cemo.pirapora</b>
+              <em data-i18n="contactSocial">Acompanhe a CEMO</em>
+            </span>
+          </a>
+
+          <a class="contact-row" href="https://www.google.com/maps/search/?api=1&query=Rua+Argemiro+Peixoto+202+Pirapora+MG" target="_blank" rel="noopener">
+            <span class="contact-icon">⌖</span>
+            <span>
+              <small data-i18n="address">ENDEREÇO</small>
+              <b>Rua Argemiro Peixoto, 202</b>
+              <em>Centro · Pirapora/MG</em>
+            </span>
+          </a>
+
+          <div class="contact-row">
+            <span class="contact-icon">◷</span>
+            <span>
+              <small data-i18n="hours">HORÁRIO DE ATENDIMENTO</small>
+              <b data-i18n="weekdays">Segunda a sexta-feira</b>
+              <em>07:30–18:00</em>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark">
+          <svg viewBox="0 0 48 48">
+            <path d="M24 5v38M5 24h38"/>
+            <circle cx="24" cy="24" r="17"/>
+          </svg>
+        </span>
+        <span>
+          <b>CEMO</b>
+          <small data-i18n="brandline">CLÍNICA & ENGENHARIA OCUPACIONAL</small>
+        </span>
+      </a>
+
+      <p data-i18n="footerLine">Saúde, segurança e engenharia com atenção às pessoas.</p>
+      <a href="index.html" class="footer-back" data-i18n="back">← Voltar ao site</a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year">2026</span> CEMO. <span data-i18n="rights">Todos os direitos reservados.</span></span>
+      <a href="#top" data-i18n="toTop">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5538991610939" target="_blank" rel="noopener" aria-label="WhatsApp CEMO">◉</a>
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">↑</button>
 
 </body>
-
 </html>
